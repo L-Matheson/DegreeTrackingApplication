@@ -16,12 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
+from api.view_index import home
 from api.views.testview import PersonListView
 
-
-
-from .views import home
 
 urlpatterns = [
     path('admin/', admin.site.urls),
