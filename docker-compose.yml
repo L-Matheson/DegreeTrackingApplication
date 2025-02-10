@@ -1,0 +1,55 @@
+version: '3.8'  # Use a stable and well-supported version
+
+services:
+  # Web Application Service
+  web:
+    image: nginx:latest  # Use a stable, well-maintained image from Docker Hub
+    container_name: my_nginx_container  # Assign a meaningful name to the container
+    ports:
+      - "80:80"  # Map host port 80 to container port 80 for HTTP traffic
+    command: >
+      sh -c "if [ ! -f /etc/nginx/nginx.conf ]; then
+      echo 'worker_processes 1;
+      events { worker_connections 1024; }
+      http { server { listen 80; root /usr/share/nginx/html; } }' > /etc/nginx/nginx.conf; fi &&
+      nginx -g 'daemon off;'"
+    networks:
+      - frontend_network  # Attach to the defined network
+
+  # Backend API Service
+  api:
+    build:
+      context: .  # Build the image using the Dockerfile in this directory
+      dockerfile: Dockerfile  # Specify the Dockerfile if it's not named Dockerfile
+    container_name: api_service  # Give a descriptive name to the container
+    ports:
+      - "5000:5000"  # Map host port 5000 to container port 5000
+    environment:
+      - ENV=production  # Pass environment variables for configuration
+    networks:
+      - backend_network  # Attach to the defined network
+    depends_on:
+      - db  # Ensure the API service starts after the database
+
+  # Database Service
+  db:
+    image: postgres:14  # Use a specific, stable version of Postgres
+    container_name: postgres_db  # Name the container for easier reference
+    restart: always  # Automatically restart the container if it crashes
+    environment:
+      POSTGRES_USER: myuser  # Set database user
+      POSTGRES_PASSWORD: mypassword  # Set database password
+      POSTGRES_DB: mydatabase  # Set the initial database
+    volumes:
+      - db_data:/var/lib/postgresql/data  # Persistent storage for database data
+    networks:
+      - backend_network  # Attach to backend network
+
+# Define Docker Volumes for Persistent Data Storage
+volumes:
+  db_data:
+
+# Define Docker Networks to Isolate Services
+networks:
+  frontend_network:  # For web services
+  backend_network:  # For backend and database services
