@@ -1,7 +1,7 @@
 from rest_framework import serializers
-from api.models import test
+from api.models.test import TestTable
 
-class PersonSerializer(serializers.ModelSerializer):
+class TestTableSerializer(serializers.ModelSerializer):
     class Meta:
-        model = test
+        model = TestTable
         fields = '__all__'

@@ -1,25 +1,89 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
 
-function App() {
+const TestTableManager = () => {
+  const [data, setData] = useState([]);
+  const [newTitle, setNewTitle] = useState("");
+  const [newDescription, setNewDescription] = useState("");
+
+  // Fetch all records on component mount
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = () => {
+    fetch("/api/testtable/")
+      .then(response => response.json())
+      .then(data => setData(data))
+      .catch(error => console.error("Error fetching data:", error));
+  };
+
+  // Add a new record
+  const handlePostData = (e) => {
+    e.preventDefault();
+    fetch("/api/testtable/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        title: newTitle,
+        description: newDescription,
+      }),
+    })
+      .then(response => response.json())
+      .then(newRecord => {
+        setData([...data, newRecord]);
+        setNewTitle("");
+        setNewDescription("");
+      })
+      .catch(error => console.error("Error posting data:", error));
+  };
+
+  // Delete a record by ID
+  const handleDeleteData = (id) => {
+    fetch(`/api/testtable/${id}/`, {
+      method: "DELETE",
+    })
+      .then(() => {
+        setData(data.filter(item => item.id !== id));
+      })
+      .catch(error => console.error("Error deleting data:", error));
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Test Table Manager</h1>
+
+      {/* Form to Add New Record */}
+      <form onSubmit={handlePostData}>
+        <input
+          type="text"
+          value={newTitle}
+          placeholder="Title"
+          onChange={(e) => setNewTitle(e.target.value)}
+          required
+        />
+        <input
+          type="text"
+          value={newDescription}
+          placeholder="Description"
+          onChange={(e) => setNewDescription(e.target.value)}
+          required
+        />
+        <button type="submit">Add Record</button>
+      </form>
+
+      {/* Display Data */}
+      <ul>
+        {data.map(item => (
+          <li key={item.id}>
+            <strong>{item.title}:</strong> {item.description}
+            <button onClick={() => handleDeleteData(item.id)}>Delete</button>
+          </li>
+        ))}
+      </ul>
     </div>
   );
-}
+};
 
-export default App;
+export default TestTableManager;

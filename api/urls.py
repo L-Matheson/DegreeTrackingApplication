@@ -17,11 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from api.view_index import home
-from api.views.testview import PersonListView
+from api.views.testview import TestTableDeleteView, TestTableListCreateView
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home),
-    path('api/persons/', PersonListView.as_view(), name='person-list'),
+    path('api/testtable/', TestTableListCreateView.as_view(), name='testtable-list-create'),
+    path('api/testtable/<int:pk>/', TestTableDeleteView.as_view(), name='testtable-delete'),
 ]
