@@ -23,18 +23,18 @@ Some of the expected key features of this API are
 Please contact Lucas at 22lucasmatheson@gmail.com for help with installation. A guideline will displayed here soon!
 
 # Usage
-Once the first working version is released, this section will outline how it is working and the expected outputs from router calls. 
+Currently, the API has three routes. Each displaying a simple GET, POST, and DELETE from a simple test table. 
 
 # Roadmap
 
 * Import Django and get the necessary files imported and ready to use
 * Create docker containers and images through the Django framework
-* Publish the first working version
+* Publish the first working version 
 * Create table frameworks to outline data structures needed for the application
-* TBD
+* Brainstorm UI format, divide tasks
   
 # Project status
-Currently, the project has just begun. There are currently no working versions or expected updates until further notice.
+The API is now functioning through React, Django, and docker. Currently, the API only displays a test format using three routes. These being a GET, POST, and DELETE.
 
 # Questions
   Any questions can be submitted directly to Lucas at 22lucasmatheson@gmail.com
