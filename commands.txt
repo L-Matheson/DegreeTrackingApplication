@@ -1,2 +1,9 @@
-docker build --tag python-django .
-docker run --publish 8000:8000 python-django
+# Recreate migrations
+docker-compose exec web python manage.py makemigrations
+docker-compose exec web python manage.py migrate
+
+# Delete Docker Container. This will remove all stored data and tables
+docker-compose down --volumes --remove-orphans
+
+# Rebuilds docker container, make sure to run `docker-compose exec web python manage.py migrate after creation`
+docker-compose up --build
