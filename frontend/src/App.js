@@ -11,7 +11,7 @@ const TestTableManager = () => {
   }, []);
 
   const fetchData = () => {
-    fetch("/api/testtable/")
+    fetch("/api/test-table/")
       .then(response => response.json())
       .then(data => setData(data))
       .catch(error => console.error("Error fetching data:", error));
@@ -20,7 +20,7 @@ const TestTableManager = () => {
   // Add a new record
   const handlePostData = (e) => {
     e.preventDefault();
-    fetch("/api/testtable/", {
+    fetch("/api/test-table/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -41,7 +41,7 @@ const TestTableManager = () => {
 
   // Delete a record by ID
   const handleDeleteData = (id) => {
-    fetch(`/api/testtable/${id}/`, {
+    fetch(`/api/test-table/${id}/`, {
       method: "DELETE",
     })
       .then(() => {

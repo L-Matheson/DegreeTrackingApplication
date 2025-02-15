@@ -4,4 +4,4 @@ from api.models.test import TestTable
 class TestTableSerializer(serializers.ModelSerializer):
     class Meta:
         model = TestTable
-        fields = '__all__'
+        fields = ['id', 'title', 'description']

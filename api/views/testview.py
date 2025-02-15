@@ -4,25 +4,19 @@ from rest_framework import status
 from api.models.test import TestTable
 from api.serializers.test_serializer import TestTableSerializer
 
-class TestTableListView(APIView):
-    def get(self, request):
-        # Import models inside the method to avoid circular imports
-        from api.models.test import TestTable
-        records = TestTable.objects.all()
-        serializer = TestTableSerializer(records, many=True)
-        return Response(serializer.data)
-    
-
 class TestTableListCreateView(APIView):
     def get(self, request):
-        # Import models within the function to avoid early app loading
-        from api.models import TestTable
         records = TestTable.objects.all()
         serializer = TestTableSerializer(records, many=True)
         return Response(serializer.data)
 
+    def post(self, request):
+        serializer = TestTableSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-# DELETE an entry
 class TestTableDeleteView(APIView):
     def delete(self, request, pk):
         try:

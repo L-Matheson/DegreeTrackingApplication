@@ -1,0 +1,1 @@
+serializers in django simply take complex JSON data and converts it into python objects and vice versa. 

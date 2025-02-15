@@ -1,20 +1,16 @@
+
 services:
 
   # Web Application Service
   web:
-    image: nginx:latest  # Use a stable, well-maintained image from Docker Hub
-    container_name: my_nginx_container  # Assign a meaningful name to the container
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/app
     ports:
-      - "80:80"  # Map host port 80 to container port 80 for HTTP traffic
-    command: >
-      sh -c "if [ ! -f /etc/nginx/nginx.conf ]; then
-      echo 'worker_processes 1;
-      events { worker_connections 1024; }
-      http { server { listen 80; root /usr/share/nginx/html; } }' > /etc/nginx/nginx.conf; fi &&
-      nginx -g 'daemon off;'"
-      sh -c "python manage.py makemigrations &&
-      python manage.py migrate &&
-      python manage.py runserver 0.0.0.0:8000"
+      - "8000:8000"
+    depends_on:
+      - db
     networks:
       - frontend_network  # Attach to the defined network
 
@@ -25,7 +21,7 @@ services:
       dockerfile: Dockerfile  # Specify the Dockerfile if it's not named Dockerfile
     container_name: api_service  # Give a descriptive name to the container
     ports:
-      - "8000:8000"  # Map host port 8000 to container port 8000
+      - "8001:8001"  # Map host port 8000 to container port 8000
     environment:
       - ENV=production  # Pass environment variables for configuration
     networks:
@@ -35,21 +31,21 @@ services:
 
   # Database Service 
   db:
-    image: postgres:14  # Use a specific, stable version of Postgres
+    image: postgres:13  # Use a specific, stable version of Postgres
     container_name: postgres_db  # Name the container for easier reference
     restart: always  # Automatically restart the container if it crashes
     environment:
-      POSTGRES_USER: myuser  # Set database user
-      POSTGRES_PASSWORD: mypassword  # Set database password
-      POSTGRES_DB: mydatabase  # Set the initial database
+      POSTGRES_USER: your_db_user  # Set database user
+      POSTGRES_PASSWORD: your_db_password  # Set database password
+      POSTGRES_DB: your_db_name  # Set the initial database
     volumes:
-      - db_data:/var/lib/postgresql/data  # Persistent storage for database data
+      - postgres_data:/var/lib/postgresql/data  # Persistent storage for database data
     networks:
       - backend_network  # Attach to backend network
 
 # Define Docker Volumes for Persistent Data Storage
 volumes:
-  db_data:
+  postgres_data:
 
 # Define Docker Networks to Isolate Services
 networks:

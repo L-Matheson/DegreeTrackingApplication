@@ -1,1 +1,1 @@
-from .testview import TestTableListView
+from .testview import TestTableListCreateView, TestTableDeleteView
