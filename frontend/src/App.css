@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+.layout-sidebar {
+  position: fixed;
+  height: 100%;
+margin: 0;
+padding: 0;
+  left: 0;
+  width: 17rem;
+  background: var(--menu-bg);
+  border-right: 1px solid var(--surface-border);
+  display: flex;
+  flex-direction: column;
+}
