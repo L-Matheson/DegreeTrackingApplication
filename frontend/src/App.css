@@ -40,12 +40,48 @@
 .layout-sidebar {
   position: fixed;
   height: 100%;
-margin: 0;
-padding: 0;
+  margin: 0;
+  padding: 0;
   left: 0;
   width: 17rem;
   background: var(--menu-bg);
   border-right: 1px solid var(--surface-border);
   display: flex;
   flex-direction: column;
+  transition: width 0.3s ease-in-out;
+}
+
+.layout-sidebar.collapsed aside {
+  width: 60px; /* Adjust the width as needed */
+}
+
+.sidebar-header {
+  text-align: left;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  padding-left: 1em; /* Adjust padding as needed */
+}
+
+.sidebar-header label {
+  display: block;
+}
+
+.sidebar-header {
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: 500;
+  margin-bottom: 2em;
+  color: lightgray;
+}
+
+.sidebar-item {
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+  display: block;
+  transition: 0.3s ease;
 }
