@@ -22,7 +22,7 @@ Some of the expected key features of this API are
   * TBD
 
 
-# Usage
+# Use
 As mentioned, this API runs on a Django framework. This utilizes the REST framework which allows the API to use routes such as GET, POST, PATCH, and DELETE. The directory is set up so the backend is all 
 stored inside the api folder, with the frontend stored inside of frontend. There are some files outside of these folders. Their purpose is to build the docker containers and volumes, along with other 
 nessacery Django settings. 
