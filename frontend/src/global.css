@@ -1,0 +1,12 @@
+/* filepath: /c:/Users/kingo/OneDrive/Desktop/DegreeTrackingAPI/frontend/src/global.css */
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+  }
+  
+  * {
+    box-sizing: inherit;
+  }
