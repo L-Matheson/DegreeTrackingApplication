@@ -8,6 +8,8 @@ import React, { useContext } from 'react';
 import { Button } from 'primereact/button';
 import { SidebarContext } from '../Context/SidebarContext';
 import '../App.css';
+import { Link } from 'react-router-dom';
+
 
 export default function Sidebar({ children }) {
   const { isCollapsed, toggleSidebar } = useContext(SidebarContext);
@@ -25,27 +27,33 @@ export default function Sidebar({ children }) {
   );
 }
 
-export function SidebarItem({ icon, text, active, alert }) {
+export function SidebarItem({ icon, text, active, alert, to }) {
   const { isCollapsed } = useContext(SidebarContext);
 
   if(isCollapsed){
     
     return (
-      <div className="sidebar-item flex  py-2 hover:bg-blue-800 rounded cursor-pointer transition duration-200 ease-in-out">
+      <Link to={to} className="sidebar-item py-2 hover:bg-blue-800 rounded cursor-pointer transition duration-200 ease-in-out">
+
+     
         <div >
           <i className={icon} size="medium" />
         </div>
-      </div>
+    
+      </Link>
     );
   } else {
 
   return (
-    <div className="sidebar-item flex items-center py-2 px-4 hover:bg-blue-800 rounded cursor-pointer transition duration-200 ease-in-out">
+    <Link to={to} className="sidebar-item flex items-center py-2 px-4 hover:bg-blue-800 rounded cursor-pointer transition duration-200 ease-in-out">
+    
       <div style={{ marginRight: '10px' }}>
         <i className={icon} size="medium" />
       </div>
       {!isCollapsed && <span>{text}</span>}
-    </div>
+    
+  </Link>
+  
   );
 }
 }
