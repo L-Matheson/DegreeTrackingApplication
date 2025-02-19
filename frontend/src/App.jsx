@@ -1,15 +1,19 @@
 import React, { useState, useEffect, useRef } from 'react';
-import menubar from './GeneralComponents/Menubar';
-import Sidebar, { SidebarHeader, SidebarItem } from './GeneralComponents/SideBar';
+import Sidebar, { SidebarItem } from './GeneralComponents/SideBar';
 import './App.css';
 import './global.css'; 
-
+import { SidebarProvider } from './Context/SidebarContext';
+import { SidebarHeader } from './GeneralComponents/SideBar';
 export default function App() {
 
 
  return (
+  <SidebarProvider>
    <main className='App'>
       <Sidebar>
+          <SidebarHeader text="Degree Tracker" icon="pi pi-graduation-cap" />
+        
+          <hr className="solid" />
         <SidebarItem icon="pi pi-home" text="Home" active={true} alert={false} />
         <SidebarItem icon="pi pi-book" text="Courses" active={false} alert={false} />
         <SidebarItem icon="pi pi-user" text="Professors" active={false} alert={true} />
@@ -20,6 +24,7 @@ export default function App() {
         <SidebarItem icon="pi pi-sign-out" text="Logout" active={false} alert={false} />
        </Sidebar>
    </main>
+   </SidebarProvider>
   );
 }
 
