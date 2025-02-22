@@ -20,7 +20,6 @@ export default function Sidebar({ children }) {
         <div className="flex justify-between items-center">
           <Button icon="pi pi-bars" className="p-button-text ml-auto" style={{marginRight: '1px'}} onClick={toggleSidebar} />
         </div>
-  
         {children}
       </aside>
     </div>
@@ -29,21 +28,15 @@ export default function Sidebar({ children }) {
 
 export function SidebarItem({ icon, text, active, alert, to }) {
   const { isCollapsed } = useContext(SidebarContext);
-
-  if(isCollapsed){
-    
-    return (
+  if(isCollapsed){ 
+   return (
       <Link to={to} className="sidebar-item py-2 hover:bg-blue-800 rounded cursor-pointer transition duration-200 ease-in-out">
-
-     
         <div >
           <i className={icon} size="medium" />
         </div>
-    
       </Link>
     );
   } else {
-
   return (
     <Link to={to} className="sidebar-item flex items-center py-2 px-4 hover:bg-blue-800 rounded cursor-pointer transition duration-200 ease-in-out">
     
