@@ -30,7 +30,7 @@ export function SidebarItem({ icon, text, active, alert, to }) {
   const { isCollapsed } = useContext(SidebarContext);
   if(isCollapsed){ 
    return (
-      <Link to={to} className="sidebar-item py-2 hover:bg-blue-800 rounded cursor-pointer transition duration-200 ease-in-out">
+      <Link to={to} className="sidebar-item  flex items-center py-2 hover:bg-blue-800 rounded cursor-pointer transition duration-200 ease-in-out" >
         <div >
           <i className={icon} size="medium" />
         </div>
@@ -39,14 +39,11 @@ export function SidebarItem({ icon, text, active, alert, to }) {
   } else {
   return (
     <Link to={to} className="sidebar-item flex items-center py-2 px-4 hover:bg-blue-800 rounded cursor-pointer transition duration-200 ease-in-out">
-    
       <div style={{ marginRight: '10px' }}>
         <i className={icon} size="medium" />
       </div>
-      {!isCollapsed && <span>{text}</span>}
-    
+      <span>{text}</span>
   </Link>
-  
   );
 }
 }
@@ -56,10 +53,8 @@ export function SidebarHeader({ text, icon }) {
 
   if(isCollapsed){
     return(
-    <div className="sidebar-item flex  py-2  transition duration-200 ease-in-out">
-
+    <div className="sidebar-header-collapsed " >
       <i className={icon} size="medium" />
-
   </div>
     );
   } else {
