@@ -35,10 +35,8 @@ To better understand how to use the API after installation, please refer to the 
 * Create docker containers and images through the Django framework
 * Publish the first working version 
 * Create table frameworks to outline data structures needed for the application
-* Brainstorm UI format, divide tasks
-  
-# Project status
-The API is now functioning through React, Django, and docker. Currently, the API only displays a test format using three routes. These being a GET, POST, and DELETE.
+* Create Dashboard, coures, and other related pages
+* Get neccessary data from USM about courses
 
 # Questions
   Any questions can be submitted directly to Lucas at 22lucasmatheson@gmail.com
