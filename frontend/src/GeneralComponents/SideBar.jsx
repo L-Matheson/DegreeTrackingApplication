@@ -15,11 +15,9 @@ export default function Sidebar({ children }) {
   const { isCollapsed, toggleSidebar } = useContext(SidebarContext);
 
   return (
-    <div className={`layout-sidebar ${isCollapsed ? 'collapsed' : ''}`}>
-      <aside className="bg-blue-900 text-white h-screen p-2">
-        <div className="flex justify-between items-center">
-          <Button icon="pi pi-bars" className="p-button-text ml-auto" style={{marginRight: '1px'}} onClick={toggleSidebar} />
-        </div>
+    <div className={`layout-sidebar ${isCollapsed ? 'collapsed' : ''}`} style={{ padding: 0 }}>
+      <aside className="bg-blue-900 text-white h-screen ">
+      
         {children}
       </aside>
     </div>
@@ -30,10 +28,11 @@ export function SidebarItem({ icon, text, active, alert, to }) {
   const { isCollapsed } = useContext(SidebarContext);
   if(isCollapsed){ 
    return (
-      <Link to={to} className="sidebar-item  flex items-center py-2 hover:bg-blue-800 rounded cursor-pointer transition duration-200 ease-in-out" >
-        <div >
-          <i className={icon} size="medium" />
-        </div>
+      <Link to={to} style={{width: 46, marginLeft: 7}} className="sidebar-item  flex items-center py-2 hover:bg-blue-800 rounded cursor-pointer transition duration-200 ease-in-out" >
+      <div>
+      <i className={icon} size="medium"  />
+      </div>
+    
       </Link>
     );
   } else {
@@ -42,29 +41,30 @@ export function SidebarItem({ icon, text, active, alert, to }) {
       <div style={{ marginRight: '10px' }}>
         <i className={icon} size="medium" />
       </div>
-      <span>{text}</span>
+      <span style={{overflowX: 'hidden', whiteSpace: 'nowrap'}}>{text}</span>
   </Link>
   );
 }
 }
 
 export function SidebarHeader({ text, icon }) {
-  const { isCollapsed } = useContext(SidebarContext);
 
+  const { isCollapsed, toggleSidebar } = useContext(SidebarContext);
   if(isCollapsed){
     return(
-    <div className="sidebar-header-collapsed " >
-      <i className={icon} size="medium" />
+    <div className="sidebar-header-collapsed " style={{height: 52, backgroundColor: 'rgb(1, 23, 54)'}} >
+      <Button icon="pi pi-bars" className="p-button-text ml-auto py-3" onClick={toggleSidebar} />
   </div>
     );
   } else {
   return (
-    <div className="sidebar-header">
-      <div className="py-2 px-3 w-full flex justify-start bg-blue-900 text-white">
-        <div style={{ marginRight: '10px' }}>
+    <div className="sidebar-header" style={{backgroundColor: 'rgb(1, 23, 54)', height: 52}}>
+      <div className=" w-full flex text-white"> 
+        <div style={{ marginRight: '10px', paddingLeft: 24, paddingTop: 11 }}>
           <i className={icon} size="medium" />
         </div>
-        <label>{text}</label>
+        <label style={{overflowX: 'hidden', whiteSpace: 'nowrap', paddingBottom: 0, paddingTop: 10}}>{text}</label>
+        <Button icon="pi pi-bars" className="p-button-text ml-6 py-3"  onClick={toggleSidebar} style={{padding: 0, margin: 0, top: 0}} />
       </div>
     </div>
   );

@@ -6,6 +6,10 @@ import './global.css';
 import { SidebarProvider } from './Context/SidebarContext';
 import Home from './pages/Home';
 import Courses from './pages/Courses';
+import Professors from './pages/Professors';
+import Calendar from './pages/Calendar';
+import MajorRequirements from './pages/MajorRequirements';
+import Settings from './pages/Settings';
 // Currently, the only url routes are home and courses. 
 export default function App() {
   return (
@@ -14,24 +18,24 @@ export default function App() {
         <main className='App'>
           <Sidebar>
             <SidebarHeader text="Degree Tracker" icon="pi pi-graduation-cap" />
-            <hr className="solid" />
+      
             <SidebarItem icon="pi pi-home" text="Home" to="/" />
             <SidebarItem icon="pi pi-book" text="Courses" to="/courses" />
-            <SidebarItem icon="pi pi-user" text="Professors" to="/" />
-            <SidebarItem icon="pi pi-calendar" text="Calendar" to="/" />
-            <SidebarItem icon="pi pi-book" text="Major Requirements" to="/" />
+            <SidebarItem icon="pi pi-user" text="Professors" to="/professors" />
+            <SidebarItem icon="pi pi-calendar" text="Calendar" to="/calendar" />
+            <SidebarItem icon="pi pi-book" text="Major Requirements" to="/MajorRequirements" />
             <hr className="solid" />
-            <SidebarItem icon="pi pi-cog" text="Settings" to="/" />
+            <SidebarItem icon="pi pi-cog" text="Settings" to="/Settings" />
             <SidebarItem icon="pi pi-sign-out" text="Logout" to="/" />
           </Sidebar>
           <div className="content">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/courses" element={<Courses />} />
-              <Route path="/" element={<Home />} />
-              <Route path="/" element={<Home />} />
-              <Route path="/" element={<Home />} />
-              <Route path="/" element={<Home />} />
+              <Route path="/professors" element={<Professors />} />
+              <Route path="/calendar" element={<Calendar />} />
+              <Route path="/MajorRequirements" element={<MajorRequirements />} />
+              <Route path="/Settings" element={<Settings />} />
               <Route path="/" element={<Home />} />
             </Routes>
           </div>

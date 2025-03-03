@@ -1,43 +1,126 @@
 // filepath: /c:/Users/kingo/OneDrive/Desktop/DegreeTrackingAPI/frontend/src/pages/Home.jsx
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import { Timeline } from "primereact/timeline";
-import { DataTable } from 'primereact/datatable';
-import { Column } from 'primereact/column';
-import { Rating } from 'primereact/rating';
-import { Tag } from 'primereact/tag';
-
+import { DataTable } from "primereact/datatable";
+import { Column } from "primereact/column";
+import { Rating } from "primereact/rating";
+import { Tag } from "primereact/tag";
+import { InputText } from "primereact/inputtext";
+import { Button } from "primereact/button";
+import { IconField } from 'primereact/iconfield';
+import { InputIcon } from 'primereact/inputicon';
 export default function Home() {
-  const events = ["Spring 2025", "Fall 2025", "Spring 2026", "Fall 2026", "Spring 2027", "Fall 2027", "Spring 2028", "Fall 2028"];
+  const events = [
+    "Spring 2025",
+    "Fall 2025",
+    "Spring 2026",
+    "Fall 2026",
+    "Spring 2027",
+    "Fall 2027",
+    "Spring 2028",
+    "Fall 2028",
+  ];
 
   const courses = [
-    { id: 1, name: 'Introduction to Computer Science', code: 'COS101', credits: 3, semester: 'Fall 2025', rating: 4, status: 'Completed' },
-    { id: 2, name: 'Data Structures', code: 'COS201', credits: 4, semester: 'Spring 2026', rating: 5, status: 'In Progress' },
-    { id: 3, name: 'Software Engineering', code: 'COS430', credits: 4, semester: 'Spring 2025', rating: 5, status: 'In Progress' },
-    { id: 4, name: 'Algorithms', code: 'COS301', credits: 3, semester: 'Fall 2026', rating: 3, status: 'Planned' },
-    { id: 5, name: 'Operating Systems', code: 'COS401', credits: 4, semester: 'Spring 2027', rating: 4, status: 'Planned' },
-    { id: 6, name: 'Database Systems', code: 'COS501', credits: 3, semester: 'Fall 2027', rating: 2, status: 'Planned' },
+    {
+      id: 1,
+      name: "Introduction to Computer Science",
+      code: "COS 101",
+      credits: 3,
+      semester: "Fall 2025",
+      rating: 4,
+      status: "Completed",
+    },
+    {
+      id: 2,
+      name: "Data Structures",
+      code: "COS 201",
+      credits: 4,
+      semester: "Spring 2026",
+      rating: 5,
+      status: "In Progress",
+    },
+    {
+      id: 3,
+      name: "Software Engineering",
+      code: "COS 430",
+      credits: 4,
+      semester: "Spring 2025",
+      rating: 5,
+      status: "In Progress",
+    },
+    {
+      id: 4,
+      name: "Algorithms",
+      code: "COS 301",
+      credits: 3,
+      semester: "Fall 2026",
+      rating: 3,
+      status: "Planned",
+    },
+    {
+      id: 5,
+      name: "Operating Systems",
+      code: "COS 401",
+      credits: 4,
+      semester: "Spring 2027",
+      rating: 4,
+      status: "Planned",
+    },
+    {
+      id: 6,
+      name: "Database Systems",
+      code: "COS 501",
+      credits: 3,
+      semester: "Fall 2027",
+      rating: 2,
+      status: "Planned",
+    },
   ];
 
   const header = <div className="table-header">Current Classes</div>;
 
-
-  const ratingBodyTemplate = (rowData) => {
-    return <Rating value={rowData.rating} readOnly stars={5} cancel={false} />;
-  };
-
-  const statusBodyTemplate = (rowData) => {
-    return <Tag value={rowData.status} severity={rowData.status === 'Completed' ? 'success' : rowData.status === 'In Progress' ? 'warning' : 'info'} />;
-  };
-
   return (
-    <div>
-      <div
-        className="text-900 font-bold text-4xl mb-3"
-        style={{ textAlign: "left" }}
-      >
-        Home
+    <div style={{ padding: 0 }}>
+      {/* Soon to be Content Header */}
+      <div style={{ textAlign: "left", backgroundColor: "white", height: 50 }}>
+        <div style={{ paddingTop: 15, paddingLeft: 20, paddingRight: 15 }}>
+          <div className="text-900 font-medium flex" style={{ width: 10 }}>
+            Dashboard
+            <div className="flex" style={{ right: 0, position: "absolute"}}>
+              <div className="p-inputgroup flex-1 gap-3" style={{ paddingTop: 1 }}>
+            <IconField iconPosition="left">
+                <InputIcon className="pi pi-search"> </InputIcon>
+                <InputText placeholder="Search..." style={{width: 300, height: 25}}/>
+            </IconField>
+              </div>
+              <div className="flex px-4" style={{ gap: 12 }}>
+                <Button
+                  icon="pi pi-bell"
+                  rounded
+                  text
+                  style={{ height: 27, width: 27 }}
+                />
+                <Button
+                  icon="pi pi-cog"
+                  rounded
+                  text
+                  style={{ height: 27, width: 27 }}
+                />
+                <Button
+                  icon="pi pi-calendar"
+                  rounded
+                  text
+                  style={{ height: 27, width: 27 }}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <hr className="solid" style={{ marginBottom: 15 }} />
+
+      <hr className="solid" style={{ padding: 0, marginTop: 0 }} />
+   
       <div className="grid">
         <div className="col-12 md:col-6 lg:col-3">
           <div className="surface-0 shadow-2 p-4 border-1 border-50 border-round">
@@ -125,30 +208,14 @@ export default function Home() {
         </div>
       </div>
 
-     {/* This could also be expanded and used in the Courses tab */}
-              <DataTable value={courses}  tableStyle={{ maxWidth: '50rem', minWidth: '15rem' }} className="mt-4">
-                <Column field="name" header="Course Name"></Column>
-                <Column field="code" header="Course Code"></Column>
-                <Column field="credits" header="Credits"></Column>
-              </DataTable>
-            
-        
-      <div className="lg:col-12">
-        <div className="surface-0 shadow-2 p-6 border-1 border-50 border-round">
-          <div className="card flex flex-column gap-3">
-            <span className="block text-500 font-medium mb-3">
-              Timeline to Graduation
-            </span>
-            <Timeline
-              value={events}
-              layout="horizontal"
-              align="alternate"
-              content={(item) => item}
-              opposite={<span>&nbsp;</span>}
-            />
-          </div>
-        </div>
-      </div>
+
+      <DataTable value={courses} className="mt-4">
+        <Column field="name" header="Course Name"></Column>
+        <Column field="code" header="Course Code"></Column>
+        <Column field="credits" header="Credits"></Column>
+      </DataTable>
+
+
     </div>
   );
 }

@@ -21,7 +21,7 @@ services:
       dockerfile: Dockerfile  # Specify the Dockerfile if it's not named Dockerfile
     container_name: api_service  # Give a descriptive name to the container
     ports:
-      - "8001:8001"  # Map host port 8000 to container port 8000
+      - "8001:8001"  # Map host port 8001 to container port 8001
     environment:
       - ENV=production  # Pass environment variables for configuration
     networks:

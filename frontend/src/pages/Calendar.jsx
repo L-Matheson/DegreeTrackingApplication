@@ -9,14 +9,14 @@ import { InputText } from "primereact/inputtext";
 import { Button } from "primereact/button";
 import { IconField } from 'primereact/iconfield';
 import { InputIcon } from 'primereact/inputicon';
-export default function Courses() {
+export default function Calendar() {
   
   return (
     <div style={{ padding: 0 }}>
       <div style={{ textAlign: "left", backgroundColor: "white", height: 50 }}>
         <div style={{ paddingTop: 15, paddingLeft: 20, paddingRight: 15 }}>
           <div className="text-900 font-medium flex" style={{ width: 10 }}>
-            Courses
+          Calendar
             <div className="flex" style={{ right: 0, position: "absolute"}}>
               <div className="p-inputgroup flex-1 gap-3" style={{ paddingTop: 1 }}>
               
