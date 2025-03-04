@@ -1,0 +1,23 @@
+.overall-performance {
+    background-color: white;
+    width: 90%;
+    height: 50vh;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    box-shadow: 2px 2px 1px 1px lightgray;
+  }
+
+.performance-header {
+    border-bottom: 1px solid lightgray;
+
+}
+
+.performance-content {
+
+}
+
+.performance-footer {
+    border-top: 1px solid lightgray;
+
+}

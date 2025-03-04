@@ -38,10 +38,11 @@
 }
 .content {
   border: 0px solid white; 
-padding-right: 0px;
+  padding-right: 0px;
   padding-left: 17rem;
   transition: 0.5s ;
   background-color: rgb(233, 230, 230);
+  height: 100vh;
 
 }
 .layout-sidebar.collapsed ~ .content {
@@ -63,7 +64,7 @@ padding-right: 0px;
 
 .layout-sidebar.collapsed  {
   transition: 0.5s;
-  width: 60px; /* Adjust the width as needed */
+  width: 60px; 
 }
 
 .sidebar-header {
@@ -80,7 +81,6 @@ padding-right: 0px;
   text-align: center;
   font-size: 1.2em;
   font-weight: 500;
-
   color: lightgray;
 }
 
@@ -106,15 +106,3 @@ padding-right: 0px;
   font-family: Helvetica, Arial, sans-serif;
 }
 
-h1 {
-  height: 43px;
-  margin-top: 0px;
-  padding-bottom: 0px;
-  margin-bottom: 0px;
-	font-size: 1em;
-	font-weight: 600;
-	letter-spacing: .01em;
-	text-shadow: .022em .022em .022em #111;
-	color: black;
-  background-color: white;
-}
