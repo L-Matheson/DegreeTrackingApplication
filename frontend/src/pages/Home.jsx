@@ -140,7 +140,7 @@ export default function Home() {
       <div className="overall-performance">
         <div className="performance-header">
           <div style={{ textAlign: "left", padding: 10, fontWeight: 600 }}>
-            Welcome Test User - Freshman
+            Welcome Test User
           </div>
         </div>
 
@@ -259,20 +259,20 @@ export default function Home() {
         <div className="current-semester-courses">
           <div className="current-semester-class">
             {" "}
-            <Chip label="COS 430" seve />
+            <Chip label="COS 430" style={{fontWeight: 600}} />
           </div>
 
           <div className="current-semester-class">
             {" "}
-            <Chip label="COS 285" />
+            <Chip label="COS 285" style={{fontWeight: 600}}/>
           </div>
           <div className="current-semester-class">
             {" "}
-            <Chip label="GEO 101" />
+            <Chip label="GEO 101" style={{fontWeight: 600}}/>
           </div>
           <div className="current-semester-class">
             {" "}
-            <Chip label="PHI 105" />
+            <Chip label="PHI 105" style={{fontWeight: 600}}/>
           </div>
         </div>
       </div>
@@ -335,20 +335,19 @@ export default function Home() {
           <div className="current-semester-courses">
             <div className="next-semester-class">
               {" "}
-              <Chip label="COS 473" />
-            </div>
-
-            <div className="next-semester-class">
-              {" "}
-              <Chip label="COS 350" severity={"secondary"} />
+              <Chip label="COS 473" style={{fontWeight: 600}}/>
             </div>
             <div className="next-semester-class">
               {" "}
-              <Chip label="ITP 210" />
+              <Chip label="COS 350" style={{fontWeight: 600}}/>
             </div>
             <div className="next-semester-class">
               {" "}
-              <Chip label="MAT 110" />
+              <Chip label="ITP 210" style={{fontWeight: 600}}/>
+            </div>
+            <div className="next-semester-class">
+              {" "}
+              <Chip label="MAT 110" style={{fontWeight: 600}}/>
             </div>
           </div>
           <div className="cell-footer">
