@@ -5,6 +5,8 @@
   tracking application has to offer. 
 
 */
+import { Tag } from "primereact/tag";
+import { Card } from "primereact/card";
 import { Chip } from "primereact/chip";
 import React, { useState, useEffect } from "react";
 import { InputText } from "primereact/inputtext";
@@ -14,81 +16,79 @@ import { InputIcon } from "primereact/inputicon";
 import { MeterGroup } from "primereact/metergroup";
 import "./HomeFormat.css";
 export default function Home() {
-  const majorCoursesRemaining = [
-    { label: "Major Credits Taken", value: 6 },
-    { label: "Major Credits Left", color: "lightgray", value: 94 },
-  ];
+  const meter = (props, attr) => (
+    <span
+      {...attr}
+      key={props.index}
+      style={{
+        backgroundColor: props.color,
+        width: props.percentage + "%",
+      }}
+    />
+  );
 
-  const coreCoursesRemaining = [
-    { label: "Core Credits Taken", value: 10 },
-    { label: "Core Credits Left", color: "lightgray", value: 90 },
-  ];
+  const labelList = ({ values }) => (
+    <div className="flex flex-wrap gap-3">
+      {values.map((item, index) => (
+        <Card className="flex-1" key={index}>
+          <div
+            className="flex justify-content-between gap-5"
+            style={{ width: 200 }}
+          >
+            <div className="flex flex-column gap-1">
+              <span className="text-secondary text-sm">{item.label}</span>
+              <span className="font-bold text-lg">{item.value}</span>
+            </div>
+            <span
+              className="w-2rem h-2rem border-circle inline-flex justify-content-center align-items-center text-center"
+              style={{ backgroundColor: item.color, color: "#ffffff" }}
+            >
+              <i className={item.icon} />
+            </span>
+          </div>
+        </Card>
+      ))}
+    </div>
+  );
 
-  const events = [
-    "Spring 2025",
-    "Fall 2025",
-    "Spring 2026",
-    "Fall 2026",
-    "Spring 2027",
-    "Fall 2027",
-    "Spring 2028",
-    "Fall 2028",
-  ];
+  const start = ({ totalPercent }) => (
+    <div className="flex justify-content-between mt-3 mb-2 relative">
+      <span>Total Credits</span>
+      <span
+        style={{ width: totalPercent + 3 + "%" }}
+        className="absolute text-right"
+      >
+        {totalPercent + " Credits"}
+      </span>
+      <span className="font-medium">120 Credits</span>
+    </div>
+  );
 
-  const courses = [
+  const values = [
     {
-      id: 1,
-      name: "Introduction to Computer Science",
-      code: "COS 101",
-      credits: 3,
-      semester: "Fall 2025",
-      rating: 4,
-      status: "Completed",
+      label: "Core Credits",
+      color: "#34d399",
+      value: 25,
+      icon: "pi pi-book",
     },
     {
-      id: 2,
-      name: "Data Structures",
-      code: "COS 201",
-      credits: 4,
-      semester: "Spring 2026",
-      rating: 5,
-      status: "In Progress",
+      label: "Major Credits",
+      color: "#fbbf24",
+      value: 15,
+      icon: "pi pi-briefcase",
     },
     {
-      id: 3,
-      name: "Software Engineering",
-      code: "COS 430",
-      credits: 4,
-      semester: "Spring 2025",
-      rating: 5,
-      status: "In Progress",
+      label: "Minor Credits",
+      color: "#60a5fa",
+      value: 6,
+      icon: "pi pi-building-columns",
     },
     {
-      id: 4,
-      name: "Algorithms",
-      code: "COS 301",
-      credits: 3,
-      semester: "Fall 2026",
-      rating: 3,
-      status: "Planned",
-    },
-    {
-      id: 5,
-      name: "Operating Systems",
-      code: "COS 401",
-      credits: 4,
-      semester: "Spring 2027",
-      rating: 4,
-      status: "Planned",
-    },
-    {
-      id: 6,
-      name: "Database Systems",
-      code: "COS 501",
-      credits: 3,
-      semester: "Fall 2027",
-      rating: 2,
-      status: "Planned",
+      label: "Electives",
+      color: "#c084fc",
+      value: 6,
+      icon: "pi pi-globe",
+      meterTemplate: meter,
     },
   ];
 
@@ -145,13 +145,11 @@ export default function Home() {
         </div>
 
         <div className="performace-banner">
-          This banner will potentially contain all student information, such as
-          id, major, minor, etc
+          Extra Information can go here, To be determined
         </div>
-
         <div className="performance-content">
-          <div className="grid py-3" style={{ padding: 15 }}>
-            <div className=" lg:col-4">
+          <div className=" py-3" style={{ padding: 15 }}>
+            {/* <div className=" lg:col-4">
               <div className="surface-0  shadow-2 border-1 border-50 p-4 ">
                 <div className="flex justify-content-between mb-3">
                   <div>
@@ -212,40 +210,35 @@ export default function Home() {
                 <span className="text-green-500 font-medium">text </span>
                 <span className="text-500"> text</span>
               </div>
+            </div> */}
+            <div className="card flex justify-content-center">
+              <MeterGroup
+                labelPosition="start"
+                values={values}
+                start={start}
+                meter={meter}
+                labelList={labelList}
+              />
             </div>
           </div>
         </div>
 
         <div className="performance-footer">
-          <div
-            style={{
-              paddingLeft: 15,
-              paddingRight: 15,
-              paddingTop: 18,
-              width: "55%",
-            }}
-          >
-            <MeterGroup
-              values={majorCoursesRemaining}
-              style={{ fontWeight: 550 }}
-            />
+          <div className="student-tag">
+            <Tag value="Major: Computer Science" rounded />
           </div>
-
-          <div
-            style={{
-              paddingLeft: 15,
-              paddingRight: 15,
-              paddingTop: 18,
-              width: "45%",
-            }}
-          >
-            <MeterGroup
-              values={coreCoursesRemaining}
-              style={{ fontWeight: 550 }}
-            />
+          <div className="student-tag">
+            <Tag value="Minor: Cyber Security" rounded />
+          </div>
+          <div className="student-tag">
+            <Tag value="Graduate in Four Years" rounded />
+          </div>
+          <div className="student-tag">
+            <Tag value="Sophomore" rounded />
           </div>
         </div>
       </div>
+
       <div className="current-semester-banner">
         <div className="current-semester-cell ">
           <div className="current-semester">
@@ -266,28 +259,103 @@ export default function Home() {
         <div className="current-semester-courses">
           <div className="current-semester-class">
             {" "}
-            <Chip label="COS 430"  />
+            <Chip label="COS 430" seve />
           </div>
 
           <div className="current-semester-class">
             {" "}
-            <Chip label="COS 285"  />
+            <Chip label="COS 285" />
           </div>
           <div className="current-semester-class">
             {" "}
-            <Chip label="GEO 101"  />
+            <Chip label="GEO 101" />
           </div>
           <div className="current-semester-class">
             {" "}
-            <Chip label="PHI 105"  />
+            <Chip label="PHI 105" />
           </div>
         </div>
       </div>
-      
-      <div className="support-cells">
 
-        
-Advisor
+      <div className="support-cells">
+        <div className="support-cell">
+          <div
+            style={{
+              fontWeight: 600,
+              textAlign: "left",
+              padding: 20,
+              color: "gray",
+            }}
+          >
+            Advisor
+          </div>
+          <div className="advisor-name" style={{ fontWeight: 600 }}>
+            <div className="circle">FL</div>
+            <div style={{ paddingLeft: 5 }}>First Lastname</div>
+          </div>
+
+          <div className="cell-footer">
+            <Button label="Contact" size="small" />
+          </div>
+        </div>
+
+        <div className="support-cell">
+          <div
+            style={{
+              fontWeight: 600,
+              textAlign: "left",
+              padding: 20,
+              color: "gray",
+            }}
+          >
+            GPA
+          </div>
+          <div className="current-semester-courses">
+            <div className="gpa">
+              <div style={{fontWeight: 600, color: "GrayText"}}>Spring 2025:</div> 3.2
+            </div>
+            <div className="gpa">  <div style={{fontWeight: 600, color: "GrayText", width: "auto"}}>Overall:</div> 3.2</div>
+          </div>
+          <div className="cell-footer">
+            <Button label="View Transcript" size="small" />
+          </div>
+        </div>
+
+        <div className="support-cell">
+          <div
+            style={{
+              fontWeight: 600,
+              textAlign: "left",
+              padding: 20,
+              color: "gray",
+            }}
+          >
+            Fall 2025 Courses
+          </div>
+          <div className="current-semester-courses">
+            <div className="next-semester-class">
+              {" "}
+              <Chip label="COS 473" />
+            </div>
+
+            <div className="next-semester-class">
+              {" "}
+              <Chip label="COS 350" severity={"secondary"} />
+            </div>
+            <div className="next-semester-class">
+              {" "}
+              <Chip label="ITP 210" />
+            </div>
+            <div className="next-semester-class">
+              {" "}
+              <Chip label="MAT 110" />
+            </div>
+          </div>
+          <div className="cell-footer">
+            <Button label="Full Course Catalog" size="small" />
+            <Button label="Alter Courses" size="small" />
+          </div>
+        </div>
       </div>
     </div>
   );
