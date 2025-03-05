@@ -1,0 +1,180 @@
+.overall-performance {
+  background-color: white;
+  width: 90%; /* Set width */
+  height: 400px; /* Set height */
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  box-shadow: 2px 2px 1px 1px lightgray;
+  flex-direction: column;
+  display: flex;
+}
+
+.performace-banner {
+  width: 90%;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 25px;
+  height: 5vh;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+}
+
+.performance-header {
+  flex: 0 0 50px;
+  border-bottom: 1px solid lightgray;
+  width: 100%;
+}
+
+.performance-content {
+  flex-grow: 1;
+  padding: 10px;
+  overflow: auto;
+  background: white;
+}
+
+.performance-footer {
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex: 0 0 50px;
+  border-top: 1px solid lightgray;
+  display: flex;
+  padding-bottom: 10px;
+}
+
+.current-semester-banner {
+  background-color: white;
+  margin-top: 15px;
+  width: 90%;
+  height: 12vh;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  box-shadow: 2px 2px 1px 1px lightgray;
+  display: flex;
+  flex: 1;
+}
+
+.current-semester-cell {
+  width: 11%;
+  left: 0;
+  margin-left: 15px;
+  display: flex;
+
+}
+
+.current-semester {
+  padding-top: 30px;
+}
+
+.current-semester-class {
+  padding: 5px;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.current-semester-courses {
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  white-space: normal;
+  overflow-y: auto;
+  flex-wrap: wrap;
+}
+
+.student-tag {
+  padding: 5px;
+  text-align: center;
+  font-size: 1px;
+  align-items: center;
+  justify-content: center;
+}
+.support-cells {
+  margin-top: 15px;
+  width: 90%;
+  height: 25vh;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  display: flex;
+  gap: 20px;
+}
+
+.support-cell {
+  background-color: white;
+  width: 50vh;
+  height: 25vh;
+  border-radius: 5px;
+  box-shadow: 2px 2px 1px 1px lightgray;
+  position: relative;
+  overflow: auto;
+}
+
+.news-cells {
+  background-color: white;
+  margin-top: 15px;
+  width: 90%;
+  height: 25vh;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  box-shadow: 2px 2px 1px 1px lightgray;
+  display: flex;
+  flex: 1;
+}
+
+.advisor-name {
+  padding-left: 25px;
+  align-items: center;
+  display: flex;
+  overflow: hidden;
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
+  border-radius: 50%;
+  background-color: lightblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 0;
+}
+
+.cell-footer {
+  position: absolute;
+  bottom: 0px;
+  display: flex;
+  gap: 90px;
+  padding: 25px;
+}
+.hint {
+  font-size: small;
+}
+
+.next-semester-class {
+    padding: 5px;
+    display: flex;
+    white-space: normal;
+  }
+
+  .gpa {
+    width: 150px;
+font-weight: 600;
+  }
