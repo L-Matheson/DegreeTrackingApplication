@@ -52,13 +52,13 @@ export function SidebarHeader({ text, icon }) {
   const { isCollapsed, toggleSidebar } = useContext(SidebarContext);
   if(isCollapsed){
     return(
-    <div className="sidebar-header-collapsed " style={{height: 52, backgroundColor: 'rgb(1, 23, 54)'}} >
+    <div className="sidebar-header-collapsed " style={{height: 51, backgroundColor: 'rgb(1, 23, 54)'}} >
       <Button icon="pi pi-bars" className="p-button-text ml-auto py-3" onClick={toggleSidebar} />
   </div>
     );
   } else {
   return (
-    <div className="sidebar-header" style={{backgroundColor: 'rgb(1, 23, 54)', height: 52}}>
+    <div className="sidebar-header" style={{backgroundColor: 'rgb(1, 23, 54)', height: 51}}>
       <div className=" w-full flex text-white"> 
         <div style={{ marginRight: '10px', paddingLeft: 24, paddingTop: 11 }}>
           <i className={icon} size="medium" />

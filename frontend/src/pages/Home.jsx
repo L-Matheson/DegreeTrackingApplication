@@ -1,4 +1,11 @@
-// filepath: /c:/Users/kingo/OneDrive/Desktop/DegreeTrackingAPI/frontend/src/pages/Home.jsx
+/*
+ @Author Lucas Matheson
+
+  Home.jsx displays a high level, quick overview of everything the degree 
+  tracking application has to offer. 
+
+*/
+import { Chip } from "primereact/chip";
 import React, { useState, useEffect } from "react";
 import { InputText } from "primereact/inputtext";
 import { Button } from "primereact/button";
@@ -7,10 +14,16 @@ import { InputIcon } from "primereact/inputicon";
 import { MeterGroup } from "primereact/metergroup";
 import "./HomeFormat.css";
 export default function Home() {
-  const coursesRemaining = [
-    { label: "Courses Taken", value: 15 },
-    { label: "Courses Left", color: "lightgray", value: 85 },
+  const majorCoursesRemaining = [
+    { label: "Major Credits Taken", value: 6 },
+    { label: "Major Credits Left", color: "lightgray", value: 94 },
   ];
+
+  const coreCoursesRemaining = [
+    { label: "Core Credits Taken", value: 10 },
+    { label: "Core Credits Left", color: "lightgray", value: 90 },
+  ];
+
   const events = [
     "Spring 2025",
     "Fall 2025",
@@ -81,7 +94,6 @@ export default function Home() {
 
   return (
     <div style={{ padding: 0 }}>
- 
       <div style={{ textAlign: "left", backgroundColor: "white", height: 50 }}>
         <div style={{ paddingTop: 15, paddingLeft: 20, paddingRight: 15 }}>
           <div className="text-900 font-medium flex" style={{ width: 10 }}>
@@ -123,7 +135,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
       <hr className="solid" style={{ padding: 0, marginTop: 0 }} />
 
       <div className="overall-performance">
@@ -133,16 +144,21 @@ export default function Home() {
           </div>
         </div>
 
+        <div className="performace-banner">
+          This banner will potentially contain all student information, such as
+          id, major, minor, etc
+        </div>
+
         <div className="performance-content">
           <div className="grid py-3" style={{ padding: 15 }}>
             <div className=" lg:col-4">
-              <div className="surface-0  p-4 ">
+              <div className="surface-0  shadow-2 border-1 border-50 p-4 ">
                 <div className="flex justify-content-between mb-3">
                   <div>
                     <span className="block text-500 font-medium mb-3">
-                      Classes this semester
+                      Basic info here
                     </span>
-                    <div className="text-900 font-medium text-xl">5</div>
+                    <div className="text-900 font-medium text-xl">info</div>
                   </div>
                   <div
                     className="flex align-items-center justify-content-center bg-blue-100 border-round"
@@ -151,158 +167,128 @@ export default function Home() {
                     <i className="pi pi-thumbtack text-blue-500 text-xl"></i>
                   </div>
                 </div>
-                <span className="text-green-500 font-medium">9 </span>
-                <span className="text-500">until degree completion!</span>
+                <span className="text-green-500 font-medium">text </span>
+                <span className="text-500"> text</span>
               </div>
             </div>
 
-            <div className="lg:col-4">
-              <div className="surface-0 shadow-2 p-4 border-1 border-50 border-round">
+            <div className=" lg:col-4">
+              <div className="surface-0  shadow-2 border-1 border-50 p-4 ">
                 <div className="flex justify-content-between mb-3">
                   <div>
                     <span className="block text-500 font-medium mb-3">
-                      Next Class
+                      Basic info here
                     </span>
-                    <div className="text-900 font-medium text-xl">COS 430</div>
+                    <div className="text-900 font-medium text-xl">info</div>
                   </div>
                   <div
-                    className="flex align-items-center justify-content-center bg-orange-100 border-round"
+                    className="flex align-items-center justify-content-center bg-blue-100 border-round"
                     style={{ width: "2.5rem", height: "2.5rem" }}
                   >
-                    <i className="pi pi-check-circle text-orange-500 text-xl"></i>
+                    <i className="pi pi-thumbtack text-blue-500 text-xl"></i>
                   </div>
                 </div>
-                <span className="text-green-500 font-medium">12:00 AM </span>
-                <span className="text-500">Online</span>
+                <span className="text-green-500 font-medium">text </span>
+                <span className="text-500"> text</span>
               </div>
             </div>
 
-            <div className="lg:col-4">
-              <div className="surface-0 shadow-2 p-4 border-1 border-50 border-round">
+            <div className=" lg:col-4">
+              <div className="surface-0  shadow-2 border-1 border-50 p-4 ">
                 <div className="flex justify-content-between mb-3">
                   <div>
                     <span className="block text-500 font-medium mb-3">
-                      Requirements met
+                      Basic info here
                     </span>
-                    <div className="text-900 font-medium text-xl">13</div>
+                    <div className="text-900 font-medium text-xl">info</div>
                   </div>
                   <div
-                    className="flex align-items-center justify-content-center bg-cyan-100 border-round"
+                    className="flex align-items-center justify-content-center bg-blue-100 border-round"
                     style={{ width: "2.5rem", height: "2.5rem" }}
                   >
-                    <i className="pi pi-microchip text-cyan-500 text-xl"></i>
+                    <i className="pi pi-thumbtack text-blue-500 text-xl"></i>
                   </div>
                 </div>
-                <span className="text-green-500 font-medium">9 </span>
-                <span className="text-500">left!</span>
+                <span className="text-green-500 font-medium">text </span>
+                <span className="text-500"> text</span>
               </div>
             </div>
-          </div>
-
-          <div style={{ paddingLeft: 15, paddingRight: 15 }}>
-            <MeterGroup values={coursesRemaining} style={{ fontWeight: 550 }} />
           </div>
         </div>
 
-        <div className="performance-footer">footer</div>
-      </div>
-
-      {/* <div className="grid">
-        <div className="col-12 md:col-6 lg:col-3">
-          <div className="surface-0 shadow-2 p-4 border-1 border-50 border-round">
-            <div className="flex justify-content-between mb-3">
-              <div>
-                <span className="block text-500 font-medium mb-3">
-                  Classes this semester
-                </span>
-                <div className="text-900 font-medium text-xl">5</div>
-              </div>
-              <div
-                className="flex align-items-center justify-content-center bg-blue-100 border-round"
-                style={{ width: "2.5rem", height: "2.5rem" }}
-              >
-                <i className="pi pi-thumbtack text-blue-500 text-xl"></i>
-              </div>
-            </div>
-            <span className="text-green-500 font-medium">9 </span>
-            <span className="text-500">until degree completion!</span>
+        <div className="performance-footer">
+          <div
+            style={{
+              paddingLeft: 15,
+              paddingRight: 15,
+              paddingTop: 18,
+              width: "55%",
+            }}
+          >
+            <MeterGroup
+              values={majorCoursesRemaining}
+              style={{ fontWeight: 550 }}
+            />
           </div>
-        </div>
 
-        <div className="col-12 md:col-6 lg:col-3">
-          <div className="surface-0 shadow-2 p-4 border-1 border-50 border-round">
-            <div className="flex justify-content-between mb-3">
-              <div>
-                <span className="block text-500 font-medium mb-3">
-                  Next Class
-                </span>
-                <div className="text-900 font-medium text-xl">COS 430</div>
-              </div>
-              <div
-                className="flex align-items-center justify-content-center bg-orange-100 border-round"
-                style={{ width: "2.5rem", height: "2.5rem" }}
-              >
-                <i className="pi pi-check-circle text-orange-500 text-xl"></i>
-              </div>
-            </div>
-            <span className="text-green-500 font-medium">12:00 AM </span>
-            <span className="text-500">Online</span>
-          </div>
-        </div>
-
-        <div className=" md:col-6 lg:col-3">
-          <div className="surface-0 shadow-2 p-4 border-1 border-50 border-round">
-            <div className="flex justify-content-between mb-3">
-              <div>
-                <span className="block text-500 font-medium mb-3">
-                  Requirements met
-                </span>
-                <div className="text-900 font-medium text-xl">13</div>
-              </div>
-              <div
-                className="flex align-items-center justify-content-center bg-cyan-100 border-round"
-                style={{ width: "2.5rem", height: "2.5rem" }}
-              >
-                <i className="pi pi-microchip text-cyan-500 text-xl"></i>
-              </div>
-            </div>
-            <span className="text-green-500 font-medium">9 </span>
-            <span className="text-500">left!</span>
-          </div>
-        </div>
-
-        <div className="col-12 md:col-6 lg:col-3">
-          <div className="surface-0 shadow-2 p-4 border-1 border-50 border-round">
-            <div className="flex justify-content-between mb-3">
-              <div>
-                <span className="block text-500 font-medium mb-3">
-                  Current GPA
-                </span>
-                <div className="text-900 font-medium text-xl">3.42</div>
-              </div>
-              <div
-                className="flex align-items-center justify-content-center bg-purple-100 border-round"
-                style={{ width: "2.5rem", height: "2.5rem" }}
-              >
-                <i className="pi pi-graduation-cap text-purple-500 text-xl"></i>
-              </div>
-            </div>
-            <span className="text-500">Current Goal: </span>
-            {3.42 > 3.5 ? (
-              <span className="text-green-500 font-medium">3.5 </span>
-            ) : (
-              <span className="text-red-500 font-medium">3.5 </span>
-            )}
+          <div
+            style={{
+              paddingLeft: 15,
+              paddingRight: 15,
+              paddingTop: 18,
+              width: "45%",
+            }}
+          >
+            <MeterGroup
+              values={coreCoursesRemaining}
+              style={{ fontWeight: 550 }}
+            />
           </div>
         </div>
       </div>
+      <div className="current-semester-banner">
+        <div className="current-semester-cell ">
+          <div className="current-semester">
+            <div style={{ textDecoration: "underline", fontWeight: 500 }}>
+              Spring 2025
+            </div>
 
+            <div
+              className=" text-500 font-small"
+              style={{ fontSize: 14, fontWeight: 500 }}
+            >
+              12 credits
+            </div>
+          </div>
+        </div>
 
-      <DataTable value={courses} className="mt-4">
-        <Column field="name" header="Course Name"></Column>
-        <Column field="code" header="Course Code"></Column>
-        <Column field="credits" header="Credits"></Column>
-      </DataTable>  */}
+        {/* Make into a for loop that runs through courses when available */}
+        <div className="current-semester-courses">
+          <div className="current-semester-class">
+            {" "}
+            <Chip label="COS 430"  />
+          </div>
+
+          <div className="current-semester-class">
+            {" "}
+            <Chip label="COS 285"  />
+          </div>
+          <div className="current-semester-class">
+            {" "}
+            <Chip label="GEO 101"  />
+          </div>
+          <div className="current-semester-class">
+            {" "}
+            <Chip label="PHI 105"  />
+          </div>
+        </div>
+      </div>
+      
+      <div className="support-cells">
+
+        
+Advisor
+      </div>
     </div>
   );
 }
