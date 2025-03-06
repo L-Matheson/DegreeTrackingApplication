@@ -1,0 +1,224 @@
+{
+ "course": [
+  {
+   "name": "COS 160 - Structured Problem Solving Java",
+   "course_block": "COS 160 - Structured Problem Solving Java\nAn introduction to the use of digital computers for problem solving, employing the Java programming language as a vehicle. Content includes elementary control structures and data representation methods provided by Java and the object-oriented programming methodology. Course requirements include a substantial number of programming projects.\nPrerequisite(s): Grade of C or higher in MAT 108 or appropriate placement score.\nCo-requisite(s): COS 170.\nCredits: 3\nCourse Typically Offered: Fall and spring\nCourse Type: Computer Science"
+  },
+  {
+   "name": "COS 161 - Algorithms in Programming",
+   "course_block": "COS 161 - Algorithms in Programming\nThe development of algorithms and their implementations in a higher-level programming language, with emphasis on proper design principles and advanced programming concepts. Introduction to the performance analysis of algorithms. Course requirements include a substantial number of programming projects.\nPrerequisite(s): Grade of C or higher in COS 160 or permission of instructor.\nCo-requisite(s):\nCredits: 4\nCourse Typically Offered: Fall and spring\nCourse Type: Computer Science"
+  },
+  {
+   "name": "COS 170 - Structured Programming Laboratory",
+   "course_block": "COS 170 - Structured Programming Laboratory\nComputational experiments will be designed to teach students how to construct reliable software using Java. Topics to be covered include: Windows system, conditional program flow, iteration, procedures and functions, and symbolic debugging.\nPrerequisite(s):\nCo-requisite(s): COS 160.\nCredits: 1\nCourse Typically Offered: Fall and spring\nCourse Type: Computer Science"
+  },
+  {
+   "name": "COS 250 - Computer Organization",
+   "course_block": "COS 250 - Computer Organization\nThe basic hardware, architecture, and software of computer systems are covered. Subjects include digital logic design, microprogramming, machine languages, assembly languages, and operating systems.\nPrerequisite(s): Grade of C or higher in COS 161.\nCo-requisite(s): COS 255.\nCredits: 3\nCourse Typically Offered: Fall\nCourse Type: Computer Science"
+  },
+  {
+   "name": "COS 255 - Computer Organization Laboratory",
+   "course_block": "COS 255 - Computer Organization Laboratory\nStudents design, build, and test combinational and sequential logic circuits and write assembly language programs.\nPrerequisite(s):\nCo-requisite(s): COS 250.\nCredits: 1\nCourse Typically Offered: Fall\nCourse Type: Computer Science"
+  },
+  {
+   "name": "COS 285 - Data Structures",
+   "course_block": "COS 285 - Data Structures\nBasic abstract data types and their representations, fundamental algorithms, and algorithm analysis. Consideration is given to applications. Specific topics include linked structures, trees, searching and sorting, priority queues, graphs, and hashing. Course requirements include a substantial programming component.\nPrerequisite(s): Grade of C or higher in COS 161, and MAT 145 or MAT 152 or their equivalents, or permission of instructor.\nCo-requisite(s):\nCredits: 4\nCourse Typically Offered: Fall\nCourse Type: Computer Science"
+  },
+  {
+   "name": "COS 360 - Programming Languages",
+   "course_block": "COS 360 - Programming Languages\nPrinciples and techniques of high level programming language specification, including syntax and semantics, and implementation methods. Languages are considered as formal constructs representing computable functions and the course presents basic results of computability theory. Methods of recognition for regular and context free languages, the functional alternative to the state based imperative paradigm, use of parse trees as control constructs, and concurrent programming synchronization primitives are also covered.\nPrerequisite(s): Grade of C or higher in COS 280 and COS 285, or permission of instructor.\nCo-requisite(s):\nCredits: 3\nCourse Typically Offered: Fall\nCourse Type: Computer Science"
+  },
+  {
+   "name": "COS 398 - Professional Ethics and Social Impact of Computing",
+   "course_block": "COS 398 - Professional Ethics and Social Impact of Computing\nA study of ethical perspectives and social responsibilities of computer professionals. Assigned readings provide the basis for class discussions of such issues as social control and privacy, computer viruses, ACM code of professional conduct, hacking, limits of correctness in computer software, military influence on computer science research and education.\nPrerequisite(s): Grade of C or higher in COS 161 or permission of instructor.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Ethical Inquiry, Social Responsibility, and Citizenship\nCourse Typically Offered: Spring\nCourse Type: Computer Science"
+  },
+  {
+   "name": "COS 485 - Design and Analysis of Computing Algorithms",
+   "course_block": "COS 485 - Design and Analysis of Computing Algorithms\nAn introduction to the design and analysis of algorithms. Techniques for designing algorithms, such as divide-and-conquer, greedy method, dynamic programming, and backtracking are emphasized and illustrated. Many problems of practical importance are covered including: minimum spanning tree, single source shortest path, traveling salesperson, and graph search. The concepts of NP-completeness are also considered. Substantial programming in a high-level language.\nPrerequisite(s): Grade of C or higher in COS 285.\nCo-requisite(s):\nCredits: 3\nCourse Typically Offered: Spring\nCourse Type: Computer Science"
+  },
+  {
+   "name": "COS 420 - Object-Oriented Design",
+   "course_block": "COS 420 - Object-Oriented Design\nThis course will focus on the construction of object-oriented software. Students will learn conceptual models for organizing objects and object hierarchies, an object-oriented design notation, the application of design patterns, and the use of software development methodologies such as the Agile development process. The capabilities will be used to solve relatively complex problems in a group setting.\nPrerequisite(s): Grade of C or higher in either COS 350 or COS 360 or any COS 400 level course, or permission of instructor.\nCo-requisite(s):\nCredits: 4\nMeets the Following Core Requirement: Capstone\nCourse Typically Offered: Spring\nCourse Type: Computer Science"
+  },
+  {
+   "name": "COS 430 - Software Engineering",
+   "course_block": "COS 430 - Software Engineering\nStudy of methods applied to large-scale software development, including topics such as requirements analysis and specification, design, validation and verification, and project management, with emphasis on principles of design. Students use methods on a large programming project.\nPrerequisite(s): COS 285 or COS 360.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Capstone\nCourse Typically Offered:\nCourse Type: Computer Science"
+  },
+  {
+   "name": "COS 450 - Operating Systems",
+   "course_block": "COS 450 - Operating Systems\nBottom up construction of a layered operating system beginning with the hardware interface and ending with the user interface. Specific topics covered include concurrent processes, process management, I/O, virtual memory, file management, resource scheduling, and performance measurement. Students are assumed to be familiar with general machine architecture, functions of system software (compilers, loaders, editors, etc.), data structures, and have some experience with UNIX or other multiprogramming operating systems.\nPrerequisite(s): Grade of C or higher in COS 250.\nCo-requisite(s):\nCredits: 3\nCourse Typically Offered: Fall of Even Years\nCourse Type: Computer Science"
+  },
+  {
+   "name": "COS 457 - Database Systems",
+   "course_block": "COS 457 - Database Systems\nStudy of the methods and principles of database management systems (DBMS). Topics addressed include DBMS objectives and architecture, data models, the SQL data definition and data manipulation language, and providing Internet access to databases. The entity-relationship and relational models are emphasized and their use required in a design project.\nPrerequisite(s): Grade of C or higher in COS 280 and COS 285, or permission of instructor.\nCo-requisite(s):\nCredits: 3\nCourse Typically Offered: Once every two years\nCourse Type: Computer Science"
+  },
+  {
+   "name": "MAT 145 - Discrete Mathematics I",
+   "course_block": "MAT 145 - Discrete Mathematics I\nThis course is an introduction to discrete mathematics necessary for a study of computer science. Topics will include a study of functions, sets, basic logic systems, and combinatorics.\nPrerequisite(s): Grade of C- or higher in MAT 108 or MAT 140 or MAT 152, or appropriate placement test score.\nCo-requisite(s):\nCredits: 3\nCourse Typically Offered:\nCourse Type: Mathematics"
+  },
+  {
+   "name": "COS 280 - Discrete Mathematics II",
+   "course_block": "COS 280 - Discrete Mathematics II\nConcepts of modern algebra, set theory, Boolean algebra and predicate logic, elements of graph theory, and their application to computer science. This course emphasizes a syntactic approach to proof discovery.\nPrerequisite(s): Grade of C or higher in COS 160 and MAT 145.\nCo-requisite(s):\nCredits: 4\nCourse Typically Offered: Fall\nCourse Type: Computer Science"
+  },
+  {
+   "name": "EGN 181 - Engineering Tools: Mathematica",
+   "course_block": "EGN 181 - Engineering Tools: Mathematica\nAn introduction to Mathematica as a general-purpose computational and visualization tool. Topics covered include symbolic and numerical computations, graphics and visualization, and basics of the Mathematica programming language. Students will use Mathematica in several hands-on exercises to solve typical computational problems. Lecture 1 hr., Lab 1 hr.\nPrerequisite(s):\nCo-requisite(s):\nCredits: 1\nCourse Typically Offered:\nCourse Type: General Engineering"
+  },
+  {
+   "name": "EGN 248 - Introduction to Differential Equations and Linear Algebra",
+   "course_block": "EGN 248 - Introduction to Differential Equations and Linear Algebra\nIntroduction to linear algebra and differential equations for engineering and science students. Standard methods for solving differential equations as they arise in engineering and science, linear algebra concepts needed to solve linear algebraic systems and linear systems of differential equations, and computational skills in matrix theory needed in computational linear algebra. Topics will include matrix algebra, determinants, linear independence, linear systems, linear transformations, eigenvalues and eigenvectors, vector spaces, first-order ODEs, higher-order linear ODEs, linear systems of ODEs, Laplace transform, and mathematical modeling and numerical methods. May be replaced by MAT 295 and MAT 350. Lecture 4 hrs.\nPrerequisite(s): MAT 153.\nCo-requisite(s):\nCredits: 4\nCourse Typically Offered:\nCourse Type: General Engineering"
+  },
+  {
+   "name": "MAT 152 - Calculus A",
+   "course_block": "MAT 152 - Calculus A\nThe first course in a three-semester sequence covering basic calculus of real variables, Calculus A introduces the concept of limit and applies it to the definition of derivative and integral of a function of one variable. The rules of differentiation and properties of the integral are emphasized, as well as applications of the derivative and integral. This course also includes an introduction to the transcendental functions.\nPrerequisite(s): Grade of C- or higher in MAT 140 or appropriate placement test score.\nCo-requisite(s):\nCredits: 4\nMeets the Following Core Requirement: Quantitative Reasoning\nCourse Typically Offered:\nCourse Type: Mathematics"
+  },
+  {
+   "name": "MAT 153 - Calculus B",
+   "course_block": "MAT 153 - Calculus B\nThe second course in a three-semester sequence covering basic calculus of real variables, Calculus B includes techniques of integration, indeterminate forms and L’Hopital’s Rule, improper integrals, infinite series, conic sections, parametric equations, and polar coordinates.\nPrerequisite(s): Grade of C- or higher in MAT 152.\nCo-requisite(s):\nCredits: 4\nCourse Typically Offered:\nCourse Type: Mathematics"
+  },
+  {
+   "name": "MAT 220 - Statistics for the Biological Sciences",
+   "course_block": "MAT 220 - Statistics for the Biological Sciences\nThis course treats basic statistical methods as applied to the biological sciences. The topics emphasized are descriptive statistics, discrete and continuous distributions, statistical estimation, hypothesis testing procedures, chi-square methods (goodness of fit and two-way tables), analysis of variance, and simple and multiple regression. Students will use at least one computer-based statistical package.\nPrerequisite(s): MAT 152.\nCo-requisite(s):\nCredits: 4\nCourse Typically Offered:\nCourse Type: Mathematics"
+  },
+  {
+   "name": "MAT 252 - Calculus C",
+   "course_block": "MAT 252 - Calculus C\nThe third course in a three-semester sequence covering basic calculus of real variables, Calculus C includes vectors, curves and surfaces in space, multivariate calculus, and vector analysis.\nPrerequisite(s): Grade of C- or higher in MAT 153.\nCo-requisite(s):\nCredits: 4\nCourse Typically Offered:\nCourse Type: Mathematics"
+  },
+  {
+   "name": "MAT 281 - Introduction to Probability",
+   "course_block": "MAT 281 - Introduction to Probability\nThis course will cover basic concepts of probability, including discrete and continuous random variables and their distributions, moment generating functions, and bivariate random variables and their distributions. Some basic sampling distributions will also be discussed.\nPrerequisite(s): Grade of C- or higher in MAT 153.\nCo-requisite(s):\nCredits: 3\nCourse Typically Offered:\nCourse Type: Mathematics"
+  },
+  {
+   "name": "MAT 282 - Statistical Inference",
+   "course_block": "MAT 282 - Statistical Inference\nThis course will examine various statistical methods and applications such as point and interval estimation; methods of estimation including methods of moments, maximum likelihood and least-squares method; hypothesis testing; simple and multiple linear regression; and one-factor and two-factor ANOVA. Some statistical packages may be used throughout the course.\nPrerequisite(s): Grade of C- or higher in MAT 281 or permission of instructor.\nCo-requisite(s):\nCredits: 3\nCourse Typically Offered:\nCourse Type: Mathematics"
+  },
+  {
+   "name": "MAT 295 - Linear Algebra",
+   "course_block": "MAT 295 - Linear Algebra\nAn introduction to the theory of vector spaces and linear transformations. Particular topics will include the study of systems of linear equations, matrices, determinants, Euclidean vector spaces, inner product spaces, and theory of diagonalization.\nPrerequisite(s): Grade of C- or higher in MAT 153 or permission of instructor.\nCo-requisite(s):\nCredits: 4\nCourse Typically Offered:\nCourse Type: Mathematics"
+  },
+  {
+   "name": "MAT 350 - Differential Equations",
+   "course_block": "MAT 350 - Differential Equations\nA study of various methods for solving ordinary differential equations, including series methods and Laplace transforms. The course also introduces systems of linear differential equations, Fourier series, and boundary value problems.\nPrerequisite(s): MAT 252.\nCo-requisite(s):\nCredits: 4\nCourse Typically Offered:\nCourse Type: Mathematics"
+  },
+  {
+   "name": "MAT 352 - Real Analysis",
+   "course_block": "MAT 352 - Real Analysis\nLimits, continuity, differentiation, and integration of functions of one or more real variables, infinite series, uniform convergence, and other selected topics.\nPrerequisite(s): MAT 252 and MAT 290 or permission of instructor.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Capstone\nCourse Typically Offered:\nCourse Type: Mathematics"
+  },
+  {
+   "name": "MAT 355 - Complex Analysis",
+   "course_block": "MAT 355 - Complex Analysis\nA study of the complex number system and its applications: differentiation and integration of complex-valued functions, the Cauchy integral theorem and formula, Taylor and Laurent series, singularities and residues, conformal mappings.\nPrerequisite(s): MAT 252 and MAT 290 or permission of instructor.\nCo-requisite(s):\nCredits: 3\nCourse Typically Offered:\nCourse Type: Mathematics"
+  },
+  {
+   "name": "MAT 364 - Numerical Analysis",
+   "course_block": "MAT 364 - Numerical Analysis\nA study of the theory and application of computational algorithms for interpolation, equation solving, matrix methods, integration, and error analysis.\nPrerequisite(s): MAT 252, MAT 295, and COS 160; or permission of instructor.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Capstone\nCourse Typically Offered:\nCourse Type: Mathematics"
+  },
+  {
+   "name": "MAT 366 - Deterministic Models in Operations Research",
+   "course_block": "MAT 366 - Deterministic Models in Operations Research\nFormulation and analysis of mathematical models for the optimal solution of decision-making problems under certainty. Linear programming; the simplex method, duality and sensitivity analysis. Network analysis: shortest paths, minimal spanning tree, network flows. Introduction to nonlinear optimization: convex programming, Kuhn-Tucker conditions. Applications to pricing, allocation, production planning, transportation, and scheduling problems.\nPrerequisite(s): MAT 153 and MAT 295.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Capstone\nCourse Typically Offered:\nCourse Type: Mathematics"
+  },
+  {
+   "name": "MAT 380 - Probability and Statistics",
+   "course_block": "MAT 380 - Probability and Statistics\nThis course explores concepts and techniques of collecting and analyzing statistical data, examines some discrete and continuous probability models, and introduces statistical inference, specifically, hypothesis testing, and confidence interval construction. Not for mathematics major credit.\nPrerequisite(s): MAT 153.\nCo-requisite(s):\nCredits: 3\nCourse Typically Offered:\nCourse Type: Mathematics"
+  },
+  {
+   "name": "MAT 383 - System Modeling and Simulation",
+   "course_block": "MAT 383 - System Modeling and Simulation\nThis course is designed to introduce the fundamental elements of successful system modeling using simulation. Applications to computer, communications, and inventory systems, as well as to traditional engineering problems, will be discussed. Topics include model validation and verification, input/output analysis, and the generation of various types of random data. Students are required to conduct a simulation project in their area of interest using a simulation language.\nPrerequisite(s): MAT 281 or MAT 380 or permission of instructor.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Capstone\nCourse Typically Offered:\nCourse Type: Mathematics"
+  },
+  {
+   "name": "MAT 392 - Theory of Numbers",
+   "course_block": "MAT 392 - Theory of Numbers\nBasic course in number theory, including such topics as divisibility properties of integers, prime numbers, congruences, multiplicative number-theoretic functions, and continued fractions.\nPrerequisite(s): MAT 290 or permission of instructor.\nCo-requisite(s):\nCredits: 3\nCourse Typically Offered:\nCourse Type: Mathematics"
+  },
+  {
+   "name": "MAT 395 - Abstract Algebra",
+   "course_block": "MAT 395 - Abstract Algebra\nAlgebraic structures, such as groups, rings, integral domains, and fields.\nPrerequisite(s): MAT 290 or permission of instructor.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Capstone\nCourse Typically Offered:\nCourse Type: Mathematics"
+  },
+  {
+   "name": "MAT 460 - Mathematical Modeling",
+   "course_block": "MAT 460 - Mathematical Modeling\nAn introduction to the process of formulating problems in mathematical terms, solving the resulting mathematical model and interpreting the results and evaluating the solutions. Examples will be chosen from the behavioral, biological, and physical sciences.\nPrerequisite(s): Junior or senior standing, some elementary calculus including differentiation and integration, elementary probability, and some computer programming experience.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Capstone\nCourse Typically Offered:\nCourse Type: Mathematics"
+  },
+  {
+   "name": "MAT 461 - Stochastic Models in Operations Research",
+   "course_block": "MAT 461 - Stochastic Models in Operations Research\nThis course applies probabilistic analysis to such non-deterministic models as queuing models, inventory control models, and reliability models. Additional topics include simulation, elements of dynamic programming, and Markov decision analysis.\nPrerequisite(s): MAT 281 or MAT 380 or permission of instructor.\nCo-requisite(s):\nCredits: 3\nCourse Typically Offered:\nCourse Type: Mathematics"
+  },
+  {
+   "name": "MAT 470 - Non-Euclidean Geometry",
+   "course_block": "MAT 470 - Non-Euclidean Geometry\nDevelopment of one or more of the non-Euclidean geometries.\nPrerequisite(s): MAT 371 or permission of instructor.\nCo-requisite(s):\nCredits: 3\nCourse Typically Offered:\nCourse Type: Mathematics"
+  },
+  {
+   "name": "MAT 490 - Topology",
+   "course_block": "MAT 490 - Topology\nAn introduction to fundamental concepts in topology, including topological spaces, mappings, convergence, separation and countability, compactness, connectedness, metrization, and other selected topics.\nPrerequisite(s): MAT 252 and MAT 290 or permission of instructor.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Capstone\nCourse Typically Offered:\nCourse Type: Mathematics"
+  },
+  {
+   "name": "MAT 492 - Graph Theory and Combinatorics",
+   "course_block": "MAT 492 - Graph Theory and Combinatorics\nThis course is designed to acquaint students with some fundamental concepts and results of graph theory and combinatorial mathematics. Applications will be made to the behavioral, managerial, computer, and social sciences.\nPrerequisite(s): MAT 290 or permission of instructor.\nCo-requisite(s):\nCredits: 3\nCourse Typically Offered:\nCourse Type: Mathematics"
+  },
+  {
+   "name": "BIO 105 - Biological Principles I: Cellular Biology",
+   "course_block": "BIO 105 - Biological Principles I: Cellular Biology\nThis is an introduction to the scientific principles of molecular biology, cell biology, and genetics.\nPrerequisite(s): Grade of C or higher in MAT 101 or higher level MAT course, or appropriate placement test score.\nCo-requisite(s):\nCredits: 3\nCourse Typically Offered: Fall, Spring, Summer\nCourse Type: Biology"
+  },
+  {
+   "name": "BIO 106 - Laboratory Biology",
+   "course_block": "BIO 106 - Laboratory Biology\nLaboratory experiences illustrating concepts and principles introduced in BIO 105. Concurrent enrollment in BIO 105 is highly recommended.\nPrerequisite(s): Grade of C- or higher or concurrent enrollment in BIO 105; grade of C or higher in MAT 101 or higher level MAT course, or appropriate placement test score.\nCo-requisite(s):\nCredits: 1.5\nCourse Typically Offered: Fall, Spring, Summer\nCourse Type: Biology"
+  },
+  {
+   "name": "BIO 107 - Biological Principles II: Evolution, Biodiversity, and Ecology",
+   "course_block": "BIO 107 - Biological Principles II: Evolution, Biodiversity, and Ecology\nThis is an integrated lecture-laboratory course introducing students to the scientific principles of evolution, biodiversity, and ecology. The lecture and laboratory each meet three hours weekly.\nPrerequisite(s): Grades of C- or higher in BIO 105 and BIO 106.\nCo-requisite(s):\nCredits: 4.5\nMeets the Following Core Requirement: Science Exploration\nCourse Typically Offered: Fall, Spring\nCourse Type: Biology"
+  },
+  {
+   "name": "CHY 113 - Principles of Chemistry I",
+   "course_block": "CHY 113 - Principles of Chemistry I\nA presentation of fundamental principles of chemical science. These principles will be presented in quantitative terms and illustrated by examples of their applications in laboratories and in ordinary non-laboratory experience. This course and CHY 114 (normally taken concurrently) provide the basis for further study of chemistry.\nPrerequisite(s): MAT 108 (or concurrent) or MAT 140 (or concurrent) or MAT 152 (or concurrent) or permission of instructor.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Science Exploration\nCourse Typically Offered: Fall, Spring\nCourse Type: Chemistry"
+  },
+  {
+   "name": "CHY 114 - Laboratory Techniques I",
+   "course_block": "CHY 114 - Laboratory Techniques I\nA project-based laboratory experience to illustrate the principles presented in CHY 113. One recitation and two laboratory hours per week.\nPrerequisite(s): CHY 113 (or concurrent).\nCo-requisite(s):\nCredits: 1.5\nMeets the Following Core Requirement: Science Exploration\nCourse Typically Offered: Fall, Spring\nCourse Type: Chemistry"
+  },
+  {
+   "name": "CHY 115 - Principles of Chemistry II",
+   "course_block": "CHY 115 - Principles of Chemistry II\nA continuation of CHY 113. This course is designed to provide the foundation for all further studies in chemistry and is a prerequisite for all upper-level chemistry courses.\nPrerequisite(s): Grade of C or higher in CHY 113.\nCo-requisite(s):\nCredits: 3\nCourse Typically Offered: Spring, Summer\nCourse Type: Chemistry"
+  },
+  {
+   "name": "CHY 116 - Laboratory Techniques II",
+   "course_block": "CHY 116 - Laboratory Techniques II\nA project-based laboratory experience to illustrate the principles presented in CHY 115. One recitation and two laboratory hours per week.\nPrerequisite(s): Grade of C or higher in CHY 114; CHY 115 (or concurrent).\nCo-requisite(s):\nCredits: 1.5\nCourse Typically Offered: Spring, Summer\nCourse Type: Chemistry"
+  },
+  {
+   "name": "ESP 101 - Environmental Science and Sustainability",
+   "course_block": "ESP 101 - Environmental Science and Sustainability\nThis course is an examination of the science of environmental problems, processes, and solutions. Students will explore the interrelationships of the natural world, the environment, and impacts from humans. Specific topics will include land, air, and water pollution; biodiversity; global climate change; energy; public health; and sustainability.\nPrerequisite(s):\nCo-requisite(s): ESP 102.\nCredits: 3\nMeets the Following Core Requirement: Science Exploration\nCourse Typically Offered:\nCourse Type: Environmental Science & Policy"
+  },
+  {
+   "name": "ESP 102 - Fundamentals of Environmental Science Laboratory",
+   "course_block": "ESP 102 - Fundamentals of Environmental Science Laboratory\nThis laboratory is designed to provide applied experience with some of the tools and techniques used in environmental science. Students will apply the scientific method to examine a variety of environmental issues using field kits, lab equipment, and computers.\nPrerequisite(s):\nCo-requisite(s): ESP 101.\nCredits: 1\nMeets the Following Core Requirement: Science Exploration\nCourse Typically Offered:\nCourse Type: Environmental Science & Policy"
+  },
+  {
+   "name": "ESP 125 - Introduction to Environmental Ecology",
+   "course_block": "ESP 125 - Introduction to Environmental Ecology\nThis course is an introduction to the study of interactions between organisms and their environments. Students will explore the basic principles of ecology and systems with emphasis on forests, wildlife, freshwater, marine, and urban habitats. Environmental physiology and evolution will be a central theme throughout the course.\nPrerequisite(s): ESP 101 and ESP 102, or BIO 105 and BIO 106.\nCo-requisite(s): ESP 126.\nCredits: 3\nMeets the Following Core Requirement: Science Exploration\nCourse Typically Offered:\nCourse Type: Environmental Science & Policy"
+  },
+  {
+   "name": "ESP 126 - Introduction to Environmental Ecology Laboratory",
+   "course_block": "ESP 126 - Introduction to Environmental Ecology Laboratory\nThis laboratory surveys the identification, measurement, and function of various ecosystems. A focus will be on the impact of human activity on ecosystems.\nPrerequisite(s): ESP 101 and ESP 102, or BIO 105 and BIO 106.\nCo-requisite(s): ESP 125.\nCredits: 1\nMeets the Following Core Requirement: Science Exploration\nCourse Typically Offered:\nCourse Type: Environmental Science & Policy"
+  },
+  {
+   "name": "PHY 121 - General Physics I",
+   "course_block": "PHY 121 - General Physics I\nThe first of a two-semester sequence introducing the fundamental concepts of physics, using calculus. Topics to be covered include mechanics, waves, sound, and thermal physics. This course is recommended for students who plan further study in physical sciences, mathematics, or engineering. Three hours of lecture and one and one-half hours of recitation per week.\nPrerequisite(s): Completion of MAT 152 or equivalent (highly recommended) or concurrent.\nCo-requisite(s): PHY 114.\nCredits: 4\nMeets the Following Core Requirement: Science Exploration\nCourse Typically Offered:\nCourse Type: Physics"
+  },
+  {
+   "name": "PHY 114 - Introductory Physics Laboratory I",
+   "course_block": "PHY 114 - Introductory Physics Laboratory I\nExperiments designed to illustrate the concepts studied in PHY 111 and PHY 121. Two hours per week.\nPrerequisite(s):\nCo-requisite(s): PHY 111 or PHY 121.\nCredits: 1\nMeets the Following Core Requirement: Science Exploration\nCourse Typically Offered:\nCourse Type: Physics"
+  },
+  {
+   "name": "PHY 123 - General Physics II",
+   "course_block": "PHY 123 - General Physics II\nA continuation of PHY 121, introducing the fundamental concepts of physics, using calculus. Topics to be covered include electricity, magnetism, and light. This course is recommended for students who plan further study in physical sciences, mathematics, or engineering. Three hours of lecture and one and one-half hours of recitation per week.\nPrerequisite(s): Grades of C or higher in PHY 121 and MAT 152.\nCo-requisite(s): PHY 116.\nCredits: 4\nCourse Typically Offered:\nCourse Type: Physics"
+  },
+  {
+   "name": "PHY 116 - Introductory Physics Laboratory II",
+   "course_block": "PHY 116 - Introductory Physics Laboratory II\nExperiments designed to illustrate the concepts studied in PHY 112 and PHY 123. Two hours per week.\nPrerequisite(s):\nCo-requisite(s): PHY 112 or PHY 123.\nCredits: 1\nCourse Typically Offered:\nCourse Type: Physics"
+  },
+  {
+   "name": "ITP 210 - Technical Writing",
+   "course_block": "ITP 210 - Technical Writing\nA basic technical writing course that strengthens critical thinking, collaboration, and communication skills. Study includes document purpose, situation analysis, style, format and production of reports, proposals, instructions, procedures, technical descriptions, forms, letters, memos, and visual aids, as well as digital and virtual communication.\nPrerequisite(s): ENG 100 or equivalent for all students; for students admitted fall 2021 or later: ENG 102 or equivalent (may be concurrent), or non-degree student; OR permission of instructor.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Writing, Reading, and Inquiry 3\nCourse Typically Offered: Fall, spring, and summer\nCourse Type: Industrial Technology Professional"
+  },
+  {
+   "name": "THE 170 - Public Speaking",
+   "course_block": "THE 170 - Public Speaking\nAn introductory course in the art of public discourse. Primarily a lecture-performance course, students will learn the basics of informative and persuasive speaking by writing and giving a variety of speeches. Constructive feedback will assist students in identifying, developing, and strengthening the physical and vocal skills needed to engage an audience and communicate effectively.\nPrerequisite(s):\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Creative Expression\nCourse Typically Offered:\nCourse Type: Theatre"
+  }
+ ]
+}

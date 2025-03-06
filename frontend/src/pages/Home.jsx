@@ -15,6 +15,7 @@ import { IconField } from "primereact/iconfield";
 import { InputIcon } from "primereact/inputicon";
 import { MeterGroup } from "primereact/metergroup";
 import "./HomeFormat.css";
+
 export default function Home() {
   const meter = (props, attr) => (
     <span
@@ -68,25 +69,25 @@ export default function Home() {
     {
       label: "Core Credits",
       color: "#34d399",
-      value: 25,
+      value: 10,
       icon: "pi pi-book",
     },
     {
       label: "Major Credits",
       color: "#fbbf24",
-      value: 15,
+      value: 20,
       icon: "pi pi-briefcase",
     },
     {
-      label: "Minor Credits",
+      label: "Core Credits",
       color: "#60a5fa",
-      value: 6,
+      value: 3,
       icon: "pi pi-building-columns",
     },
     {
       label: "Electives",
       color: "#c084fc",
-      value: 6,
+      value: 30,
       icon: "pi pi-globe",
       meterTemplate: meter,
     },
@@ -259,20 +260,20 @@ export default function Home() {
         <div className="current-semester-courses">
           <div className="current-semester-class">
             {" "}
-            <Chip label="COS 430" style={{fontWeight: 600}} />
+            <Chip label="COS 430" style={{ fontWeight: 600 }} />
           </div>
 
           <div className="current-semester-class">
             {" "}
-            <Chip label="COS 285" style={{fontWeight: 600}}/>
+            <Chip label="COS 285" style={{ fontWeight: 600 }} />
           </div>
           <div className="current-semester-class">
             {" "}
-            <Chip label="GEO 101" style={{fontWeight: 600}}/>
+            <Chip label="GEO 101" style={{ fontWeight: 600 }} />
           </div>
           <div className="current-semester-class">
             {" "}
-            <Chip label="PHI 105" style={{fontWeight: 600}}/>
+            <Chip label="PHI 105" style={{ fontWeight: 600 }} />
           </div>
         </div>
       </div>
@@ -312,9 +313,20 @@ export default function Home() {
           </div>
           <div className="current-semester-courses">
             <div className="gpa">
-              <div style={{fontWeight: 600, color: "GrayText"}}>Spring 2025:</div> 3.2
+              <div style={{ fontWeight: 600, color: "GrayText" }}>
+                Spring 2025:
+              </div>{" "}
+              3.2
             </div>
-            <div className="gpa">  <div style={{fontWeight: 600, color: "GrayText", width: "auto"}}>Overall:</div> 3.2</div>
+            <div className="gpa">
+              {" "}
+              <div
+                style={{ fontWeight: 600, color: "GrayText", width: "auto" }}
+              >
+                Overall:
+              </div>{" "}
+              3.2
+            </div>
           </div>
           <div className="cell-footer">
             <Button label="View Transcript" size="small" />
@@ -335,19 +347,19 @@ export default function Home() {
           <div className="current-semester-courses">
             <div className="next-semester-class">
               {" "}
-              <Chip label="COS 473" style={{fontWeight: 600}}/>
+              <Chip label="COS 473" style={{ fontWeight: 600 }} />
             </div>
             <div className="next-semester-class">
               {" "}
-              <Chip label="COS 350" style={{fontWeight: 600}}/>
+              <Chip label="COS 350" style={{ fontWeight: 600 }} />
             </div>
             <div className="next-semester-class">
               {" "}
-              <Chip label="ITP 210" style={{fontWeight: 600}}/>
+              <Chip label="ITP 210" style={{ fontWeight: 600 }} />
             </div>
             <div className="next-semester-class">
               {" "}
-              <Chip label="MAT 110" style={{fontWeight: 600}}/>
+              <Chip label="MAT 110" style={{ fontWeight: 600 }} />
             </div>
           </div>
           <div className="cell-footer">

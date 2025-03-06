@@ -1,7 +1,7 @@
 .overall-performance {
   background-color: white;
-  width: 90%; /* Set width */
-  height: 400px; /* Set height */
+  width: 90%; 
+  height: 400px; 
   margin-left: auto;
   margin-right: auto;
   border-radius: 5px;
@@ -176,5 +176,5 @@
 
   .gpa {
     width: 150px;
-font-weight: 600;
+    font-weight: 600;
   }
