@@ -65,7 +65,7 @@ export default function Home() {
     </div>
   );
 
-  const values = [
+  const totalCourses = [
     {
       label: "Core Credits",
       color: "#34d399",
@@ -79,7 +79,7 @@ export default function Home() {
       icon: "pi pi-briefcase",
     },
     {
-      label: "Core Credits",
+      label: "Minor Credits",
       color: "#60a5fa",
       value: 3,
       icon: "pi pi-building-columns",
@@ -150,72 +150,10 @@ export default function Home() {
         </div>
         <div className="performance-content">
           <div className=" py-3" style={{ padding: 15 }}>
-            {/* <div className=" lg:col-4">
-              <div className="surface-0  shadow-2 border-1 border-50 p-4 ">
-                <div className="flex justify-content-between mb-3">
-                  <div>
-                    <span className="block text-500 font-medium mb-3">
-                      Basic info here
-                    </span>
-                    <div className="text-900 font-medium text-xl">info</div>
-                  </div>
-                  <div
-                    className="flex align-items-center justify-content-center bg-blue-100 border-round"
-                    style={{ width: "2.5rem", height: "2.5rem" }}
-                  >
-                    <i className="pi pi-thumbtack text-blue-500 text-xl"></i>
-                  </div>
-                </div>
-                <span className="text-green-500 font-medium">text </span>
-                <span className="text-500"> text</span>
-              </div>
-            </div>
-
-            <div className=" lg:col-4">
-              <div className="surface-0  shadow-2 border-1 border-50 p-4 ">
-                <div className="flex justify-content-between mb-3">
-                  <div>
-                    <span className="block text-500 font-medium mb-3">
-                      Basic info here
-                    </span>
-                    <div className="text-900 font-medium text-xl">info</div>
-                  </div>
-                  <div
-                    className="flex align-items-center justify-content-center bg-blue-100 border-round"
-                    style={{ width: "2.5rem", height: "2.5rem" }}
-                  >
-                    <i className="pi pi-thumbtack text-blue-500 text-xl"></i>
-                  </div>
-                </div>
-                <span className="text-green-500 font-medium">text </span>
-                <span className="text-500"> text</span>
-              </div>
-            </div>
-
-            <div className=" lg:col-4">
-              <div className="surface-0  shadow-2 border-1 border-50 p-4 ">
-                <div className="flex justify-content-between mb-3">
-                  <div>
-                    <span className="block text-500 font-medium mb-3">
-                      Basic info here
-                    </span>
-                    <div className="text-900 font-medium text-xl">info</div>
-                  </div>
-                  <div
-                    className="flex align-items-center justify-content-center bg-blue-100 border-round"
-                    style={{ width: "2.5rem", height: "2.5rem" }}
-                  >
-                    <i className="pi pi-thumbtack text-blue-500 text-xl"></i>
-                  </div>
-                </div>
-                <span className="text-green-500 font-medium">text </span>
-                <span className="text-500"> text</span>
-              </div>
-            </div> */}
             <div className="card flex justify-content-center">
               <MeterGroup
                 labelPosition="start"
-                values={values}
+                values={totalCourses}
                 start={start}
                 meter={meter}
                 labelList={labelList}
