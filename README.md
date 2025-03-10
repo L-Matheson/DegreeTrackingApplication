@@ -1,4 +1,4 @@
-# Degree Tracking - Backend
+# Degree Tracking Application
 
 ### Contributors
   * Lucas
