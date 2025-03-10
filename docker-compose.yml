@@ -4,11 +4,11 @@ services:
   # Web Application Service
   web:
     build: .
-    command: python manage.py runserver 0.0.0.0:8000
+    command: python manage.py runserver 0.0.0.0:8001
     volumes:
       - .:/app
     ports:
-      - "8000:8000"
+      - "8001:8001"
     depends_on:
       - db
     networks:
@@ -21,7 +21,7 @@ services:
       dockerfile: Dockerfile  # Specify the Dockerfile if it's not named Dockerfile
     container_name: api_service  # Give a descriptive name to the container
     ports:
-      - "8001:8001"  # Map host port 8001 to container port 8001
+      - "8000:8000"  # Map host port 8001 to container port 8001
     environment:
       - ENV=production  # Pass environment variables for configuration
     networks:

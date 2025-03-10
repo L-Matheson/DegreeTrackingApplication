@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -24,6 +23,17 @@ SECRET_KEY = 'django-insecure-b+mrbv)uh3z5yn%67y6%kc)u6v1i@d44^ou*=u2$+ve-co9i@f
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+
+
+CORS_ALLOW_ALL_ORIGINS = True  
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+]
+
+CORS_ALLOW_METHODS = ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
+
+CORS_ALLOW_HEADERS = ["*"]
 
 ALLOWED_HOSTS = []
 
