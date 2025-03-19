@@ -22,6 +22,8 @@ SECRET_KEY = 'django-insecure-b+mrbv)uh3z5yn%67y6%kc)u6v1i@d44^ou*=u2$+ve-co9i@f
 
 DEBUG = True
 
+# Here is some documentation if you want to learn more about CORS https://www.stackhawk.com/blog/django-cors-guide/
+
 CORS_ALLOW_ALL_ORIGINS = True  
 
 CORS_ALLOWED_ORIGINS = [
