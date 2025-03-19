@@ -32,20 +32,7 @@ export default function Login({ onLogin }) {
       }
     } else {
       // Log in user
-      try {
-        const response = await fetch(`http://127.0.0.1:8000/api/check_username/${username}/`);
-        const data = await response.json();
-
-        if (data.exists) {
-          console.log('User found, logging in...');
-          onLogin(username);
-        } else {
-          setMessage('User not found.');
-        }
-      } catch (error) {
-        console.error('Error checking username:', error);
-        setMessage('Server error. Please try again.');
-      }
+    
     }
   };
 

@@ -1,37 +1,47 @@
-from django.http import JsonResponse
-from api.models.student import User
-import json
-from django.http import JsonResponse
-from django.contrib.auth.hashers import make_password
-from django.views.decorators.csrf import csrf_exempt
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+from rest_framework import status
+from api.models.student import Student
+from api.serializers.StudentSerializer import StudentSerializer
 
-def check_student(request, username):
-    exists = User.objects.filter(username=username).exists()
-    if exists:
-        return JsonResponse({'exists': True})
-    else:
-        return JsonResponse({"User Doesn't Exist": False})
+@api_view(['GET'])
+def get_students(request):
+    # .objects simply gets all the objects in the database, .all returns everything currently in the table
+    students = Student.objects.all()
+    # in the serializer, first param is the data to serialize, second param is whether or not to serialize multiple objects
+    serializer = StudentSerializer(students, many=True)
+    return Response(serializer.data)
+
+@api_view(['GET', 'PUT', 'DELETE'])
+def student_details(request, pk):
+    # gets student information that matches the primary key
+    try:
+        student = Student.objects.get(pk=pk)
+    except Student.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
+        
+    if request.method == 'GET':
+        # serialize the student data and return it
+        serializer = StudentSerializer(student)
+        return Response(serializer.data)
     
-@csrf_exempt
-def register_user(request):
-    if request.method == 'POST':
-        try:
-            data = json.loads(request.body)
-            username = data.get('username')
-            password = data.get('password')
+    elif request.method == 'PUT':
+        serializer = StudentSerializer(student, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    elif request.method == 'DELETE':
+        student.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
 
-            if not username or not password:
-                return JsonResponse({'error': 'Username and password required.'}, status=400)
 
-            if User.objects.filter(username=username).exists():
-                return JsonResponse({'error': 'Username already taken.'}, status=400)
 
-            # Save hashed password
-            hashed_password = make_password(password)
-            User.objects.create(username=username, password=hashed_password)
 
-            return JsonResponse({'message': 'User registered successfully!'})
-        except Exception as e:
-            return JsonResponse({'error': str(e)}, status=500)
-
-    return JsonResponse({'error': 'Invalid request'}, status=400)
+@api_view(['POST'])
+def create_student(request):
+    serializer = StudentSerializer(data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
