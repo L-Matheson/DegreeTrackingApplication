@@ -18,12 +18,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-b+mrbv)uh3z5yn%67y6%kc)u6v1i@d44^ou*=u2$+ve-co9i@f'
 
-# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
 
 CORS_ALLOW_ALL_ORIGINS = True  
 
@@ -32,8 +29,6 @@ CORS_ALLOWED_ORIGINS = [
 ]
 
 CORS_ALLOW_METHODS = ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
-
-CORS_ALLOW_HEADERS = ["*"]
 
 ALLOWED_HOSTS = []
 
@@ -52,6 +47,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',

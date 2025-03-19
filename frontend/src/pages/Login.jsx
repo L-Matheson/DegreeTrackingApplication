@@ -13,13 +13,14 @@ export default function Login({ onLogin }) {
     if (isRegistering) {
       // Register new user
       try {
-        const response = await fetch('http://127.0.0.1:8000/api/register/', {
+
+        const response = await fetch('http://127.0.0.1:8000/api/student/create/', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ username, password }),
         });
+        const data = response.json();
 
-        const data = await response.json();
         if (response.ok) {
           setMessage('Account created! Please log in.');
           setIsRegistering(false);
@@ -32,7 +33,18 @@ export default function Login({ onLogin }) {
       }
     } else {
       // Log in user
-    
+      try {
+
+        const response = await fetch('http://127.0.0.1:8000/api/students/', {
+          method: 'POST',
+          body: JSON.stringify({ username, password }),
+        });
+        const data = response.json();
+
+      } catch (error) {
+        console.error('Error signing in: ', error);
+        setMessage('Server error. Please try again.');
+      }
     }
   };
 
