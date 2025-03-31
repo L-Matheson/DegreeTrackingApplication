@@ -8,6 +8,6 @@ urlpatterns = [
     path('majorReq/', MajorReqView.as_view(), name='major-req'),
     path('students/', get_students, name='get-students'),
     path('student/create/', create_student, name='create-student'),
-    path('student/<str:pk>', student_details, name='get-students'),
+    path('student/<str:user>/<str:pas>', student_details, name='get-students'),
     # Add other URL patterns here
 ]

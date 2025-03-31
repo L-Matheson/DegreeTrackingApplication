@@ -35,12 +35,17 @@ export default function Login({ onLogin }) {
       // Log in user
       try {
 
-        const response = await fetch('http://127.0.0.1:8000/api/students/', {
-          method: 'POST',
-          body: JSON.stringify({ username, password }),
+        const response = await fetch(`http://127.0.0.1:8000/api/student/${username}/${password}`, {
+          method: 'GET',
         });
         const data = response.json();
-
+        if (response.ok) {
+          // Successful login
+          onLogin(username); // Call the onLogin prop with the username
+        } else {
+          // Handle login failure
+          setMessage(data.error || 'Invalid username or password.');
+        }
       } catch (error) {
         console.error('Error signing in: ', error);
         setMessage('Server error. Please try again.');

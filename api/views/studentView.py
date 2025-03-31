@@ -13,10 +13,10 @@ def get_students(request):
     return Response(serializer.data)
 
 @api_view(['GET', 'PUT', 'DELETE'])
-def student_details(request, pk):
+def student_details(request, user, pas):
     # gets student information that matches the primary key
     try:
-        student = Student.objects.get(pk=pk)
+        student = Student.objects.get(username=user, password=pas) 
     except Student.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
         

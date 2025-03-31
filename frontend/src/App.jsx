@@ -31,7 +31,6 @@ export default function App() {
               <SidebarHeader text="Degree Tracker" icon="pi pi-graduation-cap" />
               <SidebarItem icon="pi pi-home" text="Home" to="/" />
               <SidebarItem icon="pi pi-book" text="Courses" to="/courses" />
-              <SidebarItem icon="pi pi-user" text="Professors" to="/professors" />
               <SidebarItem icon="pi pi-calendar" text="Calendar" to="/calendar" />
               <SidebarItem icon="pi pi-book" text="Major Requirements" to="/MajorRequirements" />
               <hr className="solid" />
@@ -42,7 +41,6 @@ export default function App() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/courses" element={<Courses />} />
-                <Route path="/professors" element={<Professors />} />
                 <Route path="/calendar" element={<Calendar />} />
                 <Route path="/MajorRequirements" element={<MajorRequirements />} />
                 <Route path="/Settings" element={<Settings />} />
