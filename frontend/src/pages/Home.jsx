@@ -54,7 +54,7 @@ export default function Home() {
 
   const start = ({ totalPercent }) => (
     <div className="flex justify-content-between mt-3 mb-2 relative">
-      <span>Total Credits</span>
+      <span>Total Credits Taken</span>
       <span
         style={{ width: totalPercent + 3 + "%" }}
         className="absolute text-right"
@@ -67,25 +67,25 @@ export default function Home() {
 
   const totalCourses = [
     {
-      label: "Core Credits",
+      label: "Core Credits Taken",
       color: "#34d399",
       value: 10,
       icon: "pi pi-book",
     },
     {
-      label: "Major Credits",
+      label: "Major Credits Taken",
       color: "#fbbf24",
       value: 20,
       icon: "pi pi-briefcase",
     },
     {
-      label: "Minor Credits",
+      label: "Minor Credits Taken",
       color: "#60a5fa",
       value: 3,
       icon: "pi pi-building-columns",
     },
     {
-      label: "Electives",
+      label: "Electives Taken",
       color: "#c084fc",
       value: 30,
       icon: "pi pi-globe",
