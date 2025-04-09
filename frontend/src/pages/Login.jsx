@@ -100,28 +100,34 @@ export default function Login({ onLogin }) {
           {message && <p style={{ color: "red" }}>{message}</p>}
           <form onSubmit={handleSubmit}>
             <div className="login-input-field">
-            <div style={{ marginLeft: "25px", marginRight: "20px"}}>  
               <FloatLabel>
                 <InputText
                   id="username"
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
+                  style={{ width: "100%" }}
                 />
                 <label htmlFor="username">Username</label>
               </FloatLabel>
+
+              <div
+                style={{
+                  marginTop: "15px",
+                  marginBottom: "15px"
+                }}
+              >
+                <FloatLabel>
+                  <InputText
+                    id="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    style={{ width: "100%" }}
+                  />
+                  <label htmlFor="password">Password</label>
+                </FloatLabel>
+              </div>
             </div>
-            <div style={{ marginTop: "20px", marginBottom: "20px", marginLeft: "25px", marginRight: "20px"}}>
-              <FloatLabel>
-                <InputText
-                  id="password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                />
-                <label htmlFor="password">Password</label>
-              </FloatLabel>
-            </div>
-</div>
-            <button type="submit">{isRegistering ? "Sign Up" : "Login"}</button>
+            <Button type="submit" style={{width: '100%', textAlign: 'center', fontWeight: "bold"}}> {isRegistering ? "Sign Up" : "Login"} </Button>
           </form>
           <p>
             {isRegistering
