@@ -9,8 +9,15 @@ import { InputText } from "primereact/inputtext";
 import { Button } from "primereact/button";
 import { IconField } from 'primereact/iconfield';
 import { InputIcon } from 'primereact/inputicon';
+import { useSelector, useDispatch } from 'react-redux'
+import { decrement, increment } from '../slices/courseSlice'
+import {selectCOSCourses} from '../slices/totalCosCoursesSlice'
+
 export default function Courses() {
-  
+  const count = useSelector((state) => state.course.value)
+  const dispatch = useDispatch()
+
+
   return (
     <div style={{ padding: 0 }}>
       <div style={{ textAlign: "left", backgroundColor: "white", height: 50 }}>
@@ -56,6 +63,26 @@ export default function Courses() {
 
       <hr className="solid" style={{ padding: 0, marginTop: 0 }} />
    
+
+
+      <div>
+      <div>
+        <button
+          aria-label="Increment value"
+          onClick={() => dispatch(increment())}
+        >
+          Increment
+        </button>
+        <span>{count}</span>
+        <button
+          aria-label="Decrement value"
+          onClick={() => dispatch(decrement())}
+        >
+          Decrement
+        </button>
+      </div>
+    </div>
+{selectCOSCourses}
     </div>
   );
 }

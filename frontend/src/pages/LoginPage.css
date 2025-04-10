@@ -25,7 +25,7 @@
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    height: 23vh;
+    height: 20vh;
     font-size: xx-large;
     font-weight: bold;
   }
@@ -34,6 +34,7 @@
     margin-left: auto;
     margin-right: auto;
     width: 50vh;
+    height: 15vh;
     position: static;
   }
 

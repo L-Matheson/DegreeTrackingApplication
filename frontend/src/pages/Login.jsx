@@ -49,13 +49,14 @@ export default function Login({ onLogin }) {
             method: "GET",
           }
         );
-        const data = response.json();
+
         if (response.ok) {
           // Successful login
+          const data = response.json();
           onLogin(username); // Call the onLogin prop with the username
         } else {
           // Handle login failure
-          setMessage(data.error || "Invalid username or password.");
+          setMessage("Invalid username or password, Please Try Again");
         }
       } catch (error) {
         console.error("Error signing in: ", error);
@@ -97,7 +98,7 @@ export default function Login({ onLogin }) {
           </div>
         </div>
         <div className="login-content">
-          {message && <p style={{ color: "red" }}>{message}</p>}
+          {message && <p style={{ color: "red", marginBottom: '25px'}}>{message}</p>}
           <form onSubmit={handleSubmit}>
             <div className="login-input-field">
               <FloatLabel>
@@ -112,7 +113,7 @@ export default function Login({ onLogin }) {
 
               <div
                 style={{
-                  marginTop: "15px",
+                  marginTop: "20px",
                   marginBottom: "15px"
                 }}
               >
@@ -129,16 +130,10 @@ export default function Login({ onLogin }) {
             </div>
             <Button type="submit" style={{width: '100%', textAlign: 'center', fontWeight: "bold"}}> {isRegistering ? "Sign Up" : "Login"} </Button>
           </form>
-          <p>
+          <p style={{fontWeight: 'bold', marginTop: 20, cursor: 'pointer', textDecoration: 'underline', textAlign: 'center' }} onClick={() => setIsRegistering(!isRegistering)}>
             {isRegistering
-              ? "Already have an account?"
-              : "Don't have an account?"}
-            <button
-              onClick={() => setIsRegistering(!isRegistering)}
-              style={{ marginLeft: "10px" }}
-            >
-              {isRegistering ? "Login" : "Sign Up"}
-            </button>
+              ? "Sign In"
+              : "Create An Account"}
           </p>
         </div>
       </div>

@@ -11,7 +11,8 @@ import Calendar from './pages/Calendar';
 import MajorRequirements from './pages/MajorRequirements';
 import Settings from './pages/Settings';
 import Login from './pages/Login';
-
+import CoursesStore from './stores/CoursesStore';
+import {Provider} from 'react-redux';
 export default function App() {
   const [user, setUser] = useState(null);
 
@@ -38,14 +39,18 @@ export default function App() {
               <SidebarItem icon="pi pi-sign-out" text="Logout" to="/" onClick={() => setUser(null)} />
             </Sidebar>
             <div className="content">
+            <Provider store={CoursesStore}> 
               <Routes>
+               
                 <Route path="/" element={<Home />} />
                 <Route path="/courses" element={<Courses />} />
                 <Route path="/calendar" element={<Calendar />} />
                 <Route path="/MajorRequirements" element={<MajorRequirements />} />
                 <Route path="/Settings" element={<Settings />} />
                 <Route path="*" element={<Navigate to="/" />} />
+              
               </Routes>
+              </Provider>
             </div>
           </main>
         </SidebarProvider>
