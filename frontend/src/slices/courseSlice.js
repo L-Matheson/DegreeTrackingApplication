@@ -1,5 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
+ // This is a test slice, taken from following Redux's docs
+ // May not be fully implemented
 export const courseSlice = createSlice({
   name: 'course',
   initialState: {

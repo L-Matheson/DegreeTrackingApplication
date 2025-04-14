@@ -10,6 +10,9 @@ import "../App.css";
 export default function Login({ onLogin }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [studentEmail, setEmail] = useState("");
   const [isRegistering, setIsRegistering] = useState(false);
   const [message, setMessage] = useState("");
 
@@ -25,7 +28,13 @@ export default function Login({ onLogin }) {
           {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ username, password }),
+            body: JSON.stringify({
+              username,
+              password,
+              firstName,
+              lastName,
+             studentEmail
+            }),
           }
         );
         const data = response.json();
@@ -98,7 +107,9 @@ export default function Login({ onLogin }) {
           </div>
         </div>
         <div className="login-content">
-          {message && <p style={{ color: "red", marginBottom: '25px'}}>{message}</p>}
+          {message && (
+            <p style={{ color: "red", marginBottom: "25px" }}>{message}</p>
+          )}
           <form onSubmit={handleSubmit}>
             <div className="login-input-field">
               <FloatLabel>
@@ -114,7 +125,7 @@ export default function Login({ onLogin }) {
               <div
                 style={{
                   marginTop: "20px",
-                  marginBottom: "15px"
+                  marginBottom: "15px",
                 }}
               >
                 <FloatLabel>
@@ -127,14 +138,89 @@ export default function Login({ onLogin }) {
                   <label htmlFor="password">Password</label>
                 </FloatLabel>
               </div>
+              {isRegistering && (
+                <div>
+                  <div
+                    style={{
+                      marginTop: "20px",
+                      marginBottom: "15px",
+                    }}
+                  >
+                    <FloatLabel>
+                      <InputText
+                        id="firstName"
+                        value={firstName}
+                        onChange={(e) => setFirstName(e.target.value)}
+                        style={{ width: "100%" }}
+                      />
+                      <label htmlFor="firstName">First Name</label>
+                    </FloatLabel>
+                  </div>
+                  <div
+                    style={{
+                      marginTop: "20px",
+                      marginBottom: "15px",
+                    }}
+                  >
+                    <FloatLabel>
+                      <InputText
+                        id="lastName"
+                        value={lastName}
+                        onChange={(e) => setLastName(e.target.value)}
+                        style={{ width: "100%" }}
+                      />
+                      <label htmlFor="lastName">Last Name</label>
+                    </FloatLabel>
+                  </div>
+                  <div
+                    style={{
+                      marginTop: "20px",
+                      marginBottom: "15px",
+                    }}
+                  >
+                    <FloatLabel>
+                      <InputText
+                        id="email"
+                        value={studentEmail}
+                        onChange={(e) => setEmail(e.target.value)}
+                        style={{ width: "100%" }}
+                      />
+                      <label htmlFor="email">Email</label>
+                    </FloatLabel>
+                  </div>
+                </div>
+              )}
             </div>
-            <Button type="submit" style={{width: '100%', textAlign: 'center', fontWeight: "bold"}}> {isRegistering ? "Sign Up" : "Login"} </Button>
           </form>
-          <p style={{fontWeight: 'bold', marginTop: 20, cursor: 'pointer', textDecoration: 'underline', textAlign: 'center' }} onClick={() => setIsRegistering(!isRegistering)}>
-            {isRegistering
-              ? "Sign In"
-              : "Create An Account"}
-          </p>
+          <div
+            type="submit"
+            style={{
+              width: "85%",
+              padding: "10px 0",
+              paddingLeft: "0",
+              textAlign: "center",
+              fontWeight: "bold",
+              bottom: "0",
+              position: "absolute",
+            }}
+          >
+            <Button onClick={handleSubmit}>
+              {" "}
+              {isRegistering ? "Sign Up" : "Login"}{" "}
+            </Button>
+            <p
+              style={{
+                fontWeight: "bold",
+                marginTop: 20,
+                cursor: "pointer",
+                textDecoration: "underline",
+                textAlign: "center",
+              }}
+              onClick={() => setIsRegistering(!isRegistering)}
+            >
+              {isRegistering ? "Sign In" : "Create An Account"}
+            </p>
+          </div>
         </div>
       </div>
     </div>
