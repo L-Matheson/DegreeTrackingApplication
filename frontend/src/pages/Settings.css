@@ -1,0 +1,9 @@
+.settings-background {
+    margin: auto;
+    height: 700px;
+    width: 550px;
+    background-color: white;
+    border-radius: 25px;
+    padding: 20px;
+    box-shadow: 2px 2px 1px 1px lightgray;
+}
