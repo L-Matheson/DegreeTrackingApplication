@@ -180,7 +180,7 @@ export default function Courses() {
 
       <hr className="solid" style={{ padding: 0, marginTop: 0 }} />
 
-      <div style={{ gap: "5px", backgroundColor: "pink" }}>
+      <div style={{ margin: 15 }}>
         <DataTable
           value={courses}
           paginator
