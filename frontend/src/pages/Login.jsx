@@ -33,11 +33,43 @@ export default function Login({ onLogin }) {
               password,
               firstName,
               lastName,
-             studentEmail
+              studentEmail,
             }),
           }
         );
+
         const data = response.json();
+
+        const dataCourse = require("./cos_req.json");
+        console.log(dataCourse.course);
+
+        for (let i = 0; i < dataCourse.course.length; i++) {
+          const x = dataCourse.course[i];
+          let test = x.course_block.split("\n");
+
+          console.log(test);
+          let name = test[0];
+          let description = test[1];
+          let prerequisite = test[2];
+          let co_requisite = test[3];
+          let course_offered = test[4];
+          let course_type = test[5];
+          const postedCourse = await fetch(
+            "http://127.0.0.1:8000/api/courses/major/",
+            {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({
+                name,
+                description,
+                prerequisite,
+                co_requisite,
+                course_offered,
+                course_type,
+              }),
+            }
+          );
+        }
 
         if (response.ok) {
           setMessage("Account created! Please log in.");

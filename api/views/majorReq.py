@@ -4,7 +4,6 @@ from rest_framework import status
 from api.models.majorReq import MajorReq
 from api.serializers.MajorReqSerializer import MajorReqSerializer
 from rest_framework.decorators import api_view
-
 import json
 
 
@@ -16,7 +15,6 @@ def populate_majorreq(request):
         with open('cos_req.json', 'r') as file:
             data = json.load(file)
             print(data)
-        # Iterate through the JSON data and create MajorReq entries
         for entry in data:
             serializer = MajorReqSerializer(data=entry)
             if serializer.is_valid():
@@ -63,7 +61,7 @@ def major_courses_details(request):
 
 
 @api_view(['POST'])
-def create_student(request):
+def create_course(request):
     serializer = MajorReqSerializer(data=request.data)
     if serializer.is_valid():
         serializer.save()
