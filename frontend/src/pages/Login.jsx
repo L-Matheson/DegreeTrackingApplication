@@ -4,6 +4,7 @@ import { InputText } from "primereact/inputtext";
 import { IconField } from "primereact/iconfield";
 import { InputIcon } from "primereact/inputicon";
 import { FloatLabel } from "primereact/floatlabel";
+import CourseHandler from "../GeneralComponents/courseHandler";
 import "./LoginPage.css";
 import "../App.css";
 
@@ -43,19 +44,43 @@ export default function Login({ onLogin }) {
         const dataCourse = require("./cos_req.json");
         console.log(dataCourse.course);
 
+
         for (let i = 0; i < dataCourse.course.length; i++) {
+
+          let name = '';
+          let description = '';
+          let prerequisite = '';
+          let co_requisite = '';
+          let credits = '';
+          let CoreRequirement = ''
+          let course_offered = '';
+          let course_type = '';
+  
           const x = dataCourse.course[i];
           let test = x.course_block.split("\n");
 
-          console.log(test);
-          let name = test[0];
-          let description = test[1];
-          let prerequisite = test[2];
-          let co_requisite = test[3];
-          let course_offered = test[4];
-          let course_type = test[5];
+          console.log(test.length);
+          if(test.length === 8){
+             name = test[0];
+             description = test[1];
+             prerequisite = test[2];
+             co_requisite = test[3];
+             credits = test[4];
+             CoreRequirement = test[5]
+             course_offered = test[6];
+             course_type = test[7];
+          } else {
+            name = test[0];
+            description = test[1];
+            prerequisite = test[2];
+            co_requisite = test[3];
+            credits = test[4];
+            course_offered = test[5];
+            course_type = test[6];
+          }
+
           const postedCourse = await fetch(
-            "http://127.0.0.1:8000/api/courses/major/",
+            "http://127.0.0.1:8000/api/courses/major/create",
             {
               method: "POST",
               headers: { "Content-Type": "application/json" },
@@ -64,6 +89,8 @@ export default function Login({ onLogin }) {
                 description,
                 prerequisite,
                 co_requisite,
+                credits, 
+                CoreRequirement,
                 course_offered,
                 course_type,
               }),

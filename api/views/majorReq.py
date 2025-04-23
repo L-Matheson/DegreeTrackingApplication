@@ -39,7 +39,7 @@ def get_major_courses(request):
 @api_view(['GET', 'PUT', 'DELETE'])
 def major_courses_details(request):
     try:
-        majorReqCourses = MajorReq.objects.get() 
+        majorReqCourses = MajorReq.objects.all()
     except MajorReq.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
         
@@ -56,8 +56,6 @@ def major_courses_details(request):
     elif request.method == 'DELETE':
         majorReqCourses.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
-
-
 
 
 @api_view(['POST'])
