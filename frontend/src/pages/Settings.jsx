@@ -18,6 +18,7 @@ export default function Settings() {
   const [visibleD, setVisibleD] = useState(false);
 
 
+
   return (
     <div style={{ padding: 0 }}>
       <div style={{ textAlign: "left", backgroundColor: "white", height: 50 }}>
@@ -65,6 +66,7 @@ export default function Settings() {
 
       <div className = "settings-background">
 
+
         <div className="card flex flex-row align-items-start gap-4">
           <FloatLabel className="w-full">
             <InputText id="firstName" className="w-full" />
@@ -86,7 +88,7 @@ export default function Settings() {
           <div className="w-full">
             <Button className="w-full" label="Change Username" onClick={() => setVisibleU(true)} />
               <Dialog
-                  visibleU={visibleU}
+                  visible={visibleU}
                   modal
                   onHide={() => {if (!visibleU) return; setVisibleU(false); }}
                   content={({ hide }) => (
@@ -125,7 +127,7 @@ export default function Settings() {
           <div className="w-full">
           <Button className="w-full" label="Change Password" onClick={() => setVisibleP(true)} />
             <Dialog
-                visibleP={visibleP}
+                visible={visibleP}
                 modal
                 onHide={() => {if (!visibleP) return; setVisibleP(false); }}
                 content={({ hide }) => (
@@ -158,7 +160,7 @@ export default function Settings() {
           <div className="card flex justify-content-center mt-5">
             <Button className="w-full bg-red-500 hover:bg-red-600 text-white border-none" label="Delete Account" icon="pi pi-user" onClick={() => setVisibleD(true)} />
             <Dialog
-                visibleD={visibleD}
+                visible={visibleD}
                 modal
                 onHide={() => {if (!visibleD) return; setVisibleD(false); }}
                 content={({ hide }) => (
