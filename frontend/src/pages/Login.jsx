@@ -111,21 +111,24 @@ export default function Login({ onLogin }) {
                     course_type = test[6];
                   }
 
-                  course_offered = course_offered.replace("Course Typically Offered: ","");
-                  course_type = course_type.replace("Course Type: ","");
-                  prerequisite = prerequisite.replace("Prerequisite(s):","");
-                  co_requisite = co_requisite.replace("Co-requisite(s):","");
-                  credits = credits.replace("Credits: ","");
+                  course_offered = course_offered.replace(
+                    "Course Typically Offered: ",
+                    ""
+                  );
+                  course_type = course_type.replace("Course Type: ", "");
+                  prerequisite = prerequisite.replace("Prerequisite(s):", "");
+                  co_requisite = co_requisite.replace("Co-requisite(s):", "");
+                  credits = credits.replace("Credits: ", "");
 
-                  if(prerequisite === ""){
+                  if (prerequisite === "") {
                     prerequisite = "None";
                   }
-                  if(co_requisite === ""){
+                  if (co_requisite === "") {
                     co_requisite = "None";
                   } else {
-                    co_requisite = co_requisite.replace(/\.$/, '');
+                    co_requisite = co_requisite.replace(/\.$/, "");
                   }
-                  if(course_offered === "Course Typically Offered:"){
+                  if (course_offered === "Course Typically Offered:") {
                     course_offered = "Fall and Spring";
                   }
 
@@ -167,13 +170,21 @@ export default function Login({ onLogin }) {
     }
   };
 
+  function handleLoser(){
+    console.log("loser")
+    onLogin('username'); // Call the onLogin prop with the username
+  }
+
   return (
     <div className="login-container">
-      <div style={{ textAlign: "left", backgroundColor: "white", height: 50 }}>
+      <div style={{ backgroundColor: "white", height: 50 }}>
         <div style={{ paddingTop: 15, paddingLeft: 20, paddingRight: 15 }}>
           <div className="text-900 font-medium flex" style={{ width: 200 }}>
             Login
+            {/* This is a development button to avoid using docker to login */}
+            <Button onClick={handleLoser}  style={{ minWidth: 500, marginLeft: 200}}> Listen, I don't want to use docker, just take me to the app, remember to atleast create one account and log in once to get the classes though </Button>
           </div>
+   
         </div>
       </div>
       <hr
