@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { DataTable } from "primereact/datatable";
 import { Column } from "primereact/column";
 import { InputText } from "primereact/inputtext";
@@ -8,114 +8,45 @@ import { InputIcon } from "primereact/inputicon";
 import { FilterMatchMode, FilterOperator } from "primereact/api";
 import { Dropdown } from "primereact/dropdown";
 
-
 export default function MajorReq() {
-
-  const mockCourses = [
-    {
-      id: 1,
-      name: "Introduction to Programming",
-      description: "Learn the basics of programming using Python.",
-      prerequisite: "None",
-      co_requisite: "None",
-      course_offered: "Fall, Spring",
-      course_type: "Core",
-    },
-    {
-      id: 2,
-      name: "Data Structures",
-      description: "Explore data organization and manipulation techniques.",
-      prerequisite: "Introduction to Programming",
-      co_requisite: "None",
-      course_offered: "Spring",
-      course_type: "Core",
-    },
-    {
-      id: 3,
-      name: "Database Systems",
-      description: "Learn about relational databases and SQL.",
-      prerequisite: "Data Structures",
-      co_requisite: "None",
-      course_offered: "Fall",
-      course_type: "Elective",
-    },
-    {
-      id: 4,
-      name: "Operating Systems",
-      description: "Understand the principles of operating systems.",
-      prerequisite: "Data Structures",
-      co_requisite: "None",
-      course_offered: "Fall, Spring",
-      course_type: "Core",
-    },
-    {
-      id: 5,
-      name: "Artificial Intelligence",
-      description: "Introduction to AI concepts and techniques.",
-      prerequisite: "Data Structures",
-      co_requisite: "None",
-      course_offered: "Spring",
-      course_type: "Elective",
-    },
-    {
-      id: 6,
-      name: "Introduction to Programming",
-      description: "Learn the basics of programming using Python.",
-      prerequisite: "None",
-      co_requisite: "None",
-      course_offered: "Fall, Spring",
-      course_type: "Core",
-    },
-    {
-      id: 7,
-      name: "Data Structures",
-      description: "Explore data organization and manipulation techniques.",
-      prerequisite: "Introduction to Programming",
-      co_requisite: "None",
-      course_offered: "Spring",
-      course_type: "Core",
-    },
-    {
-      id: 8,
-      name: "Database Systems",
-      description: "Learn about relational databases and SQL.",
-      prerequisite: "Data Structures",
-      co_requisite: "None",
-      course_offered: "Fall",
-      course_type: "Elective",
-    },
-    {
-      id: 9,
-      name: "Operating Systems",
-      description: "Understand the principles of operating systems.",
-      prerequisite: "Data Structures",
-      co_requisite: "None",
-      course_offered: "Fall, Spring",
-      course_type: "Core",
-    },
-    {
-      id: 10,
-      name: "Artificial Intelligence",
-      description: "Introduction to AI concepts and techniques.",
-      prerequisite: "Data Structures",
-      co_requisite: "None",
-      course_offered: "Spring",
-      course_type: "Elective",
-    },
-  ];
-
-  const [courses, setCourses] = useState(mockCourses);
+  const [courses, setCourses] = useState([]);
   const [selectedCourses, setSelectedCourses] = useState([]);
+
+  // Defines what filters can be used for what rows
   const [filters, setFilters] = useState({
     global: { value: null, matchMode: FilterMatchMode.CONTAINS },
     name: { operator: FilterOperator.AND, constraints: [{ value: null, matchMode: FilterMatchMode.STARTS_WITH }] },
     prerequisite: { operator: FilterOperator.AND, constraints: [{ value: null, matchMode: FilterMatchMode.STARTS_WITH }] },
     course_type: { value: null, matchMode: FilterMatchMode.EQUALS },
+    course_offered: { value: null, matchMode: FilterMatchMode.CONTAINS },
   });
 
   const [globalFilterValue, setGlobalFilterValue] = useState("");
+
+  // Defines course types, used in Course Type Filtering
   const [courseTypes] = useState(["Core", "Elective"]);
 
+  // Fetch courses 
+  useEffect(() => {
+    const fetchCourses = async () => {
+      try {
+        const response = await fetch("http://127.0.0.1:8000/api/courses/major/");
+        if (response.ok) {
+          const data = await response.json();
+          setCourses(data); // Assuming the API returns an array of courses
+          console.log(data)
+        } else {
+          console.error("Failed to fetch courses:", response.statusText);
+        }
+      } catch (error) {
+        console.error("Error fetching courses:", error);
+      }
+    };
+
+    fetchCourses();
+  }, []);
+
+  // Controls the filtering
   const onGlobalFilterChange = (e) => {
     const value = e.target.value;
     let _filters = { ...filters };
@@ -126,6 +57,7 @@ export default function MajorReq() {
     setGlobalFilterValue(value);
   };
 
+  // The header above the table, contains the search bar and Courses title
   const renderHeader = () => {
     return (
       <div className="flex flex-wrap gap-2 justify-content-between align-items-center">
@@ -198,15 +130,15 @@ export default function MajorReq() {
           filters={filters}
           filterDisplay="menu"
           globalFilterFields={["name", "description", "prerequisite", "co_requisite", "course_offered", "course_type"]}
-          emptyMessage="No courses found."
+          emptyMessage="Error finding courses, please try again"
           currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
         >
           <Column selectionMode="multiple" headerStyle={{ width: "3rem" }}></Column>
           <Column field="name" header="Name" sortable filter filterPlaceholder="Search by name" style={{ minWidth: "14rem" }} />
-          <Column field="description" header="Description" style={{ minWidth: "14rem" }} />
-          <Column field="prerequisite" header="Prerequisite" filter sortable filterPlaceholder="Search by Prerequisite"  filterField="prerequisite" style={{ minWidth: "12rem" }} />
-          <Column field="co_requisite" header="Co-Requisite" sortable  style={{ minWidth: "12rem" }} />
-          <Column field="course_offered" header="Course Offered" filterPlaceholder="Search by Semester"  filter sortable style={{ minWidth: "12rem" }} />
+          <Column field="description" header="Description" style={{ minWidth: "22rem" }} />
+          <Column field="prerequisite" header="Prerequisite" filter sortable filterPlaceholder="Search by Prerequisite" filterField="prerequisite" style={{ minWidth: "12rem" }} />
+          <Column field="co_requisite" header="Co-Requisite" sortable style={{ minWidth: "12rem" }} />
+          <Column field="course_offered" header="Course Offered" filterPlaceholder="Search by Semester" filter sortable filterField="course_offered" style={{ minWidth: "12rem" }} />
           <Column
             field="course_type"
             header="Course Type"

@@ -21,7 +21,6 @@ export default function Login({ onLogin }) {
     e.preventDefault();
     setMessage("");
 
-    
     if (isRegistering) {
       // Register new user
       try {
@@ -41,11 +40,6 @@ export default function Login({ onLogin }) {
         );
 
         const data = response.json();
-
-        const dataCourse = require("./cos_req.json");
-        console.log(dataCourse.course);
-
-
 
         if (response.ok) {
           setMessage("Account created! Please log in.");
@@ -70,6 +64,97 @@ export default function Login({ onLogin }) {
         if (response.ok) {
           // Successful login
           const data = response.json();
+
+          try {
+            const response = await fetch(
+              "http://127.0.0.1:8000/api/courses/major/"
+            );
+            if (response.ok) {
+              const courseData = await response.json();
+              console.log(courseData);
+
+              if (courseData.length <= 0) {
+                const dataCourse = require("./cos_req.json");
+                console.log(dataCourse.course);
+
+                for (let i = 0; i < dataCourse.course.length; i++) {
+                  const x = dataCourse.course[i];
+                  let test = x.course_block.split("\n");
+
+                  console.log(test);
+                  let name = "";
+                  let description = "";
+                  let prerequisite = "";
+                  let co_requisite = "";
+                  let course_offered = "";
+                  let course_type = "";
+                  let credits = "";
+                  let CoreRequirement = "";
+
+                  if (test.length === 8) {
+                    name = test[0];
+                    description = test[1];
+                    prerequisite = test[2];
+                    co_requisite = test[3];
+                    credits = test[4];
+                    CoreRequirement = test[5];
+                    course_offered = test[6];
+                    course_type = test[7];
+                  } else {
+                    name = test[0];
+                    description = test[1];
+                    prerequisite = test[2];
+                    co_requisite = test[3];
+                    credits = test[4];
+                    CoreRequirement = "None";
+                    course_offered = test[5];
+                    course_type = test[6];
+                  }
+
+                  course_offered = course_offered.replace("Course Typically Offered: ","");
+                  course_type = course_type.replace("Course Type: ","");
+                  prerequisite = prerequisite.replace("Prerequisite(s):","");
+                  co_requisite = co_requisite.replace("Co-requisite(s):","");
+                  credits = credits.replace("Credits: ","");
+
+                  if(prerequisite === ""){
+                    prerequisite = "None";
+                  }
+                  if(co_requisite === ""){
+                    co_requisite = "None";
+                  } else {
+                    co_requisite = co_requisite.replace(/\.$/, '');
+                  }
+                  if(course_offered === "Course Typically Offered:"){
+                    course_offered = "Fall and Spring";
+                  }
+
+                  const postedCourse = await fetch(
+                    "http://127.0.0.1:8000/api/courses/major/create",
+                    {
+                      method: "POST",
+                      headers: { "Content-Type": "application/json" },
+                      body: JSON.stringify({
+                        name,
+                        description,
+                        prerequisite,
+                        co_requisite,
+                        credits,
+                        CoreRequirement,
+                        course_offered,
+                        course_type,
+                      }),
+                    }
+                  );
+                }
+              }
+            } else {
+              console.log("no data found a");
+            }
+          } catch (error) {
+            console.log("no data found");
+          }
+
           onLogin(username); // Call the onLogin prop with the username
         } else {
           // Handle login failure
