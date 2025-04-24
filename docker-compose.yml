@@ -11,43 +11,20 @@ services:
       - "8000:8000"
     depends_on:
       - db
-    networks:
-      - frontend_network  # Attach to the defined network
-
-  # Backend API Service
-  api:
-    build:
-      context: .  # Build the image using the Dockerfile in this directory
-      dockerfile: Dockerfile  # Specify the Dockerfile if it's not named Dockerfile
-    container_name: api_service  # Give a descriptive name to the container
-    ports:
-      - "8001:8001"  # Map host port 8001 to container port 8001
-    environment:
-      - ENV=production  # Pass environment variables for configuration
-    networks:
-      - backend_network  # Attach to the defined network
-    depends_on:
-      - db  # Ensure the API service starts after the database
 
   # Database Service 
   db:
-    image: postgres:13  # Use a specific, stable version of Postgres
+    image: postgres:15  # Use a specific, stable version of Postgres
     container_name: postgres_db  # Name the container for easier reference
     restart: always  # Automatically restart the container if it crashes
     environment:
-      POSTGRES_USER: your_db_user  # Set database user
-      POSTGRES_PASSWORD: your_db_password  # Set database password
-      POSTGRES_DB: your_db_name  # Set the initial database
+      POSTGRES_USER: DatabaseUsername
+      POSTGRES_PASSWORD: DatabasePassword 
+      POSTGRES_DB: DegreeTrackingDatabase
     volumes:
       - postgres_data:/var/lib/postgresql/data  # Persistent storage for database data
-    networks:
-      - backend_network  # Attach to backend network
 
 # Define Docker Volumes for Persistent Data Storage
 volumes:
   postgres_data:
 
-# Define Docker Networks to Isolate Services
-networks:
-  frontend_network:  # For web services
-  backend_network:  # For backend and database services

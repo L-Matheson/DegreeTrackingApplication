@@ -12,18 +12,30 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-b+mrbv)uh3z5yn%67y6%kc)u6v1i@d44^ou*=u2$+ve-co9i@f'
 
-# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+
+# Here is some documentation if you want to learn more about CORS https://www.stackhawk.com/blog/django-cors-guide/
+
+CORS_ALLOW_ALL_ORIGINS = True  
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+    "http://localhost:3000/courses",
+    "http://localhost:3000/MajorRequirements",
+    "http://localhost:3000/Settings",
+    "http://localhost:3000/calendar",
+    "http://localhost:8000",
+]
+
+CORS_ALLOW_METHODS = ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
 
 ALLOWED_HOSTS = []
 
@@ -42,6 +54,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
