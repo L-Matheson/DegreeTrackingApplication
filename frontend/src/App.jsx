@@ -1,18 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Sidebar, { SidebarItem, SidebarHeader } from './GeneralComponents/SideBar';
 import './App.css';
 import './global.css';
 import { SidebarProvider } from './Context/SidebarContext';
 import Home from './pages/Home';
 import Courses from './pages/Courses';
-import Professors from './pages/Professors';
 import Calendar from './pages/Calendar';
 import MajorRequirements from './pages/MajorRequirements';
 import Settings from './pages/Settings';
 import Login from './pages/Login';
-import CoursesStore from './stores/CoursesStore';
-import {Provider} from 'react-redux';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+
 export default function App() {
   const [user, setUser] = useState(null);
 
@@ -39,7 +37,7 @@ export default function App() {
               <SidebarItem icon="pi pi-sign-out" text="Logout" to="/" onClick={() => setUser(null)} />
             </Sidebar>
             <div className="content">
-            <Provider store={CoursesStore}> 
+
               <Routes>
                
                 <Route path="/" element={<Home />} />
@@ -50,7 +48,7 @@ export default function App() {
                 <Route path="*" element={<Navigate to="/" />} />
               
               </Routes>
-              </Provider>
+           
             </div>
           </main>
         </SidebarProvider>

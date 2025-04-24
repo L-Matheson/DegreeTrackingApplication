@@ -77,11 +77,17 @@ export default function Login({ onLogin }) {
                 const dataCourse = require("./cos_req.json");
                 console.log(dataCourse.course);
 
+                /*
+                * This is where courses will be initally processed
+                * In a real world scenerio, this would already be stored
+                * 
+                * REDO THIS ALGORITHM ITS TERRIBLE AND MAKES ME WANT TO VOMIT
+                * 
+                */
                 for (let i = 0; i < dataCourse.course.length; i++) {
                   const x = dataCourse.course[i];
                   let test = x.course_block.split("\n");
 
-                  console.log(test);
                   let name = "";
                   let description = "";
                   let prerequisite = "";
@@ -119,7 +125,7 @@ export default function Login({ onLogin }) {
                   prerequisite = prerequisite.replace("Prerequisite(s):", "");
                   co_requisite = co_requisite.replace("Co-requisite(s):", "");
                   credits = credits.replace("Credits: ", "");
-
+                  
                   if (prerequisite === "") {
                     prerequisite = "None";
                   }
@@ -152,15 +158,15 @@ export default function Login({ onLogin }) {
                 }
               }
             } else {
-              console.log("no data found a");
+              console.log("no data found");
             }
           } catch (error) {
             console.log("no data found");
           }
 
-          onLogin(username); // Call the onLogin prop with the username
+          onLogin(username); 
         } else {
-          // Handle login failure
+          //  login failure
           setMessage("Invalid username or password, Please Try Again");
         }
       } catch (error) {
