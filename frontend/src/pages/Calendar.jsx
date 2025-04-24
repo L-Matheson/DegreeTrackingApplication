@@ -57,5 +57,6 @@ export default function Calendar() {
       <hr className="solid" style={{ padding: 0, marginTop: 0 }} />
    
     </div>
+  
   );
 }
