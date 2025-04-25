@@ -14,6 +14,8 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 export default function App() {
   const [user, setUser] = useState(null);
 
+  // Check if user is stored in localStorage on initial load
+  // and set the user state accordingly
   useEffect(() => {
     const storedUser = localStorage.getItem('user');
     if (storedUser) {
@@ -37,18 +39,14 @@ export default function App() {
               <SidebarItem icon="pi pi-sign-out" text="Logout" to="/" onClick={() => setUser(null)} />
             </Sidebar>
             <div className="content">
-
               <Routes>
-               
                 <Route path="/" element={<Home />} />
                 <Route path="/courses" element={<Courses />} />
                 <Route path="/calendar" element={<Calendar />} />
                 <Route path="/MajorRequirements" element={<MajorRequirements />} />
                 <Route path="/Settings" element={<Settings />} />
                 <Route path="*" element={<Navigate to="/" />} />
-              
               </Routes>
-           
             </div>
           </main>
         </SidebarProvider>

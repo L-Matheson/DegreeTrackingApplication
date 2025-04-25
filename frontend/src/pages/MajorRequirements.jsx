@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { DataTable } from "primereact/datatable";
 import { Column } from "primereact/column";
 import { InputText } from "primereact/inputtext";
@@ -7,16 +7,26 @@ import { IconField } from "primereact/iconfield";
 import { InputIcon } from "primereact/inputicon";
 import { FilterMatchMode, FilterOperator } from "primereact/api";
 import { Dropdown } from "primereact/dropdown";
-
+import { ConfirmPopup } from "primereact/confirmpopup";
+import { Toast } from "primereact/toast";
+import { Dialog } from "primereact/dialog";
+import CustomDropList from "../GeneralComponents/CustomDropList";
 export default function MajorReq() {
   const [courses, setCourses] = useState([]);
   const [selectedCourses, setSelectedCourses] = useState([]);
+  const toast = useRef(null);
 
   // Defines what filters can be used for what rows
   const [filters, setFilters] = useState({
     global: { value: null, matchMode: FilterMatchMode.CONTAINS },
-    name: { operator: FilterOperator.AND, constraints: [{ value: null, matchMode: FilterMatchMode.STARTS_WITH }] },
-    prerequisite: { operator: FilterOperator.AND, constraints: [{ value: null, matchMode: FilterMatchMode.STARTS_WITH }] },
+    name: {
+      operator: FilterOperator.AND,
+      constraints: [{ value: null, matchMode: FilterMatchMode.STARTS_WITH }],
+    },
+    prerequisite: {
+      operator: FilterOperator.AND,
+      constraints: [{ value: null, matchMode: FilterMatchMode.STARTS_WITH }],
+    },
     course_type: { value: null, matchMode: FilterMatchMode.EQUALS },
     course_offered: { value: null, matchMode: FilterMatchMode.CONTAINS },
   });
@@ -24,17 +34,26 @@ export default function MajorReq() {
   const [globalFilterValue, setGlobalFilterValue] = useState("");
 
   // Defines course types, used in Course Type Filtering
-  const [courseTypes] = useState(["Core", "Elective"]);
+  const [courseTypes] = useState([
+    "Computer Science",
+    "Biology",
+    "Mathematics",
+    "Physics",
+    "Chemistry",
+    "Engineering",
+  ]);
 
-  // Fetch courses 
+  // Fetch courses
   useEffect(() => {
     const fetchCourses = async () => {
       try {
-        const response = await fetch("http://127.0.0.1:8000/api/courses/major/");
+        const response = await fetch(
+          "http://127.0.0.1:8000/api/courses/major/"
+        );
         if (response.ok) {
           const data = await response.json();
           setCourses(data); // Assuming the API returns an array of courses
-          console.log(data)
+          console.log(data);
         } else {
           console.error("Failed to fetch courses:", response.statusText);
         }
@@ -50,25 +69,92 @@ export default function MajorReq() {
   const onGlobalFilterChange = (e) => {
     const value = e.target.value;
     let _filters = { ...filters };
-
     _filters["global"].value = value;
-
     setFilters(_filters);
     setGlobalFilterValue(value);
   };
+
+  const addCourse = useRef(null);
+  const [noSelectCoursesWarning, setNoSelectCoursesWarning] = useState(false);
+  const [enrollVisable, setEnrollVisable] = useState(false);
+
+  async function enrollCourse() {
+
+    if (selectedCourses.length === 0) {
+      setNoSelectCoursesWarning(true);
+      toast.current.show({
+        severity: "warn",
+        summary: "No Courses",
+        detail: "Please Select Course(s) Before Enrolling",
+      });
+      return;
+    } else if (selectedCourses.length > 5) {
+      setNoSelectCoursesWarning(true);
+      toast.current.show({
+        severity: "warn",
+        summary: "Max Courses Succeeded",
+        detail:
+          "Max of Five Courses Succeeded, Please Deselect Courses and Try Again",
+      });
+    } else {
+
+    
+
+    setNoSelectCoursesWarning(false);
+    setEnrollVisable(true);
+    console.log("Selected Courses:", selectedCourses);
+    toast.current.show({
+      severity: "success",
+      summary: "Success",
+      detail: "You have successfully enrolled in the course(s)",
+    });
+
+  }
+  }
 
   // The header above the table, contains the search bar and Courses title
   const renderHeader = () => {
     return (
       <div className="flex flex-wrap gap-2 justify-content-between align-items-center">
         <h4 className="m-0">Courses</h4>
+        <Button
+          ref={addCourse}
+          icon="pi pi-plus"
+          label="Add Course"
+          className="p-button-success"
+          onClick={enrollCourse}
+          style={{ marginLeft: "auto" }}
+        />
         <IconField iconPosition="left">
+          <Toast ref={toast} />
           <InputIcon className="pi pi-search" />
-          <InputText value={globalFilterValue} onChange={onGlobalFilterChange} placeholder="Search courses..." />
+          <InputText
+            value={globalFilterValue}
+            onChange={onGlobalFilterChange}
+            placeholder="Search courses..."
+          />
         </IconField>
       </div>
     );
   };
+
+  // The footer of the dialog, contains the buttons for the dialog
+  const footerContent = (
+    <div>
+      <Button
+        label="No"
+        icon="pi pi-times"
+        onClick={() => setEnrollVisable(false)}
+        className="p-button-text"
+      />
+      <Button
+        label="Yes"
+        icon="pi pi-check"
+        onClick={() => setEnrollVisable(false)}
+        autoFocus
+      />
+    </div>
+  );
 
   const courseTypeBodyTemplate = (rowData) => {
     return <span>{rowData.course_type}</span>;
@@ -96,16 +182,37 @@ export default function MajorReq() {
           <div className="text-900 font-medium flex" style={{ width: 175 }}>
             Major Requirements
             <div className="flex" style={{ right: 0, position: "absolute" }}>
-              <div className="p-inputgroup flex-1 gap-3" style={{ paddingTop: 1 }}>
+              <div
+                className="p-inputgroup flex-1 gap-3"
+                style={{ paddingTop: 1 }}
+              >
                 <IconField iconPosition="left">
                   <InputIcon className="pi pi-search"> </InputIcon>
-                  <InputText placeholder="Search..." style={{ width: 300, height: 25 }} />
+                  <InputText
+                    placeholder="Search..."
+                    style={{ width: 300, height: 25 }}
+                  />
                 </IconField>
               </div>
               <div className="flex px-4" style={{ gap: 12 }}>
-                <Button icon="pi pi-bell" rounded text style={{ height: 27, width: 27 }} />
-                <Button icon="pi pi-cog" rounded text style={{ height: 27, width: 27 }} />
-                <Button icon="pi pi-calendar" rounded text style={{ height: 27, width: 27 }} />
+                <Button
+                  icon="pi pi-bell"
+                  rounded
+                  text
+                  style={{ height: 27, width: 27 }}
+                />
+                <Button
+                  icon="pi pi-cog"
+                  rounded
+                  text
+                  style={{ height: 27, width: 27 }}
+                />
+                <Button
+                  icon="pi pi-calendar"
+                  rounded
+                  text
+                  style={{ height: 27, width: 27 }}
+                />
               </div>
             </div>
           </div>
@@ -129,16 +236,58 @@ export default function MajorReq() {
           onSelectionChange={(e) => setSelectedCourses(e.value)}
           filters={filters}
           filterDisplay="menu"
-          globalFilterFields={["name", "description", "prerequisite", "co_requisite", "course_offered", "course_type"]}
+          globalFilterFields={[
+            "name",
+            "description",
+            "prerequisite",
+            "co_requisite",
+            "course_offered",
+            "course_type",
+          ]}
           emptyMessage="Error finding courses, please try again"
           currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
         >
-          <Column selectionMode="multiple" headerStyle={{ width: "3rem" }}></Column>
-          <Column field="name" header="Name" sortable filter filterPlaceholder="Search by name" style={{ minWidth: "14rem" }} />
-          <Column field="description" header="Description" style={{ minWidth: "22rem" }} />
-          <Column field="prerequisite" header="Prerequisite" filter sortable filterPlaceholder="Search by Prerequisite" filterField="prerequisite" style={{ minWidth: "12rem" }} />
-          <Column field="co_requisite" header="Co-Requisite" sortable style={{ minWidth: "12rem" }} />
-          <Column field="course_offered" header="Course Offered" filterPlaceholder="Search by Semester" filter sortable filterField="course_offered" style={{ minWidth: "12rem" }} />
+          <Column
+            selectionMode="multiple"
+            headerStyle={{ width: "3rem" }}
+          ></Column>
+          <Column
+            field="name"
+            header="Name"
+            sortable
+            filter
+            filterPlaceholder="Search by name"
+            style={{ minWidth: "14rem" }}
+          />
+          <Column
+            field="description"
+            header="Description"
+            style={{ minWidth: "22rem" }}
+          />
+          <Column
+            field="prerequisite"
+            header="Prerequisite"
+            filter
+            sortable
+            filterPlaceholder="Search by Prerequisite"
+            filterField="prerequisite"
+            style={{ minWidth: "12rem" }}
+          />
+          <Column
+            field="co_requisite"
+            header="Co-Requisite"
+            sortable
+            style={{ minWidth: "12rem" }}
+          />
+          <Column
+            field="course_offered"
+            header="Course Offered"
+            filterPlaceholder="Search by Semester"
+            filter
+            sortable
+            filterField="course_offered"
+            style={{ minWidth: "12rem" }}
+          />
           <Column
             field="course_type"
             header="Course Type"
@@ -152,6 +301,28 @@ export default function MajorReq() {
           />
         </DataTable>
       </div>
+
+      <div className="card flex justify-content-center">
+        <Dialog
+          header="Selected Courses"
+          visible={enrollVisable}
+          style={{ width: "50vw" }}
+          onHide={() => {
+            if (!enrollVisable) return;
+            setEnrollVisable(false);
+          }}
+          footer={footerContent}
+        >
+          <div className="selected-Courses">
+          
+
+
+          <CustomDropList courses={selectedCourses} />
+
+          </div>
+        </Dialog>
+      </div>
     </div>
   );
 }
+
