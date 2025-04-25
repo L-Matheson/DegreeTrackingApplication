@@ -6,7 +6,52 @@ from api.serializers.enrolledCoursesSerializer import enrolledCoursesSerializer
 from rest_framework.decorators import api_view
 import json
 
+@api_view(['GET'])
+def enrolled_courses_by_semester(request, semester):
+    try:
+        # Validate the input semester format
+        if " " not in semester:
+            return Response(
+                {"error": "Invalid semester format. Expected format: 'Season Year' (e.g., 'Fall 2026')."},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
 
+        # Split the input semester into season and year
+        input_season, input_year = semester.split(" ")
+        input_year = int(input_year)
+
+        # Define the order of seasons
+        season_order = {"Winter": 1, "Spring": 2, "Summer": 3, "Fall": 4}
+
+        # Get all enrolled courses
+        enrolled_courses = EnrolledCourses.objects.all()
+
+        # Filter courses manually based on year and season
+        filtered_courses = []
+        for course in enrolled_courses:
+            # Ensure the course's semesterEnrolled is properly formatted
+            if " " not in course.semesterEnrolled:
+                continue  # Skip improperly formatted entries
+
+            course_season, course_year = course.semesterEnrolled.split(" ")
+            course_year = int(course_year)
+
+            # Compare year and season
+            if course_year > input_year or (course_year == input_year and season_order[course_season] >= season_order[input_season]):
+                filtered_courses.append(course)
+
+        # Serialize the filtered courses
+        serializer = enrolledCoursesSerializer(filtered_courses, many=True)
+        return Response(serializer.data)
+
+    except ValueError:
+        return Response(
+            {"error": "Invalid semester format. Expected format: 'Season Year' (e.g., 'Fall 2026')."},
+            status=status.HTTP_400_BAD_REQUEST,
+        )
+    except Exception as e:
+        return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+    
 @api_view(['GET'])
 def get_all_enrolled_courses(request):
     enrolledCourses = EnrolledCourses.objects.all()

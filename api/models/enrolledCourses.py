@@ -9,3 +9,9 @@ class EnrolledCourses(models.Model):
     def __str__(self):
         return self.name
     
+#     {
+#     "name" : "test",
+#      "progress" : "test",
+#     "semesterEnrolled" : "test",
+#     "gpa" :  "4.0"
+# }

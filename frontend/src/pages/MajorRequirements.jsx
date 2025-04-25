@@ -18,6 +18,7 @@ export default function MajorReq() {
   const [selectedCourses, setSelectedCourses] = useState([]);
   const toast = useRef(null);
   const [courseHandler] = useState(new CourseHandler());
+  courseHandler.fetchCourses() // gather all the necessary courses upon course handler initialization
   const addCourse = useRef(null);
   const [noSelectCoursesWarning, setNoSelectCoursesWarning] = useState(false);
   const [enrollVisable, setEnrollVisable] = useState(false);
@@ -37,6 +38,7 @@ export default function MajorReq() {
     course_offered: { value: null, matchMode: FilterMatchMode.CONTAINS },
   });
   const [globalFilterValue, setGlobalFilterValue] = useState("");
+
   // Defines course types, used in Course Type Filtering
   const [courseTypes] = useState([
     "Computer Science",
@@ -46,6 +48,7 @@ export default function MajorReq() {
     "Chemistry",
     "Engineering",
   ]);
+  
   // Fetch courses
   useEffect(() => {
     const fetchCourses = async () => {
@@ -67,6 +70,7 @@ export default function MajorReq() {
 
     fetchCourses();
   }, []);
+
   // Controls the filtering
   const onGlobalFilterChange = (e) => {
     const value = e.target.value;
@@ -75,7 +79,6 @@ export default function MajorReq() {
     setFilters(_filters);
     setGlobalFilterValue(value);
   };
-
 
   async function enrollCourse() {
     if (selectedCourses.length === 0) {
@@ -105,13 +108,39 @@ export default function MajorReq() {
       });
     }
   }
-  //Calls the course handler to save the courses if they can be saved
-  function handleEnroll(){
-    console.log("Enrolling in courses:", selectedCourses);
-    selectedCourses.forEach((course) => {
-      courseHandler.saveCourse(course, course.selectedSemester);
-    });
-  };
+
+  // Calls the course handler to save the courses if they can be saved
+  function handleEnroll() {
+    for (const [name, semester] of enrolledCourses) {
+      let result = courseHandler.saveCourse(name, semester)
+        .then((response) => {
+          if (response.ok) {
+            console.log("Course saved successfully:", name, semester);
+            toast.current.show({
+              severity: "success",
+              summary: "Success",
+              detail: `You have successfully enrolled in ${name} for ${semester}`,
+            });
+          } else {
+            console.error("Failed to save course:", response.statusText);
+            toast.current.show({
+              severity: "error",
+              summary: "Error",
+              detail: `Failed to enroll in ${name} for ${semester}, ensure you are not already enrolled`,
+            });
+          }
+        })
+        .catch((error) => {
+          console.error("Error saving course:", error);
+          toast.current.show({
+            severity: "error",
+            summary: "Error",
+            detail: `Error enrolling in ${name} for ${semester}`,
+          });
+        });
+      console.log("Result:", result);
+    }
+  }
 
   // The header above the table, contains the search bar and Courses title
   const renderHeader = () => {
@@ -175,15 +204,14 @@ export default function MajorReq() {
     );
   };
 
-  
+  const enrolledCourses = new Map(); // Store enrolled courses, key is course name, value is semester
+
   const handleDropdownSelection = (name, semester) => {
-    console.log(
-      `Course: ${name} - Semester: ${semester}`
-    );
+    console.log(`Course: ${name} - Semester: ${semester}`);
+
+    enrolledCourses.set(name, semester);
+    console.log("Enrolled Courses:", enrolledCourses);
   };
-
-
-
 
 
   // The main return function, contains the table and the dialog
