@@ -42,9 +42,10 @@
   padding-left: 17rem;
   transition: 0.5s ;
   background-color: rgb(233, 230, 230);
-  height: 100vh;
-
+  height: 100vh ;
 }
+
+
 .layout-sidebar.collapsed ~ .content {
   padding-left: 60px;
 }
