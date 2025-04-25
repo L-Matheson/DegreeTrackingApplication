@@ -10,6 +10,8 @@ import "../App.css";
 import { Dialog } from "primereact/dialog";
 
 export default function Login({ onLogin }) {
+  const [loginUsername, setLoginUsername] = useState("");
+  const [loginPassword, setLoginPassword] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [firstName, setFirstName] = useState("");
@@ -58,7 +60,7 @@ export default function Login({ onLogin }) {
       // Log in user
       try {
         const studentLoginResponse = await fetch(
-          `http://127.0.0.1:8000/api/student/${username}/${password}`,
+          `http://127.0.0.1:8000/api/student/${loginUsername}/${loginPassword}`,
           {
             method: "GET",
           }
@@ -234,7 +236,7 @@ export default function Login({ onLogin }) {
               justifyContent: "center",
               alignItems: "center",
               textAlign: "center",
-              marginBottom: "18px",
+              marginBottom: "10px",
             }}
           >
             <p style={{ color: "red", fontWeight: 'bold' }}>{message}</p>
@@ -253,8 +255,8 @@ export default function Login({ onLogin }) {
               <FloatLabel>
                 <InputText
                   id="username"
-                  value={username}
-                  onChange={(e) => setUsername(e.target.value)}
+                  value={loginUsername}
+                  onChange={(e) => setLoginUsername(e.target.value)}
                   style={{ width: "100%" }}
                 />
                 <label htmlFor="username">Username</label>
@@ -269,8 +271,8 @@ export default function Login({ onLogin }) {
                 <FloatLabel>
                   <InputText
                     id="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
+                    value={loginPassword}
+                    onChange={(e) => setLoginPassword(e.target.value)}
                     style={{ width: "100%" }}
                   />
                   <label htmlFor="password">Password</label>

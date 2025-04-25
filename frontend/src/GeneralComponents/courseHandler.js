@@ -38,18 +38,24 @@ class CourseHandler {
      * @param {Object} course - The course object to send.
      * @returns {Promise<Response>} - The API response.
      */
-    async saveCourse(course) {
-        try {
-            const response = await fetch("http://127.0.0.1:8000/api/courses/major/create", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(course),
-            });
-            return response;
-        } catch (error) {
-            console.error("Error saving course:", error);
-            throw error;
-        }
+    async saveCourse(course, semester) {
+        console.log("Saving course:", course, "with semester:", semester);
+        // try {
+        //     const response = await fetch("http://127.0.0.1:8000/api/courses/enrolled/", {
+        //         method: "POST",
+        //         headers: { "Content-Type": "application/json" },
+        //         body: JSON.stringify({
+        //             name: course.name,
+        //             progress: "Enrolled",
+        //             semesterEnrolled: semester,
+        //         }
+        //         ),
+        //     });
+        //     return response;
+        // } catch (error) {
+        //     console.error("Error saving course:", error);
+        //     throw error;
+        // }
     }
 
 

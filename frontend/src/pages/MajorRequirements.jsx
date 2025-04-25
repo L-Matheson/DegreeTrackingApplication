@@ -11,10 +11,16 @@ import { ConfirmPopup } from "primereact/confirmpopup";
 import { Toast } from "primereact/toast";
 import { Dialog } from "primereact/dialog";
 import CustomDropList from "../GeneralComponents/CustomDropList";
+import CourseHandler from "../GeneralComponents/courseHandler";
+
 export default function MajorReq() {
   const [courses, setCourses] = useState([]);
   const [selectedCourses, setSelectedCourses] = useState([]);
   const toast = useRef(null);
+  const [courseHandler] = useState(new CourseHandler());
+  const addCourse = useRef(null);
+  const [noSelectCoursesWarning, setNoSelectCoursesWarning] = useState(false);
+  const [enrollVisable, setEnrollVisable] = useState(false);
 
   // Defines what filters can be used for what rows
   const [filters, setFilters] = useState({
@@ -30,9 +36,7 @@ export default function MajorReq() {
     course_type: { value: null, matchMode: FilterMatchMode.EQUALS },
     course_offered: { value: null, matchMode: FilterMatchMode.CONTAINS },
   });
-
   const [globalFilterValue, setGlobalFilterValue] = useState("");
-
   // Defines course types, used in Course Type Filtering
   const [courseTypes] = useState([
     "Computer Science",
@@ -42,7 +46,6 @@ export default function MajorReq() {
     "Chemistry",
     "Engineering",
   ]);
-
   // Fetch courses
   useEffect(() => {
     const fetchCourses = async () => {
@@ -64,7 +67,6 @@ export default function MajorReq() {
 
     fetchCourses();
   }, []);
-
   // Controls the filtering
   const onGlobalFilterChange = (e) => {
     const value = e.target.value;
@@ -74,12 +76,8 @@ export default function MajorReq() {
     setGlobalFilterValue(value);
   };
 
-  const addCourse = useRef(null);
-  const [noSelectCoursesWarning, setNoSelectCoursesWarning] = useState(false);
-  const [enrollVisable, setEnrollVisable] = useState(false);
 
   async function enrollCourse() {
-
     if (selectedCourses.length === 0) {
       setNoSelectCoursesWarning(true);
       toast.current.show({
@@ -97,20 +95,23 @@ export default function MajorReq() {
           "Max of Five Courses Succeeded, Please Deselect Courses and Try Again",
       });
     } else {
-
-    
-
-    setNoSelectCoursesWarning(false);
-    setEnrollVisable(true);
-    console.log("Selected Courses:", selectedCourses);
-    toast.current.show({
-      severity: "success",
-      summary: "Success",
-      detail: "You have successfully enrolled in the course(s)",
+      setNoSelectCoursesWarning(false);
+      setEnrollVisable(true);
+      console.log("Selected Courses:", selectedCourses);
+      toast.current.show({
+        severity: "success",
+        summary: "Success",
+        detail: "You have successfully enrolled in the course(s)",
+      });
+    }
+  }
+  //Calls the course handler to save the courses if they can be saved
+  function handleEnroll(){
+    console.log("Enrolling in courses:", selectedCourses);
+    selectedCourses.forEach((course) => {
+      courseHandler.saveCourse(course, course.selectedSemester);
     });
-
-  }
-  }
+  };
 
   // The header above the table, contains the search bar and Courses title
   const renderHeader = () => {
@@ -137,20 +138,21 @@ export default function MajorReq() {
       </div>
     );
   };
+  const header = renderHeader();
 
   // The footer of the dialog, contains the buttons for the dialog
   const footerContent = (
     <div>
       <Button
-        label="No"
+        label="Cancel"
         icon="pi pi-times"
-        onClick={() => setEnrollVisable(false)}
+        onClick={() => [setEnrollVisable(false), console.log("Canceled")]}
         className="p-button-text"
       />
       <Button
-        label="Yes"
+        label="Enroll"
         icon="pi pi-check"
-        onClick={() => setEnrollVisable(false)}
+        onClick={() => [setEnrollVisable(false), handleEnroll()]}
         autoFocus
       />
     </div>
@@ -173,8 +175,18 @@ export default function MajorReq() {
     );
   };
 
-  const header = renderHeader();
+  
+  const handleDropdownSelection = (name, semester) => {
+    console.log(
+      `Course: ${name} - Semester: ${semester}`
+    );
+  };
 
+
+
+
+
+  // The main return function, contains the table and the dialog
   return (
     <div style={{ padding: 0 }}>
       <div style={{ textAlign: "left", backgroundColor: "white", height: 50 }}>
@@ -304,9 +316,9 @@ export default function MajorReq() {
 
       <div className="card flex justify-content-center">
         <Dialog
-          header="Selected Courses"
+          header="Enroll Courses"
           visible={enrollVisable}
-          style={{ width: "50vw" }}
+          style={{ width: "40vw" }}
           onHide={() => {
             if (!enrollVisable) return;
             setEnrollVisable(false);
@@ -314,15 +326,17 @@ export default function MajorReq() {
           footer={footerContent}
         >
           <div className="selected-Courses">
-          
-
-
-          <CustomDropList courses={selectedCourses} />
-
+            {selectedCourses.map((course) => (
+              <div key={course.id}>
+                <CustomDropList
+                  course={course}
+                  onSelectionChange={handleDropdownSelection}
+                />
+              </div>
+            ))}
           </div>
         </Dialog>
       </div>
     </div>
   );
 }
-
