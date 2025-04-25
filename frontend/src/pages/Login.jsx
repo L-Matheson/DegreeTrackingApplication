@@ -7,6 +7,7 @@ import { FloatLabel } from "primereact/floatlabel";
 import CourseHandler from "../GeneralComponents/courseHandler";
 import "./LoginPage.css";
 import "../App.css";
+import { Dialog } from "primereact/dialog";
 
 export default function Login({ onLogin }) {
   const [username, setUsername] = useState("");
@@ -17,6 +18,8 @@ export default function Login({ onLogin }) {
   const [isRegistering, setIsRegistering] = useState(false);
   const [message, setMessage] = useState("");
 
+  const [visible, setVisible] = useState(false);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setMessage("");
@@ -24,7 +27,7 @@ export default function Login({ onLogin }) {
     if (isRegistering) {
       // Register new user
       try {
-        const response = await fetch(
+        const createUserResponse = await fetch(
           "http://127.0.0.1:8000/api/student/create/",
           {
             method: "POST",
@@ -39,9 +42,9 @@ export default function Login({ onLogin }) {
           }
         );
 
-        const data = response.json();
+        const data = createUserResponse.json();
 
-        if (response.ok) {
+        if (createUserResponse.ok) {
           setMessage("Account created! Please log in.");
           setIsRegistering(false);
         } else {
@@ -54,23 +57,23 @@ export default function Login({ onLogin }) {
     } else {
       // Log in user
       try {
-        const response = await fetch(
+        const studentLoginResponse = await fetch(
           `http://127.0.0.1:8000/api/student/${username}/${password}`,
           {
             method: "GET",
           }
         );
 
-        if (response.ok) {
+        if (studentLoginResponse.ok) {
           // Successful login
-          const data = response.json();
+          const data = studentLoginResponse.json();
 
           try {
-            const response = await fetch(
+            const majorCoursesResponse = await fetch(
               "http://127.0.0.1:8000/api/courses/major/"
             );
-            if (response.ok) {
-              const courseData = await response.json();
+            if (majorCoursesResponse.ok) {
+              const courseData = await majorCoursesResponse.json();
               console.log(courseData);
 
               if (courseData.length <= 0) {
@@ -78,12 +81,12 @@ export default function Login({ onLogin }) {
                 console.log(dataCourse.course);
 
                 /*
-                * This is where courses will be initally processed
-                * In a real world scenerio, this would already be stored
-                * 
-                * REDO THIS ALGORITHM ITS TERRIBLE AND MAKES ME WANT TO VOMIT
-                * 
-                */
+                 * This is where courses will be initally processed
+                 * In a real world scenerio, this would already be stored
+                 *
+                 * REDO THIS ALGORITHM ITS TERRIBLE AND MAKES ME WANT TO VOMIT
+                 *
+                 */
                 for (let i = 0; i < dataCourse.course.length; i++) {
                   const x = dataCourse.course[i];
                   let test = x.course_block.split("\n");
@@ -95,7 +98,7 @@ export default function Login({ onLogin }) {
                   let course_offered = "";
                   let course_type = "";
                   let credits = "";
-                  let CoreRequirement = "";
+                  let coreRequirement = "";
 
                   if (test.length === 8) {
                     name = test[0];
@@ -103,7 +106,7 @@ export default function Login({ onLogin }) {
                     prerequisite = test[2];
                     co_requisite = test[3];
                     credits = test[4];
-                    CoreRequirement = test[5];
+                    coreRequirement = test[5];
                     course_offered = test[6];
                     course_type = test[7];
                   } else {
@@ -112,7 +115,7 @@ export default function Login({ onLogin }) {
                     prerequisite = test[2];
                     co_requisite = test[3];
                     credits = test[4];
-                    CoreRequirement = "None";
+                    coreRequirement = "None";
                     course_offered = test[5];
                     course_type = test[6];
                   }
@@ -125,7 +128,7 @@ export default function Login({ onLogin }) {
                   prerequisite = prerequisite.replace("Prerequisite(s):", "");
                   co_requisite = co_requisite.replace("Co-requisite(s):", "");
                   credits = credits.replace("Credits: ", "");
-                  
+
                   if (prerequisite === "") {
                     prerequisite = "None";
                   }
@@ -149,7 +152,7 @@ export default function Login({ onLogin }) {
                         prerequisite,
                         co_requisite,
                         credits,
-                        CoreRequirement,
+                        CoreRequirement: coreRequirement,
                         course_offered,
                         course_type,
                       }),
@@ -164,7 +167,7 @@ export default function Login({ onLogin }) {
             console.log("no data found");
           }
 
-          onLogin(username); 
+          onLogin(username);
         } else {
           //  login failure
           setMessage("Invalid username or password, Please Try Again");
@@ -176,9 +179,9 @@ export default function Login({ onLogin }) {
     }
   };
 
-  function handleLoser(){
-    console.log("loser")
-    onLogin('username'); // Call the onLogin prop with the username
+  function handleLoser() {
+    console.log("loser");
+    onLogin("username"); // Call the onLogin prop with the username
   }
 
   return (
@@ -188,9 +191,16 @@ export default function Login({ onLogin }) {
           <div className="text-900 font-medium flex" style={{ width: 200 }}>
             Login
             {/* This is a development button to avoid using docker to login */}
-            <Button onClick={handleLoser}  style={{ minWidth: 500, marginLeft: 200}}> Listen, I don't want to use docker, just take me to the app, remember to atleast create one account and log in once to get the classes though </Button>
+            <Button
+              onClick={handleLoser}
+              style={{ minWidth: 500, marginLeft: 200 }}
+            >
+              {" "}
+              Listen, I don't want to use docker, just take me to the app,
+              remember to atleast create one account and log in once to get the
+              classes though{" "}
+            </Button>
           </div>
-   
         </div>
       </div>
       <hr
@@ -201,8 +211,8 @@ export default function Login({ onLogin }) {
       <div
         className="login-form"
         style={{
-          width: 500,
-          height: 500,
+          width: 425,
+          height: 450,
           backgroundColor: "#f9f9f9",
           borderRadius: "8px",
           boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
@@ -217,11 +227,29 @@ export default function Login({ onLogin }) {
           </div>
         </div>
         <div className="login-content">
-          {message && (
-            <p style={{ color: "red", marginBottom: "25px" }}>{message}</p>
-          )}
+        {message && (
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              textAlign: "center",
+              marginBottom: "18px",
+            }}
+          >
+            <p style={{ color: "red", fontWeight: 'bold' }}>{message}</p>
+          </div>
+        )}
           <form onSubmit={handleSubmit}>
-            <div className="login-input-field">
+            <div
+              className="login-input-field"
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
               <FloatLabel>
                 <InputText
                   id="username"
@@ -248,91 +276,149 @@ export default function Login({ onLogin }) {
                   <label htmlFor="password">Password</label>
                 </FloatLabel>
               </div>
-              {isRegistering && (
-                <div>
-                  <div
-                    style={{
-                      marginTop: "20px",
-                      marginBottom: "15px",
-                    }}
-                  >
-                    <FloatLabel>
-                      <InputText
-                        id="firstName"
-                        value={firstName}
-                        onChange={(e) => setFirstName(e.target.value)}
-                        style={{ width: "100%" }}
-                      />
-                      <label htmlFor="firstName">First Name</label>
-                    </FloatLabel>
-                  </div>
-                  <div
-                    style={{
-                      marginTop: "20px",
-                      marginBottom: "15px",
-                    }}
-                  >
-                    <FloatLabel>
-                      <InputText
-                        id="lastName"
-                        value={lastName}
-                        onChange={(e) => setLastName(e.target.value)}
-                        style={{ width: "100%" }}
-                      />
-                      <label htmlFor="lastName">Last Name</label>
-                    </FloatLabel>
-                  </div>
-                  <div
-                    style={{
-                      marginTop: "20px",
-                      marginBottom: "15px",
-                    }}
-                  >
-                    <FloatLabel>
-                      <InputText
-                        id="email"
-                        value={studentEmail}
-                        onChange={(e) => setEmail(e.target.value)}
-                        style={{ width: "100%" }}
-                      />
-                      <label htmlFor="email">Email</label>
-                    </FloatLabel>
-                  </div>
-                </div>
-              )}
+
+              <Button
+                label="Login"
+                style={{
+                  width: "18vh",
+                  textAlign: "center",
+                }}
+                onClick={handleSubmit}
+              ></Button>
             </div>
           </form>
+
           <div
             type="submit"
             style={{
-              width: "85%",
-              padding: "10px 0",
-              paddingLeft: "0",
+              width: "100%",
+              paddingBottom: "10px",
+
               textAlign: "center",
               fontWeight: "bold",
               bottom: "0",
               position: "absolute",
             }}
           >
-            <Button onClick={handleSubmit}>
-              {" "}
-              {isRegistering ? "Sign Up" : "Login"}{" "}
-            </Button>
-            <p
-              style={{
-                fontWeight: "bold",
-                marginTop: 20,
-                cursor: "pointer",
-                textDecoration: "underline",
-                textAlign: "center",
-              }}
-              onClick={() => setIsRegistering(!isRegistering)}
+            <Button
+              type="Create Account"
+              icon="pi pi-user-plus"
+              label="Create Account"
+              onClick={() => [
+                setVisible(true),
+                setIsRegistering(!isRegistering),
+              ]}
+              style={{ width: "25vh" }}
             >
-              {isRegistering ? "Sign In" : "Create An Account"}
-            </p>
+              {" "}
+            </Button>
           </div>
         </div>
       </div>
+
+      <Dialog
+        header="Create Account"
+        visible={isRegistering}
+        onHide={() => {
+          if (!isRegistering) return;
+          setIsRegistering(false);
+        }}
+        style={{ width: "36vw" }}
+        breakpoints={{ "960px": "75vw", "641px": "100vw" }}
+      >
+        {message && (
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              textAlign: "center",
+              marginBottom: "25px",
+            }}
+          >
+            <p style={{ color: "red" }}>{message}</p>
+          </div>
+        )}
+
+        <div className="login-input-field">
+          <FloatLabel>
+            <InputText
+              id="username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              style={{ width: "100%" }}
+            />
+            <label htmlFor="username">Username</label>
+          </FloatLabel>
+
+          <div
+            style={{
+              marginTop: "20px",
+              marginBottom: "15px",
+            }}
+          >
+            <FloatLabel>
+              <InputText
+                id="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                style={{ width: "100%" }}
+              />
+              <label htmlFor="password">Password</label>
+            </FloatLabel>
+          </div>
+
+          <div
+            style={{
+              marginTop: "20px",
+              marginBottom: "15px",
+            }}
+          >
+            <FloatLabel>
+              <InputText
+                id="firstName"
+                value={firstName}
+                onChange={(e) => setFirstName(e.target.value)}
+                style={{ width: "100%" }}
+              />
+              <label htmlFor="firstName">First Name</label>
+            </FloatLabel>
+          </div>
+          <div
+            style={{
+              marginTop: "20px",
+              marginBottom: "15px",
+            }}
+          >
+            <FloatLabel>
+              <InputText
+                id="lastName"
+                value={lastName}
+                onChange={(e) => setLastName(e.target.value)}
+                style={{ width: "100%" }}
+              />
+              <label htmlFor="lastName">Last Name</label>
+            </FloatLabel>
+          </div>
+          <div
+            style={{
+              marginTop: "20px",
+              marginBottom: "15px",
+            }}
+          >
+            <FloatLabel>
+              <InputText
+                id="email"
+                value={studentEmail}
+                onChange={(e) => setEmail(e.target.value)}
+                style={{ width: "100%" }}
+              />
+              <label htmlFor="email">Email</label>
+            </FloatLabel>
+          </div>
+          <Button onClick={handleSubmit}>Sign Up</Button>
+        </div>
+      </Dialog>
     </div>
   );
 }
