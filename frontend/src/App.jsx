@@ -10,6 +10,7 @@ import MajorRequirements from './pages/MajorRequirements';
 import Settings from './pages/Settings';
 import Login from './pages/Login';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import MyCourses from './pages/MyCourses';
 
 export default function App() {
   const [user, setUser] = useState(null);
@@ -30,6 +31,7 @@ export default function App() {
               <SidebarHeader text="Degree Tracker" icon="pi pi-graduation-cap" />
               <SidebarItem icon="pi pi-home" text="Home" to="/" />
               <SidebarItem icon="pi pi-book" text="Courses" to="/courses" />
+              <SidebarItem icon="pi pi-book" text="My Courses" to="/mycourses" />
               <SidebarItem icon="pi pi-calendar" text="Calendar" to="/calendar" />
               <SidebarItem icon="pi pi-book" text="Major Requirements" to="/MajorRequirements" />
               <hr className="solid" />
@@ -42,6 +44,7 @@ export default function App() {
                
                 <Route path="/" element={<Home />} />
                 <Route path="/courses" element={<Courses />} />
+                <Route path="/mycourses" element={<MyCourses />} />
                 <Route path="/calendar" element={<Calendar />} />
                 <Route path="/MajorRequirements" element={<MajorRequirements />} />
                 <Route path="/Settings" element={<Settings />} />

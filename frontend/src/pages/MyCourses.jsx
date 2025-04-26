@@ -9,7 +9,6 @@ import { InputText } from "primereact/inputtext";
 import { Button } from "primereact/button";
 import { IconField } from 'primereact/iconfield';
 import { InputIcon } from 'primereact/inputicon';
-import { ButtonGroup } from 'primereact/buttongroup';
 import "./MyCourses.css";
 export default function MyCourses() {
   
@@ -58,18 +57,20 @@ export default function MyCourses() {
 
       <hr className="solid" style={{ padding: 0, marginTop: 0 }} />
 
+      
+
       <div className = "myC-background">
-        <div className="card flex justify-content-center">
-              <ButtonGroup>
-                  <Button label="Past Courses" />
-                  <Button label="Current Courses" />
-                  <Button label="Future Courses" />
-              </ButtonGroup>
+        <div className="card flex justify-content-center gap-8">
+
+                  <Button icon="pi pi-chevron-left" label="Last Semester"className="mr-8" rounded/>
+                  <Button icon="pi pi-chevron-right" label="Next Semester"  iconPos="right" className="ml-8" rounded/>
+
         </div>
 
       </div>
    
     </div>
+    
 
     
   );
