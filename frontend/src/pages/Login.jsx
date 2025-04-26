@@ -5,6 +5,18 @@ import { IconField } from "primereact/iconfield";
 import { InputIcon } from "primereact/inputicon";
 import { FloatLabel } from "primereact/floatlabel";
 import CourseHandler from "../GeneralComponents/courseHandler";
+
+import capResults from "./core/cap_results.json";
+import createResults from "./core/create_results.json";
+import cultureResults from "./core/culture_results.json";
+import engDes from "./core/eng_des.json";
+import engagedResults from "./core/engaged_results_1.json";
+import equityResults from "./core/equity_results.json";
+import ethicResults from "./core/ethic_results.json";
+import internResults from "./core/intern_results.json";
+import reasonResults from "./core/reason_results.json";
+import scienceResults from "./core/science_results.json";
+import sociResults from "./core/soci_results.json";
 //import * as fs from 'node:fs/promises';
 //import * as path from 'path';
 import "./LoginPage.css";
@@ -179,19 +191,30 @@ export default function Login({ onLogin }) {
             );
             if (coreCoursesResponse.ok) {
               const coreCourseData = await coreCoursesResponse.json();
-              console.log(coreCourseData );
+              console.log(coreCourseData, 'core');
 
               if (coreCourseData.length <= 0) {
                 // const fs =require('fs');
                 // const path = require('path');
                 // const courseLists =  fs.readdir('./core');
-                const courseLists = ["./core/cap_result.json", "./core/create_results.json", "./core/culture_results.json", "./core/eng_des.json", "./core/engaged_results_1.json", "./core/equity_results.json", "./core/ethic_results.json", "./core/intern_results.json", "./core/reason_results.json", "./core/science_results.json", "./core/soci_results.json"];
+                const courseLists = [
+                  capResults,
+                  createResults,
+                  cultureResults,
+                  engDes,
+                  engagedResults,
+                  equityResults,
+                  ethicResults,
+                  internResults,
+                  reasonResults,
+                  scienceResults,
+                  sociResults,
+                ];             
                 // courseLists.map( async (file) => {
-                for( let i = 0; i < courseLists.length; i++){
+                for( let currFile = 0; currFile < courseLists.length; currFile++){
                 // const dataCoreCourse = require(path.join('./core', file));
-                const dataCoreCourse = require(courseLists[i]);
-                console.log(dataCoreCourse.course);
-
+                const dataCoreCourse = courseLists[currFile]; // Access the JSON data directly
+                console.log(dataCoreCourse.course, ' Current JSON');
                 /*
                  * This is where courses will be initally processed
                  * In a real world scenerio, this would already be stored
@@ -199,8 +222,8 @@ export default function Login({ onLogin }) {
                  * REDO THIS ALGORITHM ITS TERRIBLE AND MAKES ME WANT TO VOMIT
                  *
                  */
-                for (let j = 0; j < coreCourseData.course.length; j++) {
-                  const x = coreCourseData.course[i];
+                for (let currCourse = 0; currCourse < dataCoreCourse.course.length; currCourse++) {
+                  const x = dataCoreCourse.course[currCourse];
                   let test = x.course_block.split("\n");
 
                   let name = "";
@@ -275,10 +298,10 @@ export default function Login({ onLogin }) {
               // );
             }
             } else {
-              console.log("no data found");
+              console.log("no data found a");
             }    
           } catch (error) {
-            console.log("no data found");
+            console.log("no data found b");
           }
 
           onLogin(username);
