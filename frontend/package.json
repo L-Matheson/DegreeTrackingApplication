@@ -7,6 +7,9 @@
     "@types/react": "^18.2.38",
     "@vitejs/plugin-react": "latest",
     "cra-template": "1.2.0",
+    "fs.promises": "^0.1.2",
+    "node-polyfill-webpack-plugin": "^4.1.0",
+    "path-browserify": "^1.0.1",
     "primeflex": "^3.3.1",
     "primeicons": "^7.0.0",
     "primereact": "^10.9.2",
@@ -14,7 +17,7 @@
     "react-dom": "^19.0.0",
     "react-redux": "^9.2.0",
     "react-router-dom": "^7.5.2",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "react-transition-group": "^4.4.5",
     "vite": "latest",
     "web-vitals": "^4.2.4"
@@ -42,5 +45,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.2"
   }
 }

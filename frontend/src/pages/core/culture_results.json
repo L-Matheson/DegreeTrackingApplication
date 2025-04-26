@@ -1,0 +1,492 @@
+{
+ "course": [
+  {
+   "name": "ANT 280 - Prehistoric Art",
+   "course_block": "ANT 280 - Prehistoric Art\nThis course takes a combined anthropological, historical, and critical approach and focuses on two case studies: 1) the Palaeolithic (Ice Age) art of Eurasia (ca. 32,400-10,000 years ago); and 2) the pre-colonial rock art of southern Africa (prior to 1652 AD). It reviews the diversity of forms and activities constituting prehistoric image making, and their numerous interpretations, including: “art for art’s sake,” magico-religion, structuralism, neo-evolutionary functionalism, and shamanism. It also considers the sociopolitical climate within which these theories have been proposed and identifies problematic assumptions and biases. The term “prehistoric art” is a major topic of discussion as students evaluate the relevance, appropriateness, and limitations of a western (European) definition of “art” for understanding non-Western image making.\nPrerequisite(s):\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; International\nCourse Typically Offered:\nCourse Type: Anthropology"
+  },
+  {
+   "name": "ARA 101 - Beginning Arabic I",
+   "course_block": "ARA 101 - Beginning Arabic I\nThis beginning course in Arabic stresses the acquisition of cultural information and introduces students to the four skills of language learning: listening, reading, speaking, and writing.\nPrerequisite(s):\nCo-requisite(s):\nCredits: 4\nMeets the Following Core Requirement: Cultural Interpretation\nCourse Typically Offered: Every other Fall\nCourse Type: Arabic"
+  },
+  {
+   "name": "ARA 102 - Beginning Arabic II",
+   "course_block": "ARA 102 - Beginning Arabic II\nContinuation of ARA 101.\nPrerequisite(s): ARA 101 or equivalent.\nCo-requisite(s):\nCredits: 4\nMeets the Following Core Requirement: Cultural Interpretation\nCourse Typically Offered: Every other Spring\nCourse Type: Arabic"
+  },
+  {
+   "name": "ARA 201 - Intermediate Arabic I",
+   "course_block": "ARA 201 - Intermediate Arabic I\nReview of grammatical structures with further development of listening comprehension, reading, speaking, and writing skills. The emphasis will be on understanding cultures and contemporary life of Arabic-speaking countries through reading and discussion.\nPrerequisite(s): ARA 102 or equivalent.\nCo-requisite(s):\nCredits: 4\nMeets the Following Core Requirement: Cultural Interpretation\nCourse Typically Offered: Every other fall\nCourse Type: Arabic"
+  },
+  {
+   "name": "ARA 202 - Intermediate Arabic II",
+   "course_block": "ARA 202 - Intermediate Arabic II\nContinuation of ARA 201.\nPrerequisite(s): ARA 201 or equivalent.\nCo-requisite(s):\nCredits: 4\nMeets the Following Core Requirement: Cultural Interpretation\nCourse Typically Offered: Every other spring\nCourse Type: Arabic"
+  },
+  {
+   "name": "ARH 111 - Art History: Prehistoric through Medieval",
+   "course_block": "ARH 111 - Art History: Prehistoric through Medieval\nExamination and discussion of the painting, sculpture, and architecture from prehistoric cultures to the late Middle Ages. The course emphasizes the relationship of the visual arts to social, political, religious, and cultural trends, and introduces students to various methods of art-historical interpretation.\nPrerequisite(s):\nCo-requisite(s): Any approved WRI 2 course. Preference given to candidates for matriculation in the Department of Art, or those with permission of the instructor.\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; International\nCourse Typically Offered:\nCourse Type: Art History"
+  },
+  {
+   "name": "ARH 112 - Art History: Renaissance to the Present",
+   "course_block": "ARH 112 - Art History: Renaissance to the Present\nExamination and discussion of the painting, sculpture, and architecture from the Renaissance to the present. The course emphasizes the relationship of the visual arts to social, political, religious, and cultural trends and introduces students to various methods of art-historical interpretation.\nPrerequisite(s):\nCo-requisite(s): Any approved WRI 2 Course. Preference given to candidates for matriculation in the Department of Art, or those with permission of instructor.\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; International\nCourse Typically Offered:\nCourse Type: Art History"
+  },
+  {
+   "name": "ASL 101 - Beginning American Sign Language I",
+   "course_block": "ASL 101 - Beginning American Sign Language I\nThis is a beginning course in American Sign Language (ASL). It will include extensive study of receptive and expressive use of ASL, as well as an introductory discussion of Deaf culture. Course content covers basic principles in the use of sign, sign vocabulary, and aspects of the grammar of ASL. In addition to class sessions, students will use written materials and other media outside of class. This course has a community interaction requirement of four hours over the semester.\nPrerequisite(s):\nCo-requisite(s):\nCredits: 4\nMeets the Following Core Requirement: Cultural Interpretation\nCourse Typically Offered: Fall, Spring, and Summer\nCourse Type: American Sign Language"
+  },
+  {
+   "name": "ASL 102 - Beginning American Sign Language II",
+   "course_block": "ASL 102 - Beginning American Sign Language II\nThis is the second beginning course in American Sign Language (ASL). This course has a community interaction requirement of nine hours over the semester.\nPrerequisite(s): ASL 101 or departmental permission.\nCo-requisite(s):\nCredits: 4\nMeets the Following Core Requirement: Cultural Interpretation\nCourse Typically Offered: Spring and Summer\nCourse Type: American Sign Language"
+  },
+  {
+   "name": "ASL 201 - Intermediate American Sign Language I",
+   "course_block": "ASL 201 - Intermediate American Sign Language I\nThis is the third in a four-course sequence in American Sign Language (ASL). The course includes extensive work on receptive and expressive use of ASL. It emphasizes the grammatical structure of ASL, particularly its morphology, syntax, and semantics. In addition to class sessions, students will work with media from external resources. This course has a community interaction requirement of 14 hours over the semester.\nPrerequisite(s): ASL 102 or departmental permission.\nCo-requisite(s):\nCredits: 4\nMeets the Following Core Requirement: Cultural Interpretation; Engaged Learning\nCourse Typically Offered: Fall\nCourse Type: American Sign Language"
+  },
+  {
+   "name": "ASL 202 - Intermediate American Sign Language II",
+   "course_block": "ASL 202 - Intermediate American Sign Language II\nContinuation of ASL 201. This course has a community interaction requirement of 19 hours over the semester. Toward the end of the course, students will take the ASLA, an external assessment of ASL skills.\nPrerequisite(s): ASL 201 or departmental permission.\nCo-requisite(s):\nCredits: 4\nMeets the Following Core Requirement: Cultural Interpretation; Engaged Learning\nCourse Typically Offered: Spring\nCourse Type: American Sign Language"
+  },
+  {
+   "name": "CHI 101 - Beginning Chinese I",
+   "course_block": "CHI 101 - Beginning Chinese I\nThis is a beginning level Chinese language course. The course will cover listening comprehension, reading, speaking, and writing skills.\nPrerequisite(s):\nCo-requisite(s):\nCredits: 4\nMeets the Following Core Requirement: Cultural Interpretation\nCourse Typically Offered: Every other fall\nCourse Type: Chinese"
+  },
+  {
+   "name": "CHI 102 - Beginning Chinese II",
+   "course_block": "CHI 102 - Beginning Chinese II\nA continuation of CHI 101. The course will develop the student’s listening comprehension, reading, speaking, and writing skills.\nPrerequisite(s): CHI 101 or equivalent.\nCo-requisite(s):\nCredits: 4\nMeets the Following Core Requirement: Cultural Interpretation\nCourse Typically Offered: Every other spring\nCourse Type: Chinese"
+  },
+  {
+   "name": "DAN 266 - The Art of Dance",
+   "course_block": "DAN 266 - The Art of Dance\nThrough readings, writings, and creative projects we’ll investigate how dance intersects with other art forms, viewing and analyzing the work of important artists in the fields of ballet, modern, musical theatre, social dance, and visual art. Discover how dance as an art form influences culture. No dance experience is necessary.\nPrerequisite(s): College Writing.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation\nCourse Typically Offered:\nCourse Type: Dance"
+  },
+  {
+   "name": "ECO 234 - Political Economy in Popular Song",
+   "course_block": "ECO 234 - Political Economy in Popular Song\nIn this course, students will explore the intersection of economic, social, political, and cultural forces through music. They will analyze different aspects of the capitalist system through a variety of lenses, including efficiency, economic justice, and power as they examine how artists’ observations relate to economic theory and research. They will discuss the ways in which culture shapes the way we understand our social and economic systems and think critically about their roles and responsibilities in these systems as workers, consumers, and citizens. Discussion will focus primarily on American culture and issues relevant to the U.S. economy.\nPrerequisite(s): Writing, Reading, and Inquiry 1 (ENG 100, HON 100 or RSP 100 ) or concurrent.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation\nCourse Typically Offered:\nCourse Type: Economics"
+  },
+  {
+   "name": "ENG 140 - Reading Literature",
+   "course_block": "ENG 140 - Reading Literature\nThis course is an introduction to the premises and techniques of literary analysis. The course emphasizes the close reading of texts from different historical periods and introduces students to literary conventions and terminology as well as library and Internet resources available for research. In this course, students will learn to use concepts of the discipline and conventions of academic discourse with an emphasis on critical writing.\nPrerequisite(s):\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation\nCourse Typically Offered: Fall, spring, and summer\nCourse Type: English"
+  },
+  {
+   "name": "ENG 145 - Topics in Literature",
+   "course_block": "ENG 145 - Topics in Literature\nThis course emphasizes oral and written analysis and interpretation of literary and other cultural texts within and across historical contexts. Though topics vary, each provides a broad introduction to the concepts of literary history and periodization as these are understood within the discipline and familiarizes students with the basic terms and methods of literary analysis.\nPrerequisite(s):\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation\nMay be repeated for credit when topics vary.\nCourse Typically Offered: Variable\nCourse Type: English"
+  },
+  {
+   "name": "ENG 244 - Introduction to Cultural Studies",
+   "course_block": "ENG 244 - Introduction to Cultural Studies\nThis course introduces students to the history, concepts, and methods of cultural studies. Students will read a variety of critical texts from a number of different theoretical perspectives, including semiotics, Marxian theory, psychoanalytic theory, gender studies, and cultural anthropology, and will also read selected texts from specific areas of cultural analysis, such as television studies or film theory. The course examines specific aspects of past or present popular cultures.\nPrerequisite(s):\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation\nCourse Typically Offered: Variable\nCourse Type: English"
+  },
+  {
+   "name": "FRE 101 - Beginning French I",
+   "course_block": "FRE 101 - Beginning French I\nThis beginning course in French stresses the acquisition of cultural information and introduces the student to the four skills of language learning: listening comprehension, reading, speaking, and writing.\nPrerequisite(s):\nCo-requisite(s):\nCredits: 4\nMeets the Following Core Requirement: Cultural Interpretation\nCourse Typically Offered: Fall\nCourse Type: French"
+  },
+  {
+   "name": "FRE 102 - Beginning French II",
+   "course_block": "FRE 102 - Beginning French II\nContinuation of FRE 101.\nPrerequisite(s): FRE 101 or equivalent.\nCo-requisite(s):\nCredits: 4\nMeets the Following Core Requirement: Cultural Interpretation\nCourse Typically Offered: Spring\nCourse Type: French"
+  },
+  {
+   "name": "FRE 201 - Intermediate French I",
+   "course_block": "FRE 201 - Intermediate French I\nReview of grammatical structures with further development of listening comprehension, reading, speaking, and writing skills. The emphasis will be on understanding cultures and contemporary life of French-speaking countries through reading and discussion.\nPrerequisite(s): FRE 102 or equivalent.\nCo-requisite(s):\nCredits: 4\nMeets the Following Core Requirement: Cultural Interpretation\nCourse Typically Offered: Fall\nCourse Type: French"
+  },
+  {
+   "name": "FRE 202 - Intermediate French II",
+   "course_block": "FRE 202 - Intermediate French II\nContinuation of FRE 201.\nPrerequisite(s): FRE 201 or equivalent.\nCo-requisite(s):\nCredits: 4\nMeets the Following Core Requirement: Cultural Interpretation; International\nCourse Typically Offered: Spring\nCourse Type: French"
+  },
+  {
+   "name": "GER 101 - Beginning German I",
+   "course_block": "GER 101 - Beginning German I\nThis beginning course in German stresses the acquisition of cultural information and introduces the student to the four skills of language learning: listening comprehension, reading, speaking, and writing.\nPrerequisite(s):\nCo-requisite(s):\nCredits: 4\nMeets the Following Core Requirement: Cultural Interpretation\nCourse Typically Offered: Fall\nCourse Type: German"
+  },
+  {
+   "name": "GER 102 - Beginning German II",
+   "course_block": "GER 102 - Beginning German II\nContinuation of GER 101.\nPrerequisite(s): GER 101 or equivalent.\nCo-requisite(s):\nCredits: 4\nMeets the Following Core Requirement: Cultural Interpretation\nCourse Typically Offered: Spring\nCourse Type: German"
+  },
+  {
+   "name": "GER 201 - Intermediate German I",
+   "course_block": "GER 201 - Intermediate German I\nReview of grammar. Further development of listening comprehension, reading, and speaking skills. The emphasis will be on understanding German culture and contemporary life through reading and discussion of short stories, articles and essays.\nPrerequisite(s): GER 102 or equivalent.\nCo-requisite(s):\nCredits: 4\nMeets the Following Core Requirement: Cultural Interpretation\nCourse Typically Offered: Fall\nCourse Type: German"
+  },
+  {
+   "name": "GER 202 - Intermediate German II",
+   "course_block": "GER 202 - Intermediate German II\nContinuation of GER 201.\nPrerequisite(s): GER 201 or equivalent.\nCo-requisite(s):\nCredits: 4\nMeets the Following Core Requirement: Cultural Interpretation; International\nCourse Typically Offered: Spring\nCourse Type: German"
+  },
+  {
+   "name": "HON 102 - Honors Cultural Interpretation",
+   "course_block": "HON 102 - Honors Cultural Interpretation\nCultural Interpretation courses engage students in the close analysis and interpretation of cultural representations to learn how people make sense of themselves and their world. Students critically evaluate and develop arguments about cultural representations or the contexts that produce them or give them meaning.\nPrerequisite(s): Honors minor or permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation\nCourse Typically Offered: Fall and Spring\nCourse Type: Academic Honors Program"
+  },
+  {
+   "name": "HON 202 - Honors Cultural Interpretation",
+   "course_block": "HON 202 - Honors Cultural Interpretation\nCultural Interpretation courses engage students in the close analysis and interpretation of cultural representations to learn how people make sense of themselves and their world. Students critically evaluate and develop arguments about cultural representations or the contexts that produce them or give them meaning.\nPrerequisite(s): Honors minor or permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation\nCourse Typically Offered: Spring\nCourse Type: Academic Honors Program"
+  },
+  {
+   "name": "ITA 101 - Beginning Italian I",
+   "course_block": "ITA 101 - Beginning Italian I\nA beginning course in Italian in the four skills of language learning: listening comprehension, reading, speaking, and writing.\nPrerequisite(s):\nCo-requisite(s):\nCredits: 4\nMeets the Following Core Requirement: Cultural Interpretation\nCourse Typically Offered: Fall\nCourse Type: Italian"
+  },
+  {
+   "name": "ITA 102 - Beginning Italian II",
+   "course_block": "ITA 102 - Beginning Italian II\nContinuation of ITA 101.\nPrerequisite(s): ITA 101 or equivalent.\nCo-requisite(s):\nCredits: 4\nMeets the Following Core Requirement: Cultural Interpretation\nCourse Typically Offered: Spring\nCourse Type: Italian"
+  },
+  {
+   "name": "ITA 201 - Intermediate Italian I",
+   "course_block": "ITA 201 - Intermediate Italian I\nReview of grammatical structures. Further development of listening comprehension, reading, speaking, and writing skills. The emphasis will be on understanding Italian culture and civilization through reading and discussion of literary and historical texts as well as frequent reference to contemporary customs and events.\nPrerequisite(s): ITA 102 or equivalent.\nCo-requisite(s):\nCredits: 4\nMeets the Following Core Requirement: Cultural Interpretation\nCourse Typically Offered: Offered every two years in fall.\nCourse Type: Italian"
+  },
+  {
+   "name": "ITA 202 - Intermediate Italian II",
+   "course_block": "ITA 202 - Intermediate Italian II\nContinuation of ITA 201.\nPrerequisite(s): ITA 201 or equivalent.\nCo-requisite(s):\nCredits: 4\nMeets the Following Core Requirement: Cultural Interpretation; International\nCourse Typically Offered: Offered every two years in spring.\nCourse Type: Italian"
+  },
+  {
+   "name": "LAN 101 - Beginning Language I",
+   "course_block": "LAN 101 - Beginning Language I\nA beginning course in a language. Emphasis is on skills of language learning. For modern languages, skills are comprehension and production. If a modern spoken language has a standardized writing system, comprehension includes both listening and reading, and production includes both speaking and writing. For ancient/classical languages, the emphasis is on reading. For all languages, students also learn about the culture of the language’s users.\nPrerequisite(s):\nCo-requisite(s):\nCredits: 4\nMeets the Following Core Requirement: Cultural Interpretation\nMay be repeated for credit with a different language.\nCourse Typically Offered:\nCourse Type: Languages"
+  },
+  {
+   "name": "LAN 102 - Beginning Language II",
+   "course_block": "LAN 102 - Beginning Language II\nContinuation of LAN 101.\nPrerequisite(s): LAN 101 (in the corresponding language).\nCo-requisite(s):\nCredits: 4\nMeets the Following Core Requirement: Cultural Interpretation\nMay be repeated for credit with a different language.\nCourse Typically Offered:\nCourse Type: Languages"
+  },
+  {
+   "name": "LAN 201 - Intermediate Language I",
+   "course_block": "LAN 201 - Intermediate Language I\nReview of grammatical structures with further development of language skills and study of culture.\nPrerequisite(s): LAN 102 (in the corresponding language).\nCo-requisite(s):\nCredits: 4\nMeets the Following Core Requirement: Cultural Interpretation\nMay be repeated for credit with a different language.\nCourse Typically Offered:\nCourse Type: Languages"
+  },
+  {
+   "name": "LAN 202 - Intermediate Language II",
+   "course_block": "LAN 202 - Intermediate Language II\nContinuation of LAN 201.\nPrerequisite(s): LAN 201 (in the corresponding language).\nCo-requisite(s):\nCredits: 4\nMeets the Following Core Requirement: Cultural Interpretation\nMay be repeated for credit with a different language.\nCourse Typically Offered:\nCourse Type: Languages"
+  },
+  {
+   "name": "LAT 101 - Beginning Latin I",
+   "course_block": "LAT 101 - Beginning Latin I\nFundamentals of classical Latin. The emphasis will be on acquisition of reading knowledge.\nPrerequisite(s):\nCo-requisite(s):\nCredits: 4\nMeets the Following Core Requirement: Cultural Interpretation\nCourse Typically Offered:\nCourse Type: Latin"
+  },
+  {
+   "name": "LAT 102 - Beginning Latin II",
+   "course_block": "LAT 102 - Beginning Latin II\nContinuation of LAT 101.\nPrerequisite(s): LAT 101 or equivalent.\nCo-requisite(s):\nCredits: 4\nMeets the Following Core Requirement: Cultural Interpretation\nCourse Typically Offered:\nCourse Type: Latin"
+  },
+  {
+   "name": "LOS 210 - Creative Critical Inquiry",
+   "course_block": "LOS 210 - Creative Critical Inquiry\nThis writing instruction course introduces students to criteria for identifying and constructing well-reasoned arguments, fosters the discovery and use of students’ critical/analytical voice in their writing, and develops skills for incorporating, interpreting and integrating the views of others. It provides the opportunity to refine critical thinking abilities by analyzing everyday life experience, including how culture shapes our sense of reality and ourselves. The course highlights the importance of generating good questions and tolerating ambiguity when seeking to understand complex issues.\nPrerequisite(s): Completion of ENG 100, ESL 100, HON 100, or RSP 100.\nCo-requisite(s):\nCredits: 4\nMeets the Following Core Requirement: Cultural Interpretation\nCourse Typically Offered:\nCourse Type: Leadership & Organizational Studies"
+  },
+  {
+   "name": "MUH 105 - Multi-Cultural Perspectives of American Popular Music and Jazz",
+   "course_block": "MUH 105 - Multi-Cultural Perspectives of American Popular Music and Jazz\nAn overview of selected styles and traditions of jazz and American popular music, as well as World music that has influenced those styles. Developing critical thinking and writing skills, the course stresses close analysis and interpretation of selected works.\nPrerequisite(s):\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; Culture, Power, and Equity\nCourse Typically Offered:\nCourse Type: Music History"
+  },
+  {
+   "name": "MUH 222 - Music History Survey 1",
+   "course_block": "MUH 222 - Music History Survey 1\nAn historical study of the language and style of music from antiquity to 1850. Significant composers, major genres, and representative musical compositions are studied.\nPrerequisite(s): Music major or permission of instructor.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; International\nCourse Typically Offered:\nCourse Type: Music History"
+  },
+  {
+   "name": "MUS 100 - Music Appreciation and History",
+   "course_block": "MUS 100 - Music Appreciation and History\nA survey of music from the Gregorian chant to the modern times, covering musical practices of the renaissance, baroque, classical, romantic, and contemporary periods. Representative works by the outstanding composers of each period. Open to all students.\nPrerequisite(s):\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation\nCourse Typically Offered:\nCourse Type: Music"
+  },
+  {
+   "name": "MUS 103 - Introduction to Jazz",
+   "course_block": "MUS 103 - Introduction to Jazz\nA survey of jazz from its inception to the present day. Involves a study of the origins and stylistic development of jazz. Open to all students.\nPrerequisite(s):\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation\nCourse Typically Offered:\nCourse Type: Music"
+  },
+  {
+   "name": "MUS 204 - Rock and Roll: Subversive or Submissive?",
+   "course_block": "MUS 204 - Rock and Roll: Subversive or Submissive?\nThis course surveys popular musical styles from the Pre-Rock era to the early 21st century, from Rhythm and Blues to Hip hop, and examines how this music reflected or rejected societal norms of the times.\nPrerequisite(s): College Writing.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation\nCourse Typically Offered:\nCourse Type: Music"
+  },
+  {
+   "name": "PHI 105 - Introduction to Philosophy: Philosophy Through Its History",
+   "course_block": "PHI 105 - Introduction to Philosophy: Philosophy Through Its History\nAn introduction to philosophy through its history and development, i.e., through an examination of central texts in the history of philosophy, up to and including contemporary works. Specific readings may vary from semester to semester, but will always include some canonical works by classic Western philosophers (e.g., Plato, Aristotle, Descartes, and Kant).\nPrerequisite(s): College Writing\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation\nCourse Typically Offered:\nCourse Type: Philosophy"
+  },
+  {
+   "name": "PHI 106 - Why Philosophize?",
+   "course_block": "PHI 106 - Why Philosophize?\nThe course centers about the exploration of a single question: what it means to think philosophically. In the context of this question, we will examine what are the sources of philosophical thought and whether philosophy can justify its claim to be the foundation of all reflective endeavor.\nPrerequisite(s): College Writing\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation\nCourse Typically Offered:\nCourse Type: Philosophy"
+  },
+  {
+   "name": "PHI 310 - History of Ancient Philosophy",
+   "course_block": "PHI 310 - History of Ancient Philosophy\nPhilosophic thought from the pre-Socratics to the late Hellenistic period, with major emphasis on Plato and Aristotle.\nPrerequisite(s):\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation\nCourse Typically Offered:\nCourse Type: Philosophy"
+  },
+  {
+   "name": "PHI 320 - History of Medieval and Renaissance Philosophy",
+   "course_block": "PHI 320 - History of Medieval and Renaissance Philosophy\nThis course critically examines the merger of philosophical with the religious stream of thought by examining the ideas and text of Augustine, Aquinas, Duns Scotus, Maimonides, Averroes, Dane, Ibn Kahldun, Erasmus and others.\nPrerequisite(s):\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation\nCourse Typically Offered:\nCourse Type: Philosophy"
+  },
+  {
+   "name": "PHI 330 - The Enlightenment: Modern Philosophy from Descartes to Kant",
+   "course_block": "PHI 330 - The Enlightenment: Modern Philosophy from Descartes to Kant\nIn the seventeenth and eighteenth century the basis of knowledge and authority were challenged and overturned. The emerging sciences challenged the authority of tradition and scripture, and this challenging began to affect other forms of authority. This class examines the central texts and debates of the period, focusing on the intersection of the transformation of knowledge and society.\nPrerequisite(s):\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation\nCourse Typically Offered:\nCourse Type: Philosophy"
+  },
+  {
+   "name": "PHI 360 - Existentialism",
+   "course_block": "PHI 360 - Existentialism\nAn examination of the historical development and basic themes of existentialism as found in the writings of its major representatives: Kierkegaard, Nietzsche, Heidegger, Sartre, Buber, Marcel, and others.\nPrerequisite(s):\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation\nCourse Typically Offered:\nCourse Type: Philosophy"
+  },
+  {
+   "name": "PHI 370 - Analytic Philosophy",
+   "course_block": "PHI 370 - Analytic Philosophy\nAn historical approach to twentieth-century linguistic philosophy. This course will begin with logical atomism, continue through the era of logical positivism, and end with ordinary language analysis. Extensive reading of primary sources and major commentators.\nPrerequisite(s):\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation\nCourse Typically Offered:\nCourse Type: Philosophy"
+  },
+  {
+   "name": "SPA 101 - Beginning Spanish I",
+   "course_block": "SPA 101 - Beginning Spanish I\nA beginning course in Spanish in the four skills of language learning: listening comprehension, reading, speaking, and writing. In addition, audiovisual work is required.\nPrerequisite(s):\nCo-requisite(s):\nCredits: 4\nMeets the Following Core Requirement: Cultural Interpretation\nCourse Typically Offered: Fall\nCourse Type: Spanish"
+  },
+  {
+   "name": "SPA 102 - Beginning Spanish II",
+   "course_block": "SPA 102 - Beginning Spanish II\nContinuation of SPA 101.\nPrerequisite(s): SPA 101 or equivalent.\nCo-requisite(s):\nCredits: 4\nMeets the Following Core Requirement: Cultural Interpretation\nCourse Typically Offered: Spring\nCourse Type: Spanish"
+  },
+  {
+   "name": "SPA 201 - Intermediate Spanish I",
+   "course_block": "SPA 201 - Intermediate Spanish I\nReview of grammatical structures. Further development of listening comprehension, reading, speaking, and writing skills. The emphasis will be on understanding Hispanic culture and civilization through reading and discussion of literary and historical texts as well as frequent reference to contemporary customs and events.\nPrerequisite(s): SPA 102 or equivalent.\nCo-requisite(s):\nCredits: 4\nMeets the Following Core Requirement: Cultural Interpretation\nCourse Typically Offered: Fall\nCourse Type: Spanish"
+  },
+  {
+   "name": "SPA 202 - Intermediate Spanish II",
+   "course_block": "SPA 202 - Intermediate Spanish II\nContinuation of SPA 201.\nPrerequisite(s): SPA 201 or equivalent.\nCo-requisite(s):\nCredits: 4\nMeets the Following Core Requirement: Cultural Interpretation; International\nCourse Typically Offered: Spring\nCourse Type: Spanish"
+  },
+  {
+   "name": "THE 101 - Introduction to Theatre and Text Analysis",
+   "course_block": "THE 101 - Introduction to Theatre and Text Analysis\nThis course provides a general introduction to all facets of theatre including theatre history, acting, directing, playwriting, design, management, and theatre spaces, with a focus on the necessary skills needed to read, analyze, and interpret playscripts.\nPrerequisite(s):\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation\nCourse Typically Offered: Fall\nCourse Type: Theatre"
+  },
+  {
+   "name": "WAB 101 - Beginning Wabanaki Language I",
+   "course_block": "WAB 101 - Beginning Wabanaki Language I\nThis beginning course in a Wabanaki language stresses the acquisition of cultural information and introduces the student to the four skills of language learning: listening comprehension, reading, speaking, and writing.\nPrerequisite(s):\nCo-requisite(s):\nCredits: 4\nMeets the Following Core Requirement: Cultural Interpretation\nMay be repeated for credit for a different Wabanaki language.\nCourse Typically Offered: Fall\nCourse Type: Wabanaki Languages"
+  },
+  {
+   "name": "WAB 102 - Beginning Wabanaki Language II",
+   "course_block": "WAB 102 - Beginning Wabanaki Language II\nThis course is a continuation of WAB 101.\nPrerequisite(s): WAB 101 in the same Wabanaki language.\nCo-requisite(s):\nCredits: 4\nMeets the Following Core Requirement: Cultural Interpretation\nMay be repeated for credit for a different Wabanaki language.\nCourse Typically Offered: Spring\nCourse Type: Wabanaki Languages"
+  },
+  {
+   "name": "WAB 201 - Intermediate Wabanaki Language I",
+   "course_block": "WAB 201 - Intermediate Wabanaki Language I\nReview of grammatical structures with further development of listening comprehension, reading, speaking, and writing skills. The emphasis will be on understanding the culture and contemporary life of the Wabanaki community.\nPrerequisite(s): WAB 102 in the corresponding Wabanaki language.\nCo-requisite(s):\nCredits: 4\nMeets the Following Core Requirement: Cultural Interpretation\nMay be repeated for credit for a different Wabanaki language.\nCourse Typically Offered: Offered every two years in fall.\nCourse Type: Wabanaki Languages"
+  },
+  {
+   "name": "WAB 202 - Intermediate Wabanaki Language II",
+   "course_block": "WAB 202 - Intermediate Wabanaki Language II\nThis course is a continuation of WAB 201.\nPrerequisite(s): WAB 201 in the corresponding Wabanaki language.\nCo-requisite(s):\nCredits: 4\nMeets the Following Core Requirement: Cultural Interpretation\nMay be repeated for credit for a different Wabanaki language.\nCourse Typically Offered: Offered every two years in spring.\nCourse Type: Wabanaki Languages"
+  },
+  {
+   "name": "WGS 201 - Rethinking Gender & Culture",
+   "course_block": "WGS 201 - Rethinking Gender & Culture\nWhat is gender? Is it innate or learned? How many genders and sexes are there? What is gender inequality? How does gender intersect with other categories of difference such as race, class and sexuality? How are these differences understood in various national contexts? These are some of the questions that feminist, gender and sexuality studies take up, and the questions that we will pursue in this class.\nPrerequisite(s): WGS 101; WRI 1 or equivalent for all students; for students admitted fall 2021 or later: WRI 2 or equivalent (may be concurrent), or non-degree students; OR permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; Culture, Power, and Equity; Writing, Reading, and Inquiry 3\nCourse Typically Offered: Every semester\nCourse Type: Women and Gender Studies"
+  },
+  {
+   "name": "ANT 280 - Prehistoric Art",
+   "course_block": "WGS 201 - Rethinking Gender & Culture\nWhat is gender? Is it innate or learned? How many genders and sexes are there? What is gender inequality? How does gender intersect with other categories of difference such as race, class and sexuality? How are these differences understood in various national contexts? These are some of the questions that feminist, gender and sexuality studies take up, and the questions that we will pursue in this class.\nPrerequisite(s): WGS 101; WRI 1 or equivalent for all students; for students admitted fall 2021 or later: WRI 2 or equivalent (may be concurrent), or non-degree students; OR permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; Culture, Power, and Equity; Writing, Reading, and Inquiry 3\nCourse Typically Offered: Every semester\nCourse Type: Women and Gender Studies"
+  },
+  {
+   "name": "ARA 101 - Beginning Arabic I",
+   "course_block": "WGS 201 - Rethinking Gender & Culture\nWhat is gender? Is it innate or learned? How many genders and sexes are there? What is gender inequality? How does gender intersect with other categories of difference such as race, class and sexuality? How are these differences understood in various national contexts? These are some of the questions that feminist, gender and sexuality studies take up, and the questions that we will pursue in this class.\nPrerequisite(s): WGS 101; WRI 1 or equivalent for all students; for students admitted fall 2021 or later: WRI 2 or equivalent (may be concurrent), or non-degree students; OR permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; Culture, Power, and Equity; Writing, Reading, and Inquiry 3\nCourse Typically Offered: Every semester\nCourse Type: Women and Gender Studies"
+  },
+  {
+   "name": "ARA 102 - Beginning Arabic II",
+   "course_block": "WGS 201 - Rethinking Gender & Culture\nWhat is gender? Is it innate or learned? How many genders and sexes are there? What is gender inequality? How does gender intersect with other categories of difference such as race, class and sexuality? How are these differences understood in various national contexts? These are some of the questions that feminist, gender and sexuality studies take up, and the questions that we will pursue in this class.\nPrerequisite(s): WGS 101; WRI 1 or equivalent for all students; for students admitted fall 2021 or later: WRI 2 or equivalent (may be concurrent), or non-degree students; OR permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; Culture, Power, and Equity; Writing, Reading, and Inquiry 3\nCourse Typically Offered: Every semester\nCourse Type: Women and Gender Studies"
+  },
+  {
+   "name": "ARA 201 - Intermediate Arabic I",
+   "course_block": "WGS 201 - Rethinking Gender & Culture\nWhat is gender? Is it innate or learned? How many genders and sexes are there? What is gender inequality? How does gender intersect with other categories of difference such as race, class and sexuality? How are these differences understood in various national contexts? These are some of the questions that feminist, gender and sexuality studies take up, and the questions that we will pursue in this class.\nPrerequisite(s): WGS 101; WRI 1 or equivalent for all students; for students admitted fall 2021 or later: WRI 2 or equivalent (may be concurrent), or non-degree students; OR permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; Culture, Power, and Equity; Writing, Reading, and Inquiry 3\nCourse Typically Offered: Every semester\nCourse Type: Women and Gender Studies"
+  },
+  {
+   "name": "ARA 202 - Intermediate Arabic II",
+   "course_block": "WGS 201 - Rethinking Gender & Culture\nWhat is gender? Is it innate or learned? How many genders and sexes are there? What is gender inequality? How does gender intersect with other categories of difference such as race, class and sexuality? How are these differences understood in various national contexts? These are some of the questions that feminist, gender and sexuality studies take up, and the questions that we will pursue in this class.\nPrerequisite(s): WGS 101; WRI 1 or equivalent for all students; for students admitted fall 2021 or later: WRI 2 or equivalent (may be concurrent), or non-degree students; OR permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; Culture, Power, and Equity; Writing, Reading, and Inquiry 3\nCourse Typically Offered: Every semester\nCourse Type: Women and Gender Studies"
+  },
+  {
+   "name": "ARH 111 - Art History: Prehistoric through Medieval",
+   "course_block": "WGS 201 - Rethinking Gender & Culture\nWhat is gender? Is it innate or learned? How many genders and sexes are there? What is gender inequality? How does gender intersect with other categories of difference such as race, class and sexuality? How are these differences understood in various national contexts? These are some of the questions that feminist, gender and sexuality studies take up, and the questions that we will pursue in this class.\nPrerequisite(s): WGS 101; WRI 1 or equivalent for all students; for students admitted fall 2021 or later: WRI 2 or equivalent (may be concurrent), or non-degree students; OR permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; Culture, Power, and Equity; Writing, Reading, and Inquiry 3\nCourse Typically Offered: Every semester\nCourse Type: Women and Gender Studies"
+  },
+  {
+   "name": "ARH 112 - Art History: Renaissance to the Present",
+   "course_block": "WGS 201 - Rethinking Gender & Culture\nWhat is gender? Is it innate or learned? How many genders and sexes are there? What is gender inequality? How does gender intersect with other categories of difference such as race, class and sexuality? How are these differences understood in various national contexts? These are some of the questions that feminist, gender and sexuality studies take up, and the questions that we will pursue in this class.\nPrerequisite(s): WGS 101; WRI 1 or equivalent for all students; for students admitted fall 2021 or later: WRI 2 or equivalent (may be concurrent), or non-degree students; OR permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; Culture, Power, and Equity; Writing, Reading, and Inquiry 3\nCourse Typically Offered: Every semester\nCourse Type: Women and Gender Studies"
+  },
+  {
+   "name": "ASL 101 - Beginning American Sign Language I",
+   "course_block": "WGS 201 - Rethinking Gender & Culture\nWhat is gender? Is it innate or learned? How many genders and sexes are there? What is gender inequality? How does gender intersect with other categories of difference such as race, class and sexuality? How are these differences understood in various national contexts? These are some of the questions that feminist, gender and sexuality studies take up, and the questions that we will pursue in this class.\nPrerequisite(s): WGS 101; WRI 1 or equivalent for all students; for students admitted fall 2021 or later: WRI 2 or equivalent (may be concurrent), or non-degree students; OR permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; Culture, Power, and Equity; Writing, Reading, and Inquiry 3\nCourse Typically Offered: Every semester\nCourse Type: Women and Gender Studies"
+  },
+  {
+   "name": "ASL 102 - Beginning American Sign Language II",
+   "course_block": "WGS 201 - Rethinking Gender & Culture\nWhat is gender? Is it innate or learned? How many genders and sexes are there? What is gender inequality? How does gender intersect with other categories of difference such as race, class and sexuality? How are these differences understood in various national contexts? These are some of the questions that feminist, gender and sexuality studies take up, and the questions that we will pursue in this class.\nPrerequisite(s): WGS 101; WRI 1 or equivalent for all students; for students admitted fall 2021 or later: WRI 2 or equivalent (may be concurrent), or non-degree students; OR permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; Culture, Power, and Equity; Writing, Reading, and Inquiry 3\nCourse Typically Offered: Every semester\nCourse Type: Women and Gender Studies"
+  },
+  {
+   "name": "ASL 201 - Intermediate American Sign Language I",
+   "course_block": "WGS 201 - Rethinking Gender & Culture\nWhat is gender? Is it innate or learned? How many genders and sexes are there? What is gender inequality? How does gender intersect with other categories of difference such as race, class and sexuality? How are these differences understood in various national contexts? These are some of the questions that feminist, gender and sexuality studies take up, and the questions that we will pursue in this class.\nPrerequisite(s): WGS 101; WRI 1 or equivalent for all students; for students admitted fall 2021 or later: WRI 2 or equivalent (may be concurrent), or non-degree students; OR permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; Culture, Power, and Equity; Writing, Reading, and Inquiry 3\nCourse Typically Offered: Every semester\nCourse Type: Women and Gender Studies"
+  },
+  {
+   "name": "ASL 202 - Intermediate American Sign Language II",
+   "course_block": "WGS 201 - Rethinking Gender & Culture\nWhat is gender? Is it innate or learned? How many genders and sexes are there? What is gender inequality? How does gender intersect with other categories of difference such as race, class and sexuality? How are these differences understood in various national contexts? These are some of the questions that feminist, gender and sexuality studies take up, and the questions that we will pursue in this class.\nPrerequisite(s): WGS 101; WRI 1 or equivalent for all students; for students admitted fall 2021 or later: WRI 2 or equivalent (may be concurrent), or non-degree students; OR permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; Culture, Power, and Equity; Writing, Reading, and Inquiry 3\nCourse Typically Offered: Every semester\nCourse Type: Women and Gender Studies"
+  },
+  {
+   "name": "CHI 101 - Beginning Chinese I",
+   "course_block": "WGS 201 - Rethinking Gender & Culture\nWhat is gender? Is it innate or learned? How many genders and sexes are there? What is gender inequality? How does gender intersect with other categories of difference such as race, class and sexuality? How are these differences understood in various national contexts? These are some of the questions that feminist, gender and sexuality studies take up, and the questions that we will pursue in this class.\nPrerequisite(s): WGS 101; WRI 1 or equivalent for all students; for students admitted fall 2021 or later: WRI 2 or equivalent (may be concurrent), or non-degree students; OR permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; Culture, Power, and Equity; Writing, Reading, and Inquiry 3\nCourse Typically Offered: Every semester\nCourse Type: Women and Gender Studies"
+  },
+  {
+   "name": "CHI 102 - Beginning Chinese II",
+   "course_block": "WGS 201 - Rethinking Gender & Culture\nWhat is gender? Is it innate or learned? How many genders and sexes are there? What is gender inequality? How does gender intersect with other categories of difference such as race, class and sexuality? How are these differences understood in various national contexts? These are some of the questions that feminist, gender and sexuality studies take up, and the questions that we will pursue in this class.\nPrerequisite(s): WGS 101; WRI 1 or equivalent for all students; for students admitted fall 2021 or later: WRI 2 or equivalent (may be concurrent), or non-degree students; OR permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; Culture, Power, and Equity; Writing, Reading, and Inquiry 3\nCourse Typically Offered: Every semester\nCourse Type: Women and Gender Studies"
+  },
+  {
+   "name": "DAN 266 - The Art of Dance",
+   "course_block": "WGS 201 - Rethinking Gender & Culture\nWhat is gender? Is it innate or learned? How many genders and sexes are there? What is gender inequality? How does gender intersect with other categories of difference such as race, class and sexuality? How are these differences understood in various national contexts? These are some of the questions that feminist, gender and sexuality studies take up, and the questions that we will pursue in this class.\nPrerequisite(s): WGS 101; WRI 1 or equivalent for all students; for students admitted fall 2021 or later: WRI 2 or equivalent (may be concurrent), or non-degree students; OR permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; Culture, Power, and Equity; Writing, Reading, and Inquiry 3\nCourse Typically Offered: Every semester\nCourse Type: Women and Gender Studies"
+  },
+  {
+   "name": "ECO 234 - Political Economy in Popular Song",
+   "course_block": "WGS 201 - Rethinking Gender & Culture\nWhat is gender? Is it innate or learned? How many genders and sexes are there? What is gender inequality? How does gender intersect with other categories of difference such as race, class and sexuality? How are these differences understood in various national contexts? These are some of the questions that feminist, gender and sexuality studies take up, and the questions that we will pursue in this class.\nPrerequisite(s): WGS 101; WRI 1 or equivalent for all students; for students admitted fall 2021 or later: WRI 2 or equivalent (may be concurrent), or non-degree students; OR permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; Culture, Power, and Equity; Writing, Reading, and Inquiry 3\nCourse Typically Offered: Every semester\nCourse Type: Women and Gender Studies"
+  },
+  {
+   "name": "ENG 140 - Reading Literature",
+   "course_block": "WGS 201 - Rethinking Gender & Culture\nWhat is gender? Is it innate or learned? How many genders and sexes are there? What is gender inequality? How does gender intersect with other categories of difference such as race, class and sexuality? How are these differences understood in various national contexts? These are some of the questions that feminist, gender and sexuality studies take up, and the questions that we will pursue in this class.\nPrerequisite(s): WGS 101; WRI 1 or equivalent for all students; for students admitted fall 2021 or later: WRI 2 or equivalent (may be concurrent), or non-degree students; OR permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; Culture, Power, and Equity; Writing, Reading, and Inquiry 3\nCourse Typically Offered: Every semester\nCourse Type: Women and Gender Studies"
+  },
+  {
+   "name": "ENG 145 - Topics in Literature",
+   "course_block": "WGS 201 - Rethinking Gender & Culture\nWhat is gender? Is it innate or learned? How many genders and sexes are there? What is gender inequality? How does gender intersect with other categories of difference such as race, class and sexuality? How are these differences understood in various national contexts? These are some of the questions that feminist, gender and sexuality studies take up, and the questions that we will pursue in this class.\nPrerequisite(s): WGS 101; WRI 1 or equivalent for all students; for students admitted fall 2021 or later: WRI 2 or equivalent (may be concurrent), or non-degree students; OR permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; Culture, Power, and Equity; Writing, Reading, and Inquiry 3\nCourse Typically Offered: Every semester\nCourse Type: Women and Gender Studies"
+  },
+  {
+   "name": "ENG 244 - Introduction to Cultural Studies",
+   "course_block": "WGS 201 - Rethinking Gender & Culture\nWhat is gender? Is it innate or learned? How many genders and sexes are there? What is gender inequality? How does gender intersect with other categories of difference such as race, class and sexuality? How are these differences understood in various national contexts? These are some of the questions that feminist, gender and sexuality studies take up, and the questions that we will pursue in this class.\nPrerequisite(s): WGS 101; WRI 1 or equivalent for all students; for students admitted fall 2021 or later: WRI 2 or equivalent (may be concurrent), or non-degree students; OR permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; Culture, Power, and Equity; Writing, Reading, and Inquiry 3\nCourse Typically Offered: Every semester\nCourse Type: Women and Gender Studies"
+  },
+  {
+   "name": "FRE 101 - Beginning French I",
+   "course_block": "WGS 201 - Rethinking Gender & Culture\nWhat is gender? Is it innate or learned? How many genders and sexes are there? What is gender inequality? How does gender intersect with other categories of difference such as race, class and sexuality? How are these differences understood in various national contexts? These are some of the questions that feminist, gender and sexuality studies take up, and the questions that we will pursue in this class.\nPrerequisite(s): WGS 101; WRI 1 or equivalent for all students; for students admitted fall 2021 or later: WRI 2 or equivalent (may be concurrent), or non-degree students; OR permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; Culture, Power, and Equity; Writing, Reading, and Inquiry 3\nCourse Typically Offered: Every semester\nCourse Type: Women and Gender Studies"
+  },
+  {
+   "name": "FRE 102 - Beginning French II",
+   "course_block": "WGS 201 - Rethinking Gender & Culture\nWhat is gender? Is it innate or learned? How many genders and sexes are there? What is gender inequality? How does gender intersect with other categories of difference such as race, class and sexuality? How are these differences understood in various national contexts? These are some of the questions that feminist, gender and sexuality studies take up, and the questions that we will pursue in this class.\nPrerequisite(s): WGS 101; WRI 1 or equivalent for all students; for students admitted fall 2021 or later: WRI 2 or equivalent (may be concurrent), or non-degree students; OR permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; Culture, Power, and Equity; Writing, Reading, and Inquiry 3\nCourse Typically Offered: Every semester\nCourse Type: Women and Gender Studies"
+  },
+  {
+   "name": "FRE 201 - Intermediate French I",
+   "course_block": "WGS 201 - Rethinking Gender & Culture\nWhat is gender? Is it innate or learned? How many genders and sexes are there? What is gender inequality? How does gender intersect with other categories of difference such as race, class and sexuality? How are these differences understood in various national contexts? These are some of the questions that feminist, gender and sexuality studies take up, and the questions that we will pursue in this class.\nPrerequisite(s): WGS 101; WRI 1 or equivalent for all students; for students admitted fall 2021 or later: WRI 2 or equivalent (may be concurrent), or non-degree students; OR permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; Culture, Power, and Equity; Writing, Reading, and Inquiry 3\nCourse Typically Offered: Every semester\nCourse Type: Women and Gender Studies"
+  },
+  {
+   "name": "FRE 202 - Intermediate French II",
+   "course_block": "WGS 201 - Rethinking Gender & Culture\nWhat is gender? Is it innate or learned? How many genders and sexes are there? What is gender inequality? How does gender intersect with other categories of difference such as race, class and sexuality? How are these differences understood in various national contexts? These are some of the questions that feminist, gender and sexuality studies take up, and the questions that we will pursue in this class.\nPrerequisite(s): WGS 101; WRI 1 or equivalent for all students; for students admitted fall 2021 or later: WRI 2 or equivalent (may be concurrent), or non-degree students; OR permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; Culture, Power, and Equity; Writing, Reading, and Inquiry 3\nCourse Typically Offered: Every semester\nCourse Type: Women and Gender Studies"
+  },
+  {
+   "name": "GER 101 - Beginning German I",
+   "course_block": "WGS 201 - Rethinking Gender & Culture\nWhat is gender? Is it innate or learned? How many genders and sexes are there? What is gender inequality? How does gender intersect with other categories of difference such as race, class and sexuality? How are these differences understood in various national contexts? These are some of the questions that feminist, gender and sexuality studies take up, and the questions that we will pursue in this class.\nPrerequisite(s): WGS 101; WRI 1 or equivalent for all students; for students admitted fall 2021 or later: WRI 2 or equivalent (may be concurrent), or non-degree students; OR permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; Culture, Power, and Equity; Writing, Reading, and Inquiry 3\nCourse Typically Offered: Every semester\nCourse Type: Women and Gender Studies"
+  },
+  {
+   "name": "GER 102 - Beginning German II",
+   "course_block": "WGS 201 - Rethinking Gender & Culture\nWhat is gender? Is it innate or learned? How many genders and sexes are there? What is gender inequality? How does gender intersect with other categories of difference such as race, class and sexuality? How are these differences understood in various national contexts? These are some of the questions that feminist, gender and sexuality studies take up, and the questions that we will pursue in this class.\nPrerequisite(s): WGS 101; WRI 1 or equivalent for all students; for students admitted fall 2021 or later: WRI 2 or equivalent (may be concurrent), or non-degree students; OR permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; Culture, Power, and Equity; Writing, Reading, and Inquiry 3\nCourse Typically Offered: Every semester\nCourse Type: Women and Gender Studies"
+  },
+  {
+   "name": "GER 201 - Intermediate German I",
+   "course_block": "WGS 201 - Rethinking Gender & Culture\nWhat is gender? Is it innate or learned? How many genders and sexes are there? What is gender inequality? How does gender intersect with other categories of difference such as race, class and sexuality? How are these differences understood in various national contexts? These are some of the questions that feminist, gender and sexuality studies take up, and the questions that we will pursue in this class.\nPrerequisite(s): WGS 101; WRI 1 or equivalent for all students; for students admitted fall 2021 or later: WRI 2 or equivalent (may be concurrent), or non-degree students; OR permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; Culture, Power, and Equity; Writing, Reading, and Inquiry 3\nCourse Typically Offered: Every semester\nCourse Type: Women and Gender Studies"
+  },
+  {
+   "name": "GER 202 - Intermediate German II",
+   "course_block": "WGS 201 - Rethinking Gender & Culture\nWhat is gender? Is it innate or learned? How many genders and sexes are there? What is gender inequality? How does gender intersect with other categories of difference such as race, class and sexuality? How are these differences understood in various national contexts? These are some of the questions that feminist, gender and sexuality studies take up, and the questions that we will pursue in this class.\nPrerequisite(s): WGS 101; WRI 1 or equivalent for all students; for students admitted fall 2021 or later: WRI 2 or equivalent (may be concurrent), or non-degree students; OR permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; Culture, Power, and Equity; Writing, Reading, and Inquiry 3\nCourse Typically Offered: Every semester\nCourse Type: Women and Gender Studies"
+  },
+  {
+   "name": "HON 102 - Honors Cultural Interpretation",
+   "course_block": "WGS 201 - Rethinking Gender & Culture\nWhat is gender? Is it innate or learned? How many genders and sexes are there? What is gender inequality? How does gender intersect with other categories of difference such as race, class and sexuality? How are these differences understood in various national contexts? These are some of the questions that feminist, gender and sexuality studies take up, and the questions that we will pursue in this class.\nPrerequisite(s): WGS 101; WRI 1 or equivalent for all students; for students admitted fall 2021 or later: WRI 2 or equivalent (may be concurrent), or non-degree students; OR permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; Culture, Power, and Equity; Writing, Reading, and Inquiry 3\nCourse Typically Offered: Every semester\nCourse Type: Women and Gender Studies"
+  },
+  {
+   "name": "HON 202 - Honors Cultural Interpretation",
+   "course_block": "WGS 201 - Rethinking Gender & Culture\nWhat is gender? Is it innate or learned? How many genders and sexes are there? What is gender inequality? How does gender intersect with other categories of difference such as race, class and sexuality? How are these differences understood in various national contexts? These are some of the questions that feminist, gender and sexuality studies take up, and the questions that we will pursue in this class.\nPrerequisite(s): WGS 101; WRI 1 or equivalent for all students; for students admitted fall 2021 or later: WRI 2 or equivalent (may be concurrent), or non-degree students; OR permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; Culture, Power, and Equity; Writing, Reading, and Inquiry 3\nCourse Typically Offered: Every semester\nCourse Type: Women and Gender Studies"
+  },
+  {
+   "name": "ITA 101 - Beginning Italian I",
+   "course_block": "WGS 201 - Rethinking Gender & Culture\nWhat is gender? Is it innate or learned? How many genders and sexes are there? What is gender inequality? How does gender intersect with other categories of difference such as race, class and sexuality? How are these differences understood in various national contexts? These are some of the questions that feminist, gender and sexuality studies take up, and the questions that we will pursue in this class.\nPrerequisite(s): WGS 101; WRI 1 or equivalent for all students; for students admitted fall 2021 or later: WRI 2 or equivalent (may be concurrent), or non-degree students; OR permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; Culture, Power, and Equity; Writing, Reading, and Inquiry 3\nCourse Typically Offered: Every semester\nCourse Type: Women and Gender Studies"
+  },
+  {
+   "name": "ITA 102 - Beginning Italian II",
+   "course_block": "WGS 201 - Rethinking Gender & Culture\nWhat is gender? Is it innate or learned? How many genders and sexes are there? What is gender inequality? How does gender intersect with other categories of difference such as race, class and sexuality? How are these differences understood in various national contexts? These are some of the questions that feminist, gender and sexuality studies take up, and the questions that we will pursue in this class.\nPrerequisite(s): WGS 101; WRI 1 or equivalent for all students; for students admitted fall 2021 or later: WRI 2 or equivalent (may be concurrent), or non-degree students; OR permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; Culture, Power, and Equity; Writing, Reading, and Inquiry 3\nCourse Typically Offered: Every semester\nCourse Type: Women and Gender Studies"
+  },
+  {
+   "name": "ITA 201 - Intermediate Italian I",
+   "course_block": "WGS 201 - Rethinking Gender & Culture\nWhat is gender? Is it innate or learned? How many genders and sexes are there? What is gender inequality? How does gender intersect with other categories of difference such as race, class and sexuality? How are these differences understood in various national contexts? These are some of the questions that feminist, gender and sexuality studies take up, and the questions that we will pursue in this class.\nPrerequisite(s): WGS 101; WRI 1 or equivalent for all students; for students admitted fall 2021 or later: WRI 2 or equivalent (may be concurrent), or non-degree students; OR permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; Culture, Power, and Equity; Writing, Reading, and Inquiry 3\nCourse Typically Offered: Every semester\nCourse Type: Women and Gender Studies"
+  },
+  {
+   "name": "ITA 202 - Intermediate Italian II",
+   "course_block": "WGS 201 - Rethinking Gender & Culture\nWhat is gender? Is it innate or learned? How many genders and sexes are there? What is gender inequality? How does gender intersect with other categories of difference such as race, class and sexuality? How are these differences understood in various national contexts? These are some of the questions that feminist, gender and sexuality studies take up, and the questions that we will pursue in this class.\nPrerequisite(s): WGS 101; WRI 1 or equivalent for all students; for students admitted fall 2021 or later: WRI 2 or equivalent (may be concurrent), or non-degree students; OR permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; Culture, Power, and Equity; Writing, Reading, and Inquiry 3\nCourse Typically Offered: Every semester\nCourse Type: Women and Gender Studies"
+  },
+  {
+   "name": "LAN 101 - Beginning Language I",
+   "course_block": "WGS 201 - Rethinking Gender & Culture\nWhat is gender? Is it innate or learned? How many genders and sexes are there? What is gender inequality? How does gender intersect with other categories of difference such as race, class and sexuality? How are these differences understood in various national contexts? These are some of the questions that feminist, gender and sexuality studies take up, and the questions that we will pursue in this class.\nPrerequisite(s): WGS 101; WRI 1 or equivalent for all students; for students admitted fall 2021 or later: WRI 2 or equivalent (may be concurrent), or non-degree students; OR permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; Culture, Power, and Equity; Writing, Reading, and Inquiry 3\nCourse Typically Offered: Every semester\nCourse Type: Women and Gender Studies"
+  },
+  {
+   "name": "LAN 102 - Beginning Language II",
+   "course_block": "WGS 201 - Rethinking Gender & Culture\nWhat is gender? Is it innate or learned? How many genders and sexes are there? What is gender inequality? How does gender intersect with other categories of difference such as race, class and sexuality? How are these differences understood in various national contexts? These are some of the questions that feminist, gender and sexuality studies take up, and the questions that we will pursue in this class.\nPrerequisite(s): WGS 101; WRI 1 or equivalent for all students; for students admitted fall 2021 or later: WRI 2 or equivalent (may be concurrent), or non-degree students; OR permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; Culture, Power, and Equity; Writing, Reading, and Inquiry 3\nCourse Typically Offered: Every semester\nCourse Type: Women and Gender Studies"
+  },
+  {
+   "name": "LAN 201 - Intermediate Language I",
+   "course_block": "WGS 201 - Rethinking Gender & Culture\nWhat is gender? Is it innate or learned? How many genders and sexes are there? What is gender inequality? How does gender intersect with other categories of difference such as race, class and sexuality? How are these differences understood in various national contexts? These are some of the questions that feminist, gender and sexuality studies take up, and the questions that we will pursue in this class.\nPrerequisite(s): WGS 101; WRI 1 or equivalent for all students; for students admitted fall 2021 or later: WRI 2 or equivalent (may be concurrent), or non-degree students; OR permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; Culture, Power, and Equity; Writing, Reading, and Inquiry 3\nCourse Typically Offered: Every semester\nCourse Type: Women and Gender Studies"
+  },
+  {
+   "name": "LAN 202 - Intermediate Language II",
+   "course_block": "WGS 201 - Rethinking Gender & Culture\nWhat is gender? Is it innate or learned? How many genders and sexes are there? What is gender inequality? How does gender intersect with other categories of difference such as race, class and sexuality? How are these differences understood in various national contexts? These are some of the questions that feminist, gender and sexuality studies take up, and the questions that we will pursue in this class.\nPrerequisite(s): WGS 101; WRI 1 or equivalent for all students; for students admitted fall 2021 or later: WRI 2 or equivalent (may be concurrent), or non-degree students; OR permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; Culture, Power, and Equity; Writing, Reading, and Inquiry 3\nCourse Typically Offered: Every semester\nCourse Type: Women and Gender Studies"
+  },
+  {
+   "name": "LAT 101 - Beginning Latin I",
+   "course_block": "WGS 201 - Rethinking Gender & Culture\nWhat is gender? Is it innate or learned? How many genders and sexes are there? What is gender inequality? How does gender intersect with other categories of difference such as race, class and sexuality? How are these differences understood in various national contexts? These are some of the questions that feminist, gender and sexuality studies take up, and the questions that we will pursue in this class.\nPrerequisite(s): WGS 101; WRI 1 or equivalent for all students; for students admitted fall 2021 or later: WRI 2 or equivalent (may be concurrent), or non-degree students; OR permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; Culture, Power, and Equity; Writing, Reading, and Inquiry 3\nCourse Typically Offered: Every semester\nCourse Type: Women and Gender Studies"
+  },
+  {
+   "name": "LAT 102 - Beginning Latin II",
+   "course_block": "WGS 201 - Rethinking Gender & Culture\nWhat is gender? Is it innate or learned? How many genders and sexes are there? What is gender inequality? How does gender intersect with other categories of difference such as race, class and sexuality? How are these differences understood in various national contexts? These are some of the questions that feminist, gender and sexuality studies take up, and the questions that we will pursue in this class.\nPrerequisite(s): WGS 101; WRI 1 or equivalent for all students; for students admitted fall 2021 or later: WRI 2 or equivalent (may be concurrent), or non-degree students; OR permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; Culture, Power, and Equity; Writing, Reading, and Inquiry 3\nCourse Typically Offered: Every semester\nCourse Type: Women and Gender Studies"
+  },
+  {
+   "name": "LOS 210 - Creative Critical Inquiry",
+   "course_block": "WGS 201 - Rethinking Gender & Culture\nWhat is gender? Is it innate or learned? How many genders and sexes are there? What is gender inequality? How does gender intersect with other categories of difference such as race, class and sexuality? How are these differences understood in various national contexts? These are some of the questions that feminist, gender and sexuality studies take up, and the questions that we will pursue in this class.\nPrerequisite(s): WGS 101; WRI 1 or equivalent for all students; for students admitted fall 2021 or later: WRI 2 or equivalent (may be concurrent), or non-degree students; OR permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; Culture, Power, and Equity; Writing, Reading, and Inquiry 3\nCourse Typically Offered: Every semester\nCourse Type: Women and Gender Studies"
+  },
+  {
+   "name": "MUH 105 - Multi-Cultural Perspectives of American Popular Music and Jazz",
+   "course_block": "WGS 201 - Rethinking Gender & Culture\nWhat is gender? Is it innate or learned? How many genders and sexes are there? What is gender inequality? How does gender intersect with other categories of difference such as race, class and sexuality? How are these differences understood in various national contexts? These are some of the questions that feminist, gender and sexuality studies take up, and the questions that we will pursue in this class.\nPrerequisite(s): WGS 101; WRI 1 or equivalent for all students; for students admitted fall 2021 or later: WRI 2 or equivalent (may be concurrent), or non-degree students; OR permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; Culture, Power, and Equity; Writing, Reading, and Inquiry 3\nCourse Typically Offered: Every semester\nCourse Type: Women and Gender Studies"
+  },
+  {
+   "name": "MUH 222 - Music History Survey 1",
+   "course_block": "WGS 201 - Rethinking Gender & Culture\nWhat is gender? Is it innate or learned? How many genders and sexes are there? What is gender inequality? How does gender intersect with other categories of difference such as race, class and sexuality? How are these differences understood in various national contexts? These are some of the questions that feminist, gender and sexuality studies take up, and the questions that we will pursue in this class.\nPrerequisite(s): WGS 101; WRI 1 or equivalent for all students; for students admitted fall 2021 or later: WRI 2 or equivalent (may be concurrent), or non-degree students; OR permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; Culture, Power, and Equity; Writing, Reading, and Inquiry 3\nCourse Typically Offered: Every semester\nCourse Type: Women and Gender Studies"
+  },
+  {
+   "name": "MUS 100 - Music Appreciation and History",
+   "course_block": "WGS 201 - Rethinking Gender & Culture\nWhat is gender? Is it innate or learned? How many genders and sexes are there? What is gender inequality? How does gender intersect with other categories of difference such as race, class and sexuality? How are these differences understood in various national contexts? These are some of the questions that feminist, gender and sexuality studies take up, and the questions that we will pursue in this class.\nPrerequisite(s): WGS 101; WRI 1 or equivalent for all students; for students admitted fall 2021 or later: WRI 2 or equivalent (may be concurrent), or non-degree students; OR permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; Culture, Power, and Equity; Writing, Reading, and Inquiry 3\nCourse Typically Offered: Every semester\nCourse Type: Women and Gender Studies"
+  },
+  {
+   "name": "MUS 103 - Introduction to Jazz",
+   "course_block": "WGS 201 - Rethinking Gender & Culture\nWhat is gender? Is it innate or learned? How many genders and sexes are there? What is gender inequality? How does gender intersect with other categories of difference such as race, class and sexuality? How are these differences understood in various national contexts? These are some of the questions that feminist, gender and sexuality studies take up, and the questions that we will pursue in this class.\nPrerequisite(s): WGS 101; WRI 1 or equivalent for all students; for students admitted fall 2021 or later: WRI 2 or equivalent (may be concurrent), or non-degree students; OR permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; Culture, Power, and Equity; Writing, Reading, and Inquiry 3\nCourse Typically Offered: Every semester\nCourse Type: Women and Gender Studies"
+  },
+  {
+   "name": "MUS 204 - Rock and Roll: Subversive or Submissive?",
+   "course_block": "WGS 201 - Rethinking Gender & Culture\nWhat is gender? Is it innate or learned? How many genders and sexes are there? What is gender inequality? How does gender intersect with other categories of difference such as race, class and sexuality? How are these differences understood in various national contexts? These are some of the questions that feminist, gender and sexuality studies take up, and the questions that we will pursue in this class.\nPrerequisite(s): WGS 101; WRI 1 or equivalent for all students; for students admitted fall 2021 or later: WRI 2 or equivalent (may be concurrent), or non-degree students; OR permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; Culture, Power, and Equity; Writing, Reading, and Inquiry 3\nCourse Typically Offered: Every semester\nCourse Type: Women and Gender Studies"
+  },
+  {
+   "name": "PHI 105 - Introduction to Philosophy: Philosophy Through Its History",
+   "course_block": "WGS 201 - Rethinking Gender & Culture\nWhat is gender? Is it innate or learned? How many genders and sexes are there? What is gender inequality? How does gender intersect with other categories of difference such as race, class and sexuality? How are these differences understood in various national contexts? These are some of the questions that feminist, gender and sexuality studies take up, and the questions that we will pursue in this class.\nPrerequisite(s): WGS 101; WRI 1 or equivalent for all students; for students admitted fall 2021 or later: WRI 2 or equivalent (may be concurrent), or non-degree students; OR permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; Culture, Power, and Equity; Writing, Reading, and Inquiry 3\nCourse Typically Offered: Every semester\nCourse Type: Women and Gender Studies"
+  },
+  {
+   "name": "PHI 106 - Why Philosophize?",
+   "course_block": "WGS 201 - Rethinking Gender & Culture\nWhat is gender? Is it innate or learned? How many genders and sexes are there? What is gender inequality? How does gender intersect with other categories of difference such as race, class and sexuality? How are these differences understood in various national contexts? These are some of the questions that feminist, gender and sexuality studies take up, and the questions that we will pursue in this class.\nPrerequisite(s): WGS 101; WRI 1 or equivalent for all students; for students admitted fall 2021 or later: WRI 2 or equivalent (may be concurrent), or non-degree students; OR permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; Culture, Power, and Equity; Writing, Reading, and Inquiry 3\nCourse Typically Offered: Every semester\nCourse Type: Women and Gender Studies"
+  },
+  {
+   "name": "PHI 310 - History of Ancient Philosophy",
+   "course_block": "WGS 201 - Rethinking Gender & Culture\nWhat is gender? Is it innate or learned? How many genders and sexes are there? What is gender inequality? How does gender intersect with other categories of difference such as race, class and sexuality? How are these differences understood in various national contexts? These are some of the questions that feminist, gender and sexuality studies take up, and the questions that we will pursue in this class.\nPrerequisite(s): WGS 101; WRI 1 or equivalent for all students; for students admitted fall 2021 or later: WRI 2 or equivalent (may be concurrent), or non-degree students; OR permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; Culture, Power, and Equity; Writing, Reading, and Inquiry 3\nCourse Typically Offered: Every semester\nCourse Type: Women and Gender Studies"
+  },
+  {
+   "name": "PHI 320 - History of Medieval and Renaissance Philosophy",
+   "course_block": "WGS 201 - Rethinking Gender & Culture\nWhat is gender? Is it innate or learned? How many genders and sexes are there? What is gender inequality? How does gender intersect with other categories of difference such as race, class and sexuality? How are these differences understood in various national contexts? These are some of the questions that feminist, gender and sexuality studies take up, and the questions that we will pursue in this class.\nPrerequisite(s): WGS 101; WRI 1 or equivalent for all students; for students admitted fall 2021 or later: WRI 2 or equivalent (may be concurrent), or non-degree students; OR permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; Culture, Power, and Equity; Writing, Reading, and Inquiry 3\nCourse Typically Offered: Every semester\nCourse Type: Women and Gender Studies"
+  },
+  {
+   "name": "PHI 330 - The Enlightenment: Modern Philosophy from Descartes to Kant",
+   "course_block": "WGS 201 - Rethinking Gender & Culture\nWhat is gender? Is it innate or learned? How many genders and sexes are there? What is gender inequality? How does gender intersect with other categories of difference such as race, class and sexuality? How are these differences understood in various national contexts? These are some of the questions that feminist, gender and sexuality studies take up, and the questions that we will pursue in this class.\nPrerequisite(s): WGS 101; WRI 1 or equivalent for all students; for students admitted fall 2021 or later: WRI 2 or equivalent (may be concurrent), or non-degree students; OR permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; Culture, Power, and Equity; Writing, Reading, and Inquiry 3\nCourse Typically Offered: Every semester\nCourse Type: Women and Gender Studies"
+  },
+  {
+   "name": "PHI 360 - Existentialism",
+   "course_block": "WGS 201 - Rethinking Gender & Culture\nWhat is gender? Is it innate or learned? How many genders and sexes are there? What is gender inequality? How does gender intersect with other categories of difference such as race, class and sexuality? How are these differences understood in various national contexts? These are some of the questions that feminist, gender and sexuality studies take up, and the questions that we will pursue in this class.\nPrerequisite(s): WGS 101; WRI 1 or equivalent for all students; for students admitted fall 2021 or later: WRI 2 or equivalent (may be concurrent), or non-degree students; OR permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; Culture, Power, and Equity; Writing, Reading, and Inquiry 3\nCourse Typically Offered: Every semester\nCourse Type: Women and Gender Studies"
+  },
+  {
+   "name": "PHI 370 - Analytic Philosophy",
+   "course_block": "WGS 201 - Rethinking Gender & Culture\nWhat is gender? Is it innate or learned? How many genders and sexes are there? What is gender inequality? How does gender intersect with other categories of difference such as race, class and sexuality? How are these differences understood in various national contexts? These are some of the questions that feminist, gender and sexuality studies take up, and the questions that we will pursue in this class.\nPrerequisite(s): WGS 101; WRI 1 or equivalent for all students; for students admitted fall 2021 or later: WRI 2 or equivalent (may be concurrent), or non-degree students; OR permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; Culture, Power, and Equity; Writing, Reading, and Inquiry 3\nCourse Typically Offered: Every semester\nCourse Type: Women and Gender Studies"
+  },
+  {
+   "name": "SPA 101 - Beginning Spanish I",
+   "course_block": "WGS 201 - Rethinking Gender & Culture\nWhat is gender? Is it innate or learned? How many genders and sexes are there? What is gender inequality? How does gender intersect with other categories of difference such as race, class and sexuality? How are these differences understood in various national contexts? These are some of the questions that feminist, gender and sexuality studies take up, and the questions that we will pursue in this class.\nPrerequisite(s): WGS 101; WRI 1 or equivalent for all students; for students admitted fall 2021 or later: WRI 2 or equivalent (may be concurrent), or non-degree students; OR permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; Culture, Power, and Equity; Writing, Reading, and Inquiry 3\nCourse Typically Offered: Every semester\nCourse Type: Women and Gender Studies"
+  },
+  {
+   "name": "SPA 102 - Beginning Spanish II",
+   "course_block": "WGS 201 - Rethinking Gender & Culture\nWhat is gender? Is it innate or learned? How many genders and sexes are there? What is gender inequality? How does gender intersect with other categories of difference such as race, class and sexuality? How are these differences understood in various national contexts? These are some of the questions that feminist, gender and sexuality studies take up, and the questions that we will pursue in this class.\nPrerequisite(s): WGS 101; WRI 1 or equivalent for all students; for students admitted fall 2021 or later: WRI 2 or equivalent (may be concurrent), or non-degree students; OR permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; Culture, Power, and Equity; Writing, Reading, and Inquiry 3\nCourse Typically Offered: Every semester\nCourse Type: Women and Gender Studies"
+  },
+  {
+   "name": "SPA 201 - Intermediate Spanish I",
+   "course_block": "WGS 201 - Rethinking Gender & Culture\nWhat is gender? Is it innate or learned? How many genders and sexes are there? What is gender inequality? How does gender intersect with other categories of difference such as race, class and sexuality? How are these differences understood in various national contexts? These are some of the questions that feminist, gender and sexuality studies take up, and the questions that we will pursue in this class.\nPrerequisite(s): WGS 101; WRI 1 or equivalent for all students; for students admitted fall 2021 or later: WRI 2 or equivalent (may be concurrent), or non-degree students; OR permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; Culture, Power, and Equity; Writing, Reading, and Inquiry 3\nCourse Typically Offered: Every semester\nCourse Type: Women and Gender Studies"
+  },
+  {
+   "name": "SPA 202 - Intermediate Spanish II",
+   "course_block": "WGS 201 - Rethinking Gender & Culture\nWhat is gender? Is it innate or learned? How many genders and sexes are there? What is gender inequality? How does gender intersect with other categories of difference such as race, class and sexuality? How are these differences understood in various national contexts? These are some of the questions that feminist, gender and sexuality studies take up, and the questions that we will pursue in this class.\nPrerequisite(s): WGS 101; WRI 1 or equivalent for all students; for students admitted fall 2021 or later: WRI 2 or equivalent (may be concurrent), or non-degree students; OR permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; Culture, Power, and Equity; Writing, Reading, and Inquiry 3\nCourse Typically Offered: Every semester\nCourse Type: Women and Gender Studies"
+  },
+  {
+   "name": "THE 101 - Introduction to Theatre and Text Analysis",
+   "course_block": "WGS 201 - Rethinking Gender & Culture\nWhat is gender? Is it innate or learned? How many genders and sexes are there? What is gender inequality? How does gender intersect with other categories of difference such as race, class and sexuality? How are these differences understood in various national contexts? These are some of the questions that feminist, gender and sexuality studies take up, and the questions that we will pursue in this class.\nPrerequisite(s): WGS 101; WRI 1 or equivalent for all students; for students admitted fall 2021 or later: WRI 2 or equivalent (may be concurrent), or non-degree students; OR permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; Culture, Power, and Equity; Writing, Reading, and Inquiry 3\nCourse Typically Offered: Every semester\nCourse Type: Women and Gender Studies"
+  },
+  {
+   "name": "WAB 101 - Beginning Wabanaki Language I",
+   "course_block": "WGS 201 - Rethinking Gender & Culture\nWhat is gender? Is it innate or learned? How many genders and sexes are there? What is gender inequality? How does gender intersect with other categories of difference such as race, class and sexuality? How are these differences understood in various national contexts? These are some of the questions that feminist, gender and sexuality studies take up, and the questions that we will pursue in this class.\nPrerequisite(s): WGS 101; WRI 1 or equivalent for all students; for students admitted fall 2021 or later: WRI 2 or equivalent (may be concurrent), or non-degree students; OR permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; Culture, Power, and Equity; Writing, Reading, and Inquiry 3\nCourse Typically Offered: Every semester\nCourse Type: Women and Gender Studies"
+  },
+  {
+   "name": "WAB 102 - Beginning Wabanaki Language II",
+   "course_block": "WGS 201 - Rethinking Gender & Culture\nWhat is gender? Is it innate or learned? How many genders and sexes are there? What is gender inequality? How does gender intersect with other categories of difference such as race, class and sexuality? How are these differences understood in various national contexts? These are some of the questions that feminist, gender and sexuality studies take up, and the questions that we will pursue in this class.\nPrerequisite(s): WGS 101; WRI 1 or equivalent for all students; for students admitted fall 2021 or later: WRI 2 or equivalent (may be concurrent), or non-degree students; OR permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; Culture, Power, and Equity; Writing, Reading, and Inquiry 3\nCourse Typically Offered: Every semester\nCourse Type: Women and Gender Studies"
+  },
+  {
+   "name": "WAB 201 - Intermediate Wabanaki Language I",
+   "course_block": "WGS 201 - Rethinking Gender & Culture\nWhat is gender? Is it innate or learned? How many genders and sexes are there? What is gender inequality? How does gender intersect with other categories of difference such as race, class and sexuality? How are these differences understood in various national contexts? These are some of the questions that feminist, gender and sexuality studies take up, and the questions that we will pursue in this class.\nPrerequisite(s): WGS 101; WRI 1 or equivalent for all students; for students admitted fall 2021 or later: WRI 2 or equivalent (may be concurrent), or non-degree students; OR permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; Culture, Power, and Equity; Writing, Reading, and Inquiry 3\nCourse Typically Offered: Every semester\nCourse Type: Women and Gender Studies"
+  },
+  {
+   "name": "WAB 202 - Intermediate Wabanaki Language II",
+   "course_block": "WGS 201 - Rethinking Gender & Culture\nWhat is gender? Is it innate or learned? How many genders and sexes are there? What is gender inequality? How does gender intersect with other categories of difference such as race, class and sexuality? How are these differences understood in various national contexts? These are some of the questions that feminist, gender and sexuality studies take up, and the questions that we will pursue in this class.\nPrerequisite(s): WGS 101; WRI 1 or equivalent for all students; for students admitted fall 2021 or later: WRI 2 or equivalent (may be concurrent), or non-degree students; OR permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; Culture, Power, and Equity; Writing, Reading, and Inquiry 3\nCourse Typically Offered: Every semester\nCourse Type: Women and Gender Studies"
+  },
+  {
+   "name": "WGS 201 - Rethinking Gender & Culture",
+   "course_block": "WGS 201 - Rethinking Gender & Culture\nWhat is gender? Is it innate or learned? How many genders and sexes are there? What is gender inequality? How does gender intersect with other categories of difference such as race, class and sexuality? How are these differences understood in various national contexts? These are some of the questions that feminist, gender and sexuality studies take up, and the questions that we will pursue in this class.\nPrerequisite(s): WGS 101; WRI 1 or equivalent for all students; for students admitted fall 2021 or later: WRI 2 or equivalent (may be concurrent), or non-degree students; OR permission.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Cultural Interpretation; Culture, Power, and Equity; Writing, Reading, and Inquiry 3\nCourse Typically Offered: Every semester\nCourse Type: Women and Gender Studies"
+  }
+ ]
+}

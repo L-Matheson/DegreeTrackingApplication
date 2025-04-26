@@ -5,6 +5,8 @@ import { IconField } from "primereact/iconfield";
 import { InputIcon } from "primereact/inputicon";
 import { FloatLabel } from "primereact/floatlabel";
 import CourseHandler from "../GeneralComponents/courseHandler";
+//import * as fs from 'node:fs/promises';
+//import * as path from 'path';
 import "./LoginPage.css";
 import "../App.css";
 import { Dialog } from "primereact/dialog";
@@ -65,11 +67,12 @@ export default function Login({ onLogin }) {
             method: "GET",
           }
         );
-
+        
         if (studentLoginResponse.ok) {
           // Successful login
           const data = studentLoginResponse.json();
 
+          //Start of code for major courses
           try {
             const majorCoursesResponse = await fetch(
               "http://127.0.0.1:8000/api/courses/major/"
@@ -164,12 +167,122 @@ export default function Login({ onLogin }) {
               }
             } else {
               console.log("no data found");
+            }    
+          } catch (error) {
+            console.log("no data found");
+          }
+
+          //Start of code for core courses
+          try {
+            const coreCoursesResponse = await fetch(
+              "http://127.0.0.1:8000/api/courses/core/"
+            );
+            if (coreCoursesResponse.ok) {
+              const coreCourseData = await coreCoursesResponse.json();
+              console.log(coreCourseData );
+
+              if (coreCourseData.length <= 0) {
+                // const fs =require('fs');
+                // const path = require('path');
+                // const courseLists =  fs.readdir('./core');
+                const courseLists = ["./core/cap_result.json", "./core/create_results.json", "./core/culture_results.json", "./core/eng_des.json", "./core/engaged_results_1.json", "./core/equity_results.json", "./core/ethic_results.json", "./core/intern_results.json", "./core/reason_results.json", "./core/science_results.json", "./core/soci_results.json"];
+                // courseLists.map( async (file) => {
+                for( let i = 0; i < courseLists.length; i++){
+                // const dataCoreCourse = require(path.join('./core', file));
+                const dataCoreCourse = require(courseLists[i]);
+                console.log(dataCoreCourse.course);
+
+                /*
+                 * This is where courses will be initally processed
+                 * In a real world scenerio, this would already be stored
+                 *
+                 * REDO THIS ALGORITHM ITS TERRIBLE AND MAKES ME WANT TO VOMIT
+                 *
+                 */
+                for (let j = 0; j < coreCourseData.course.length; j++) {
+                  const x = coreCourseData.course[i];
+                  let test = x.course_block.split("\n");
+
+                  let name = "";
+                  let description = "";
+                  let prerequisite = "";
+                  let co_requisite = "";
+                  let course_offered = "";
+                  let course_type = "";
+                  let credits = "";
+                  let coreRequirement = "";
+
+                  if (test.length === 8) {
+                    name = test[0];
+                    description = test[1];
+                    prerequisite = test[2];
+                    co_requisite = test[3];
+                    credits = test[4];
+                    coreRequirement = test[5];
+                    course_offered = test[6];
+                    course_type = test[7];
+                  } else {
+                    name = test[0];
+                    description = test[1];
+                    prerequisite = test[2];
+                    co_requisite = test[3];
+                    credits = test[4];
+                    coreRequirement = "None";
+                    course_offered = test[5];
+                    course_type = test[6];
+                  }
+
+                  course_offered = course_offered.replace(
+                    "Course Typically Offered: ",
+                    ""
+                  );
+                  course_type = course_type.replace("Course Type: ", "");
+                  prerequisite = prerequisite.replace("Prerequisite(s):", "");
+                  co_requisite = co_requisite.replace("Co-requisite(s):", "");
+                  credits = credits.replace("Credits: ", "");
+
+                  if (prerequisite === "") {
+                    prerequisite = "None";
+                  }
+                  if (co_requisite === "") {
+                    co_requisite = "None";
+                  } else {
+                    co_requisite = co_requisite.replace(/\.$/, "");
+                  }
+                  if (course_offered === "Course Typically Offered:") {
+                    course_offered = "Fall and Spring";
+                  }
+
+                  const postedCourse = await fetch(
+                    "http://127.0.0.1:8000/api/courses/core/create",
+                    {
+                      method: "POST",
+                      headers: { "Content-Type": "application/json" },
+                      body: JSON.stringify({
+                        name,
+                        description,
+                        prerequisite,
+                        co_requisite,
+                        credits,
+                        CoreRequirement: coreRequirement,
+                        course_offered,
+                        course_type,
+                      }),
+                    }
+                  );
+                }
+              } 
+              // );
             }
+            } else {
+              console.log("no data found");
+            }    
           } catch (error) {
             console.log("no data found");
           }
 
           onLogin(username);
+          //end of new user code block
         } else {
           //  login failure
           setMessage("Invalid username or password, Please Try Again");
