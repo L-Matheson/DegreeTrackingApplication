@@ -185,7 +185,7 @@ export default function Login({ onLogin }) {
                 // const fs =require('fs');
                 // const path = require('path');
                 // const courseLists =  fs.readdir('./core');
-                const courseLists = ["./core/cap_result.json", "./core/create_results.json", "./core/culture_results.json", "./core/eng_des.json", "./core/engaged_results_1.json", "./core/equity_results.json", "./core/ethic_results.json", "./core/intern_results.json", "./core/reason_results.json", "./core/science_results.json", "./core/soci_results.json"];
+                const courseLists = ["./core/cap_results.json", "./core/create_results.json", "./core/culture_results.json", "./core/eng_des.json", "./core/engaged_results_1.json", "./core/equity_results.json", "./core/ethic_results.json", "./core/intern_results.json", "./core/reason_results.json", "./core/science_results.json", "./core/soci_results.json"];
                 // courseLists.map( async (file) => {
                 for( let i = 0; i < courseLists.length; i++){
                 // const dataCoreCourse = require(path.join('./core', file));
@@ -200,7 +200,7 @@ export default function Login({ onLogin }) {
                  *
                  */
                 for (let j = 0; j < coreCourseData.course.length; j++) {
-                  const x = coreCourseData.course[i];
+                  const x = coreCourseData.course[j];
                   let test = x.course_block.split("\n");
 
                   let name = "";
