@@ -32,7 +32,7 @@ class CourseHandler {
     if (this.courses.length === 0) {
       try {
         const response = await fetch(
-          "http://127.0.0.1:8000/api/courses/enrolled/all"
+          "http://127.0.0.1:8000/api/courses/enrolled/all/Spring 2025"
         );
         if (response.ok) {
           const data = await response.json();
@@ -70,8 +70,9 @@ class CourseHandler {
 
 // Takes a course and a semester as arguments and saves the course to the database as enrolled
   async saveCourse(course, semester) {
-    for (const course of this.courses) {
-      if (course.name === course.name) {
+
+    for (const currCourse of this.courses) {
+      if (course.name === currCourse.name) {
         return 'Already Enrolled'; // Exit if the course already exists
       }
     }
@@ -83,7 +84,7 @@ class CourseHandler {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            name: course,
+            name: course.name,
             progress: "Enrolled",
             semesterEnrolled: semester,
             gpa: "0",

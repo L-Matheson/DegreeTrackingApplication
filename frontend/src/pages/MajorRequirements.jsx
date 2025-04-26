@@ -47,6 +47,7 @@ export default function MajorReq() {
     "Physics",
     "Chemistry",
     "Engineering",
+    "Theatre"
   ]);
   
   // Fetch courses
@@ -266,7 +267,7 @@ export default function MajorReq() {
           value={courses}
           paginator
           header={header}
-          rows={10}
+          rows={5}
           showGridlines
           paginatorTemplate="FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink CurrentPageReport RowsPerPageDropdown"
           rowsPerPageOptions={[5, 10, 25, 50]}
@@ -300,9 +301,9 @@ export default function MajorReq() {
             style={{ minWidth: "14rem" }}
           />
           <Column
-            field="description"
-            header="Description"
-            style={{ minWidth: "22rem" }}
+            field="credits"
+            header="Total Credits"
+            style={{ minWidth: "9rem" }}
           />
           <Column
             field="prerequisite"

@@ -9,7 +9,10 @@ import Calendar from './pages/Calendar';
 import MajorRequirements from './pages/MajorRequirements';
 import Settings from './pages/Settings';
 import Login from './pages/Login';
+import Logout from './pages/Logout';  
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { Button } from 'primereact/button';
+import { Dialog } from 'primereact/dialog';
 
 export default function App() {
   const [user, setUser] = useState(null);
@@ -36,7 +39,7 @@ export default function App() {
               <SidebarItem icon="pi pi-book" text="Major Requirements" to="/MajorRequirements" />
               <hr className="solid" />
               <SidebarItem icon="pi pi-cog" text="Settings" to="/Settings" />
-              <SidebarItem icon="pi pi-sign-out" text="Logout" to="/" onClick={() => setUser(null)} />
+              <SidebarItem icon="pi pi-sign-out" text="Logout" to="/"  />
             </Sidebar>
             <div className="content">
               <Routes>
@@ -45,7 +48,7 @@ export default function App() {
                 <Route path="/calendar" element={<Calendar />} />
                 <Route path="/MajorRequirements" element={<MajorRequirements />} />
                 <Route path="/Settings" element={<Settings />} />
-                <Route path="*" element={<Navigate to="/" />} />
+                <Route path="/" element={<Logout />} />
               </Routes>
             </div>
           </main>
