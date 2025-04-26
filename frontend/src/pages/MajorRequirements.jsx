@@ -55,7 +55,7 @@ export default function MajorReq() {
         );
         if (response.ok) {
           const data = await response.json();
-          setCourses(data); // Assuming the API returns an array of courses
+          setCourses(data); 
           console.log(data);
         } else {
           console.error("Failed to fetch courses:", response.statusText);
