@@ -1,10 +1,10 @@
 .myC-background {
     margin: auto;
-    height: 80px;
-    width: 700px;
+    height: 110px;
+    width: 900px;
     align-items: center;
     background-color: rgb(255, 255, 255);
     border-radius: 25px;
-    padding: 22px;
+    padding: 20px;
     box-shadow: 2px 2px 1px 1px lightgray;
 }

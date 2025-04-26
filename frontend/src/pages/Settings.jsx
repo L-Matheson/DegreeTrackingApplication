@@ -1,9 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Timeline } from "primereact/timeline";
-import { DataTable } from "primereact/datatable";
-import { Column } from "primereact/column";
-import { Rating } from "primereact/rating";
-import { Tag } from "primereact/tag";
 import { InputText } from "primereact/inputtext";
 import { Button } from "primereact/button";
 import { IconField } from 'primereact/iconfield';
