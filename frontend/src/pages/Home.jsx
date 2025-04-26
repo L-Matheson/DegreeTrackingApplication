@@ -8,15 +8,45 @@
 import { Tag } from "primereact/tag";
 import { Card } from "primereact/card";
 import { Chip } from "primereact/chip";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import { useMountEffect } from 'primereact/hooks';
 import { InputText } from "primereact/inputtext";
 import { Button } from "primereact/button";
 import { IconField } from "primereact/iconfield";
 import { InputIcon } from "primereact/inputicon";
 import { MeterGroup } from "primereact/metergroup";
+import { Messages } from 'primereact/messages';
 import "./HomeFormat.css";
 
 export default function Home() {
+
+  const msgs = useRef(null);
+  const [showMessage, setShowMessage] = useState(true);
+
+  useEffect(() => {
+    // Check if the message has already been dismissed
+    const messageDismissed = localStorage.getItem("messageDismissed");
+    if (!messageDismissed) {
+      setShowMessage(true); // Show the message if it hasn't been dismissed
+    }
+  }, []);
+
+  useMountEffect(() => {
+    if (msgs.current) {
+        msgs.current.clear();
+        msgs.current.show([
+            { sticky: true, severity: 'info', summary: 'Enroll', detail: 'Fall 2025 enrollment is now open! Please enroll now during priority registeration' },
+        ]);
+    }
+});
+
+  const handleDismiss = () => {
+    if (msgs.current) {
+      msgs.current.clear(); 
+    }
+    localStorage.setItem("messageDismissed", true); 
+  };
+
   const meter = (props, attr) => (
     <span
       {...attr}
@@ -29,12 +59,12 @@ export default function Home() {
   );
 
   const labelList = ({ values }) => (
-    <div className="flex flex-wrap gap-3">
+    <div className="flex flex-wrap gap-8">
       {values.map((item, index) => (
         <Card className="flex-1" key={index}>
           <div
-            className="flex justify-content-between gap-5"
-            style={{ width: 200 }}
+            className="flex justify-content-between gap-4"
+            style={{ width: 250 }}
           >
             <div className="flex flex-column gap-1">
               <span className="text-secondary text-sm">{item.label}</span>
@@ -54,9 +84,9 @@ export default function Home() {
 
   const start = ({ totalPercent }) => (
     <div className="flex justify-content-between mt-3 mb-2 relative">
-      <span>Total Credits Taken</span>
+      <span>Total Credits</span>
       <span
-        style={{ width: totalPercent + 3 + "%" }}
+        style={{ width: totalPercent + 4 + "%" }}
         className="absolute text-right"
       >
         {totalPercent + " Credits"}
@@ -67,29 +97,16 @@ export default function Home() {
 
   const totalCourses = [
     {
-      label: "Core Credits Taken",
+      label: "Credits Taken",
       color: "#34d399",
       value: 10,
       icon: "pi pi-book",
     },
     {
-      label: "Major Credits Taken",
+      label: "Credits Planned",
       color: "#fbbf24",
       value: 20,
       icon: "pi pi-briefcase",
-    },
-    {
-      label: "Minor Credits Taken",
-      color: "#60a5fa",
-      value: 3,
-      icon: "pi pi-building-columns",
-    },
-    {
-      label: "Electives Taken",
-      color: "#c084fc",
-      value: 30,
-      icon: "pi pi-globe",
-      meterTemplate: meter,
     },
   ];
 
@@ -145,11 +162,21 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="performace-banner">
-          Extra Information can go here, To be determined
-        </div>
+         
+          <div style={{ padding: 10 }}>
+          {showMessage && (
+          <div style={{ padding: 10 }}>
+            <Messages
+              ref={msgs}
+              style={{ height: 50 }}
+              onRemove={handleDismiss} // Handle dismissal when the message is closed
+            />
+          </div>
+        )}
+          </div>
+   
         <div className="performance-content">
-          <div className=" py-3" style={{ padding: 15 }}>
+          <div style={{ padding: 10 }}>
             <div className="card flex justify-content-center">
               <MeterGroup
                 labelPosition="start"

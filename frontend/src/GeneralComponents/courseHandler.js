@@ -32,7 +32,7 @@ class CourseHandler {
     if (this.courses.length === 0) {
       try {
         const response = await fetch(
-          "http://127.0.0.1:8000/api/courses/enrolled/all/Spring 2025"
+          "http://127.0.0.1:8000/api/courses/enrolled/all/Spring 2025/p"
         );
         if (response.ok) {
           const data = await response.json();
@@ -48,31 +48,40 @@ class CourseHandler {
     }
   }
 
-  /**
-   * Parses the `courses` array into a structured format.
-   */
-  parseCourses() {
-    this.parsedCourses = this.courses.map((course) => {
-      const lines = course.course_block.split("\n");
-      return new Course(
-        lines[0],
-        lines[1],
-        lines[2],
-        lines[3],
-        lines[4],
-        lines[5],
-        lines[6],
-        lines[7]
-      );
-    });
-    console.log("Parsed courses:", this.parsedCourses);
+/*  Since prerequisites are not always in the same format, we need to extract them from the course block.
+    This function will return either undefined or the prerequisite of a course
+*/
+async extractPrerequisites(prerequisite) {
+  console.log("Prerequisite", prerequisite);
+    if (!prerequisite || prerequisite === "None") {
+      return undefined; // Return undefined if the prerequisite is null, undefined, or "None"
+    }
+
+    // Regular expression to match three capital letters followed by three numbers
+    const regex = /([A-Z]{3}\d{3})/;
+
+    // Use the regex to find the match
+    const match = prerequisite.match(regex);
+
+    // Return the matched prerequisite or undefined if no match is found
+    return match ? match[0] : undefined;
   }
 
+
+
 // Takes a course and a semester as arguments and saves the course to the database as enrolled
-  async saveCourse(course, semester) {
+async saveCourse(course, semester) {
+
+    let savedCourse = '';
+
+    if(course.name != undefined) {
+      savedCourse = course.name;
+    } else {
+      savedCourse = course
+    }
 
     for (const currCourse of this.courses) {
-      if (course.name === currCourse.name) {
+      if (savedCourse === currCourse.name) {
         return 'Already Enrolled'; // Exit if the course already exists
       }
     }
@@ -84,7 +93,7 @@ class CourseHandler {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            name: course.name,
+            name: savedCourse,
             progress: "Enrolled",
             semesterEnrolled: semester,
             gpa: "0",
@@ -101,6 +110,7 @@ class CourseHandler {
       console.error("Error saving course:", error);
       throw error;
     }
+  
   }
 }
 

@@ -12,6 +12,7 @@ urlpatterns = [
     path('courses/major/', get_major_courses, name='major_courses'),
     path('courses/enrolled/', enrolled_courses_details, name='enrolled_courses'),
     path('courses/enrolled/all', get_all_enrolled_courses, name='get_all_enrolled_courses'),
-    path('courses/enrolled/all/<str:semester>', enrolled_courses_by_semester, name='get_all_enrolled_courses_semester'),
+    path('courses/enrolled/all/<str:semester>/<str:direction>', enrolled_courses_by_semester, name='get_all_enrolled_courses_semester'),
+    
     # Add other URL patterns here     
 ]

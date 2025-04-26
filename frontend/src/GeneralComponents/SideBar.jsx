@@ -24,11 +24,11 @@ export default function Sidebar({ children }) {
   );
 }
 
-export function SidebarItem({ icon, text, active, alert, to }) {
+export function SidebarItem({ icon, text, active, alert, to,  onClick }) {
   const { isCollapsed } = useContext(SidebarContext);
   if(isCollapsed){ 
    return (
-      <Link to={to} style={{width: 46, marginLeft: 7}} className="sidebar-item  flex items-center py-2 hover:bg-blue-800 rounded cursor-pointer transition duration-200 ease-in-out" >
+      <Link to={to} style={{width: 46, marginLeft: 7}}  onClick={onClick} className="sidebar-item  flex items-center py-2 hover:bg-blue-800 rounded cursor-pointer transition duration-200 ease-in-out" >
       <div>
       <i className={icon} size="medium"  />
       </div>
@@ -37,7 +37,7 @@ export function SidebarItem({ icon, text, active, alert, to }) {
     );
   } else {
   return (
-    <Link to={to} className="sidebar-item flex items-center py-2 px-4 hover:bg-blue-800 rounded cursor-pointer transition duration-200 ease-in-out">
+    <Link to={to}  onClick={onClick} className="sidebar-item flex items-center py-2 px-4 hover:bg-blue-800 rounded cursor-pointer transition duration-200 ease-in-out">
       <div style={{ marginRight: '10px' }}>
         <i className={icon} size="medium" />
       </div>

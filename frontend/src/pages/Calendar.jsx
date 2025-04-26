@@ -1,16 +1,13 @@
 // filepath: /c:/Users/kingo/OneDrive/Desktop/DegreeTrackingAPI/frontend/src/pages/Home.jsx
 import React, { useState, useEffect } from "react";
-import { Timeline } from "primereact/timeline";
-import { DataTable } from "primereact/datatable";
-import { Column } from "primereact/column";
-import { Rating } from "primereact/rating";
-import { Tag } from "primereact/tag";
+import { Calendar } from 'primereact/calendar';
 import { InputText } from "primereact/inputtext";
 import { Button } from "primereact/button";
 import { IconField } from 'primereact/iconfield';
 import { InputIcon } from 'primereact/inputicon';
-export default function Calendar() {
-  
+export default function CalendarPage() {
+  const [date, setDate] = useState(null);
+
   return (
     <div style={{ padding: 0 }}>
       <div style={{ textAlign: "left", backgroundColor: "white", height: 50 }}>
@@ -56,6 +53,14 @@ export default function Calendar() {
 
       <hr className="solid" style={{ padding: 0, marginTop: 0 }} />
    
+
+
+      <div className="card flex justify-content-center">
+            <Calendar value={date} onChange={(e) => setDate(e.value)} inline showWeek />
+        </div>
+
+
+
     </div>
   
   );

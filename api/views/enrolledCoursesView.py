@@ -5,9 +5,8 @@ from api.models.enrolledCourses import EnrolledCourses
 from api.serializers.enrolledCoursesSerializer import enrolledCoursesSerializer
 from rest_framework.decorators import api_view
 import json
-
 @api_view(['GET'])
-def enrolled_courses_by_semester(request, semester):
+def enrolled_courses_by_semester(request, semester, direction):
     try:
         # Validate the input semester format
         if " " not in semester:
@@ -15,32 +14,32 @@ def enrolled_courses_by_semester(request, semester):
                 {"error": "Invalid semester format. Expected format: 'Season Year' (e.g., 'Fall 2026')."},
                 status=status.HTTP_400_BAD_REQUEST,
             )
-
-        # Split the input semester into season and year
+        
+        season_order = {"Winter": 1, "Spring": 2, "Summer": 3, "Fall": 4}
+        # Format is "Fall 2026", so split by space
+        # and convert the year to an integer to sort correctly
         input_season, input_year = semester.split(" ")
         input_year = int(input_year)
-
-        # Define the order of seasons
-        season_order = {"Winter": 1, "Spring": 2, "Summer": 3, "Fall": 4}
-
-        # Get all enrolled courses
+       
         enrolled_courses = EnrolledCourses.objects.all()
 
-        # Filter courses manually based on year and season
         filtered_courses = []
         for course in enrolled_courses:
-            # Ensure the course's semesterEnrolled is properly formatted
             if " " not in course.semesterEnrolled:
-                continue  # Skip improperly formatted entries
+                continue  
 
             course_season, course_year = course.semesterEnrolled.split(" ")
             course_year = int(course_year)
 
-            # Compare year and season
-            if course_year > input_year or (course_year == input_year and season_order[course_season] >= season_order[input_season]):
-                filtered_courses.append(course)
+            if direction == "up":
+                # Include courses on or after the input semester
+                if course_year > input_year or (course_year == input_year and season_order[course_season] >= season_order[input_season]):
+                    filtered_courses.append(course)
+            else:
+                # Include courses on or before the input semester
+                if course_year < input_year or (course_year == input_year and season_order[course_season] <= season_order[input_season]):
+                    filtered_courses.append(course)
 
-        # Serialize the filtered courses
         serializer = enrolledCoursesSerializer(filtered_courses, many=True)
         return Response(serializer.data)
 
