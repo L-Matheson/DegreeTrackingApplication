@@ -12,6 +12,7 @@ import Login from './pages/Login';
 import Logout from './pages/Logout';  
 import MajorTreeView from './pages/MajorTreeView';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import MyCourses from './pages/MyCourses';
 import { Button } from 'primereact/button';
 import { Dialog } from 'primereact/dialog';
 
@@ -42,6 +43,7 @@ export default function App() {
               <SidebarHeader text="Degree Tracker" icon="pi pi-graduation-cap" />
               <SidebarItem icon="pi pi-home" text="Home" to="/" />
               <SidebarItem icon="pi pi-book" text="Courses" to="/courses" />
+              <SidebarItem icon="pi pi-book" text="My Courses" to="/mycourses" />
               <SidebarItem icon="pi pi-calendar" text="Calendar" to="/calendar" />
               <SidebarItem icon="pi pi-book" text="Major Requirements" to="/MajorRequirements" />
               <SidebarItem icon="pi pi-sitemap" text="Major Tree View" to="/MajorTreeView" />
@@ -53,6 +55,7 @@ export default function App() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/courses" element={<Courses />} />
+                <Route path="/mycourses" element={<MyCourses />} />
                 <Route path="/calendar" element={<CalendarPage />} />
                 <Route path="/MajorRequirements" element={<MajorRequirements />} />
                 <Route path="/MajorTreeView" element={<MajorTreeView />} />

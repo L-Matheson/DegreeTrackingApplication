@@ -327,7 +327,7 @@ export default function Home() {
               <Chip label="MAT 110" style={{ fontWeight: 600 }} />
             </div>
           </div>
-          <div className="cell-footer">
+          <div className="cell-footer"> 
             <Button label="Full Course Catalog" size="small" />
             <Button label="Alter Courses" size="small" />
           </div>
