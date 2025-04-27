@@ -19,14 +19,14 @@
   .login-content{
     margin-left: auto;
     margin-right: auto;
-    width: 50vh;
+
   }
 
   .login-title{
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    height: 14vh;
+    height: 10vh;
     font-size: xx-large;
     font-weight: bold;
   }
@@ -34,8 +34,6 @@
   .login-input-field{
     margin-left: auto;
     margin-right: auto;
-    width: 50vh;
-
     position: static;
   }
 

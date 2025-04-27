@@ -1,92 +1,119 @@
 class Course {
-    constructor(name, description, prerequisite, coRequisite, credits, coreRequirements, courseOffered, courseType) {
-        this.name = name || '';
-        this.description = description || '';
-        this.prerequisite = prerequisite || '';
-        this.coRequisite = coRequisite || '';
-        this.credits = credits || '';
-        this.coreRequirements = coreRequirements || '';
-        this.courseOffered = courseOffered || '';
-        this.courseType = courseType || '';
-    }
+  constructor(
+    name,
+    description,
+    prerequisite,
+    coRequisite,
+    credits,
+    coreRequirements,
+    courseOffered,
+    courseType
+  ) {
+    this.name = name || "";
+    this.description = description || "";
+    this.prerequisite = prerequisite || "";
+    this.coRequisite = coRequisite || "";
+    this.credits = credits || "";
+    this.coreRequirements = coreRequirements || "";
+    this.courseOffered = courseOffered || "";
+    this.courseType = courseType || "";
+  }
 }
 
 class CourseHandler {
-    constructor(rawCourses) {
-        this.rawCourses = rawCourses;
-        this.parsedCourses = [];
-    }
+  constructor() {
+    this.courses = []; // Define the array as a property of the class
+  }
 
-    /**
-     * Parses raw course data into a structured format.
-     */
-    parseCourses() {
-        this.parsedCourses = this.rawCourses.map(course => {
-            const lines = course.course_block.split("\n");
-            return new Course(
-                lines[0],
-                lines[1],
-                lines[2],
-                lines[3],
-                lines[4],
-                lines[5],
-                lines[6],
-                lines[7]
-            );
-        });
-    }
-
-    /**
-     * Validates a single course object.
-     * @param {Course} course - The course object to validate.
-     * @returns {Boolean} - True if valid, false otherwise.
-     */
-    validateCourse(course) {
-        return course.name && course.description && course.credits;
-    }
-
-    /**
-     * Sends a course to the API for saving.
-     * @param {Object} course - The course object to send.
-     * @returns {Promise<Response>} - The API response.
-     */
-    async saveCourse(course) {
-        try {
-            const response = await fetch("http://127.0.0.1:8000/api/courses/major/create", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(course),
-            });
-            return response;
-        } catch (error) {
-            console.error("Error saving course:", error);
-            throw error;
+  /**
+   * Fetches courses from the API and populates the `courses` array.
+   */
+  async fetchCourses() {
+    if (this.courses.length === 0) {
+      try {
+        const response = await fetch(
+          "http://127.0.0.1:8000/api/courses/enrolled/all/Spring 2025/p"
+        );
+        if (response.ok) {
+          const data = await response.json();
+          this.courses = data;
+          console.log("Courses fetched and stored:", this.courses);
+          this.coursesStored = true;
+        } else {
+          console.error("Failed to fetch courses:", response.statusText);
         }
+      } catch (error) {
+        console.error("Error fetching courses:", error);
+      }
+    }
+  }
+
+/*  Since prerequisites are not always in the same format, we need to extract them from the course block.
+    This function will return either undefined or the prerequisite of a course
+*/
+async extractPrerequisites(prerequisite) {
+  console.log("Prerequisite", prerequisite);
+    if (!prerequisite || prerequisite === "None") {
+      return undefined; // Return undefined if the prerequisite is null, undefined, or "None"
     }
 
-    /**
-     * Processes and saves all parsed courses.
-     */
-    async processCourses() {
-        if (this.parsedCourses.length === 0) {
-            this.parseCourses();
-        }
+    // Regular expression to match three capital letters followed by three numbers
+    const regex = /([A-Z]{3}\d{3})/;
 
-        for (const course of this.parsedCourses) {
-            if (this.validateCourse(course)) {
-                try {
-                    const response = await this.saveCourse(course);
-                    if (!response.ok) {
-                        console.error(`Failed to save course: ${course.name}`);
-                    }
-                } catch (error) {
-                    console.error(`Error processing course: ${course.name}`, error);
-                }
-            } else {
-                console.warn(`Invalid course data: ${JSON.stringify(course)}`);
-            }
-        }
+    // Use the regex to find the match
+    const match = prerequisite.match(regex);
+
+    // Return the matched prerequisite or undefined if no match is found
+    return match ? match[0] : undefined;
+  }
+
+
+
+// Takes a course and a semester as arguments and saves the course to the database as enrolled
+async saveCourse(course, semester) {
+
+    let savedCourse = '';
+    let credits = 3
+    if(course.name != undefined) {
+      savedCourse = course.name;
+      credits = course.credits
+    } else {
+      savedCourse = course
     }
+
+    for (const currCourse of this.courses) {
+      if (savedCourse === currCourse.name) {
+        return 'Already Enrolled'; // Exit if the course already exists
+      }
+    }
+
+    try {
+      const response = await fetch(
+        "http://127.0.0.1:8000/api/courses/enrolled/",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name: savedCourse,
+            progress: "Enrolled",
+            semesterEnrolled: semester,
+            gpa: "0",
+            credits: credits,
+          }),
+        }
+      );
+      if (response.ok) {
+        console.log("Course saved successfully:", course);
+      } else {
+        console.error("Failed to save course:", response.statusText);
+      }
+      return response;
+    } catch (error) {
+      console.error("Error saving course:", error);
+      throw error;
+    }
+  
+  }
 }
 
 export default CourseHandler;

@@ -8,8 +8,11 @@ import CourseHandler from "../GeneralComponents/courseHandler";
 import "./LoginPage.css";
 import "../App.css";
 import { Dialog } from "primereact/dialog";
+import { Checkbox } from "primereact/checkbox";
 
 export default function Login({ onLogin }) {
+  const [loginUsername, setLoginUsername] = useState("");
+  const [loginPassword, setLoginPassword] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [firstName, setFirstName] = useState("");
@@ -17,13 +20,15 @@ export default function Login({ onLogin }) {
   const [studentEmail, setEmail] = useState("");
   const [isRegistering, setIsRegistering] = useState(false);
   const [message, setMessage] = useState("");
-
+  const [checked, setChecked] = useState(false);
   const [visible, setVisible] = useState(false);
+ 
+
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setMessage("");
-
     if (isRegistering) {
       // Register new user
       try {
@@ -58,7 +63,7 @@ export default function Login({ onLogin }) {
       // Log in user
       try {
         const studentLoginResponse = await fetch(
-          `http://127.0.0.1:8000/api/student/${username}/${password}`,
+          `http://127.0.0.1:8000/api/student/${loginUsername}/${loginPassword}`,
           {
             method: "GET",
           }
@@ -166,8 +171,9 @@ export default function Login({ onLogin }) {
           } catch (error) {
             console.log("no data found");
           }
-
-          onLogin(username);
+          localStorage.setItem("user", JSON.stringify(data));
+          localStorage.removeItem("messageDismissed");
+          onLogin(loginUsername);
         } else {
           //  login failure
           setMessage("Invalid username or password, Please Try Again");
@@ -208,113 +214,74 @@ export default function Login({ onLogin }) {
         style={{ padding: 0, marginTop: 0, marginBottom: 100 }}
       />
 
-      <div
-        className="login-form"
-        style={{
-          width: 425,
-          height: 450,
-          backgroundColor: "#f9f9f9",
-          borderRadius: "8px",
-          boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
-          justifyContent: "center",
-        }}
-      >
-        <div className="login-title">
-          {" "}
-          <div style={{ paddingTop: "50px" }}>
-            {" "}
-            {isRegistering ? "Create Account" : "Sign In"}
-          </div>
-        </div>
-        <div className="login-content">
-        {message && (
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              textAlign: "center",
-              marginBottom: "18px",
-            }}
-          >
-            <p style={{ color: "red", fontWeight: 'bold' }}>{message}</p>
-          </div>
-        )}
-          <form onSubmit={handleSubmit}>
-            <div
-              className="login-input-field"
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
-              <FloatLabel>
-                <InputText
-                  id="username"
-                  value={username}
-                  onChange={(e) => setUsername(e.target.value)}
-                  style={{ width: "100%" }}
-                />
-                <label htmlFor="username">Username</label>
-              </FloatLabel>
-
-              <div
-                style={{
-                  marginTop: "20px",
-                  marginBottom: "15px",
-                }}
-              >
-                <FloatLabel>
-                  <InputText
-                    id="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    style={{ width: "100%" }}
-                  />
-                  <label htmlFor="password">Password</label>
-                </FloatLabel>
-              </div>
-
-              <Button
-                label="Login"
-                style={{
-                  width: "18vh",
-                  textAlign: "center",
-                }}
-                onClick={handleSubmit}
-              ></Button>
+      <div className="flex align-items-center justify-content-center">
+        <div className="surface-card p-4 shadow-2 border-round w-full lg:w-6">
+          <div className="text-center mb-5">
+            
+            <div className="text-900 text-3xl font-medium mb-3">
+              Welcome Back
             </div>
-          </form>
-
-          <div
-            type="submit"
-            style={{
-              width: "100%",
-              paddingBottom: "10px",
-
-              textAlign: "center",
-              fontWeight: "bold",
-              bottom: "0",
-              position: "absolute",
-            }}
-          >
-            <Button
-              type="Create Account"
-              icon="pi pi-user-plus"
-              label="Create Account"
+            <span className="text-600 font-medium line-height-3">
+              Don't have an account?
+            </span>
+            <a
               onClick={() => [
                 setVisible(true),
                 setIsRegistering(!isRegistering),
               ]}
-              style={{ width: "25vh" }}
+              className="font-medium no-underline ml-2 text-blue-500 cursor-pointer"
             >
-              {" "}
-            </Button>
+              Create today!
+            </a>
+          </div>
+
+          <div>
+            <label htmlFor="email" className="block text-900 font-medium mb-2">
+              Email
+            </label>
+            <InputText
+              id="UsernameLogin"
+              type="text"
+              placeholder="Username"
+              className="w-full mb-3"
+              onChange={(e) => setLoginUsername(e.target.value)}
+            />
+
+            <label
+              htmlFor="password"
+              className="block text-900 font-medium mb-2"
+            >
+              Password
+            </label>
+            <InputText
+              id="PasswordLogin"
+              type="password"
+              placeholder="Password"
+              className="w-full mb-3"
+              onChange={(e) => setLoginPassword(e.target.value)}
+            />
+
+            <div className="flex align-items-center justify-content-between mb-6">
+              <div className="flex align-items-center">
+                <Checkbox
+                  id="rememberme"
+                  onChange={(e) => setChecked(e.checked)}
+                  checked={checked}
+                  className="mr-2"
+                />
+                <label htmlFor="rememberme">Remember me</label>
+              </div>
+              <a className="font-medium no-underline ml-2 text-blue-500 text-right cursor-pointer">
+                Forgot your password?
+              </a>
+            </div>
+
+            <Button label="Sign In"     onClick={handleSubmit} icon="pi pi-user" className="w-full" />
           </div>
         </div>
       </div>
+
+      
 
       <Dialog
         header="Create Account"

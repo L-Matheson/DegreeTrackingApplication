@@ -87,10 +87,21 @@
   display: flex;
   overflow: hidden;
   align-items: center;
-  justify-content: center;
   white-space: normal;
   overflow-y: auto;
   flex-wrap: wrap;
+  gap: 3px;
+}
+
+.next-semester-courses {
+  display: flex;
+  overflow: hidden;
+  white-space: normal;
+  overflow-y: auto;
+  flex-wrap: wrap;
+  gap: 3px;
+  padding-left: 25px;
+
 }
 
 .student-tag {
@@ -176,6 +187,7 @@
   }
 
   .gpa {
-    width: 150px;
+   
     font-weight: 600;
+
   }

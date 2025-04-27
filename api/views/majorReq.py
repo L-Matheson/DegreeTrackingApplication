@@ -7,28 +7,6 @@ from rest_framework.decorators import api_view
 import json
 
 
-   
-@api_view(['POST'])
-def populate_majorreq(request):
-    try:
-        print('test')
-        with open('cos_req.json', 'r') as file:
-            data = json.load(file)
-            print(data)
-        for entry in data:
-            serializer = MajorReqSerializer(data=entry)
-            if serializer.is_valid():
-                serializer.save()
-            else:
-                return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-        return Response({"message": "MajorReq table populated successfully."}, status=status.HTTP_201_CREATED)
-
-    except FileNotFoundError:
-        return Response({"error": "cos_req.json file not found."}, status=status.HTTP_404_NOT_FOUND)
-    except json.JSONDecodeError:
-        return Response({"error": "Invalid JSON format in cos_req.json."}, status=status.HTTP_400_BAD_REQUEST)
-
 
 @api_view(['GET'])
 def get_major_courses(request):
@@ -59,7 +37,7 @@ def major_courses_details(request):
 
 
 @api_view(['POST'])
-def create_course(request):
+def create_major_course(request):
     serializer = MajorReqSerializer(data=request.data)
     if serializer.is_valid():
         serializer.save()
