@@ -13,12 +13,11 @@ import { Dialog } from "primereact/dialog";
 import CustomDropList from "../GeneralComponents/CustomDropList";
 import CourseHandler from "../GeneralComponents/courseHandler";
 
-export default function MajorReq() {
+export default function CoreReq() {
   const [courses, setCourses] = useState([]);
   const [selectedCourses, setSelectedCourses] = useState([]);
   const toast = useRef(null);
   const [courseHandler] = useState(new CourseHandler());
-  courseHandler.fetchCourses() // gather all the necessary courses upon course handler initialization
   const addCourse = useRef(null);
   const [noSelectCoursesWarning, setNoSelectCoursesWarning] = useState(false);
   const [enrollVisable, setEnrollVisable] = useState(false);
@@ -38,7 +37,6 @@ export default function MajorReq() {
     course_offered: { value: null, matchMode: FilterMatchMode.CONTAINS },
   });
   const [globalFilterValue, setGlobalFilterValue] = useState("");
-
   // Defines course types, used in Course Type Filtering
   const [courseTypes] = useState([
     "Computer Science",
@@ -47,15 +45,13 @@ export default function MajorReq() {
     "Physics",
     "Chemistry",
     "Engineering",
-    "Theatre"
   ]);
-  
   // Fetch courses
   useEffect(() => {
     const fetchCourses = async () => {
       try {
         const response = await fetch(
-          "http://127.0.0.1:8000/api/courses/major/"
+          "http://127.0.0.1:8000/api/courses/core/"
         );
         if (response.ok) {
           const data = await response.json();
@@ -71,7 +67,6 @@ export default function MajorReq() {
 
     fetchCourses();
   }, []);
-
   // Controls the filtering
   const onGlobalFilterChange = (e) => {
     const value = e.target.value;
@@ -80,6 +75,7 @@ export default function MajorReq() {
     setFilters(_filters);
     setGlobalFilterValue(value);
   };
+
 
   async function enrollCourse() {
     if (selectedCourses.length === 0) {
@@ -102,54 +98,22 @@ export default function MajorReq() {
       setNoSelectCoursesWarning(false);
       setEnrollVisable(true);
       console.log("Selected Courses:", selectedCourses);
+      toast.current.show({
+        severity: "success",
+        summary: "Success",
+        detail: "You have successfully enrolled in the course(s)",
+      });
     }
   }
-
-  // Calls the course handler to save the courses
-  function handleEnroll() {
+  //Calls the course handler to save the courses if they can be saved
+  function handleEnroll(){
+    console.log("Enrolling in courses:", selectedCourses);
     selectedCourses.forEach((course) => {
-      const semester = enrolledCourses.get(course.name); 
-      if (semester) {
-        courseHandler
-          .saveCourse(course, semester) 
-          .then((response) => {
-            if (response.ok) {
-              console.log("Course saved successfully:", course.name, semester);
-              toast.current.show({
-                severity: "success",
-                summary: "Success",
-                detail: `You have successfully enrolled in ${course.name} for ${semester}`,
-              });
-            } else {
-              console.error("Failed to save course:", response.statusText);
-              toast.current.show({
-                severity: "error",
-                summary: "Error",
-                detail: `Failed to enroll in ${course.name} for ${semester}, ensure you are not already enrolled`,
-              });
-            }
-          })
-          .catch((error) => {
-            console.error("Error saving course:", error);
-            toast.current.show({
-              severity: "error",
-              summary: "Error",
-              detail: `Error enrolling in ${course.name} for ${semester}`,
-            });
-          });
-      } else {
-        console.error(`No semester selected for course: ${course.name}`);
-        toast.current.show({
-          severity: "warn",
-          summary: "No Semester Selected",
-          detail: `Please select a semester for ${course.name} before enrolling.`,
-        });
-      }
+      courseHandler.saveCourse(course, course.selectedSemester);
     });
-  }
+  };
 
-
-  // The header of the table, contains the search bar and the add course button
+  // The header above the table, contains the search bar and Courses title
   const renderHeader = () => {
     return (
       <div className="flex flex-wrap gap-2 justify-content-between align-items-center">
@@ -211,14 +175,15 @@ export default function MajorReq() {
     );
   };
 
-  const enrolledCourses = new Map(); // Store enrolled courses, key is course name, value is semester
-
+  
   const handleDropdownSelection = (name, semester) => {
-    console.log(`Course: ${name} - Semester: ${semester}`);
-
-    enrolledCourses.set(name, semester);
-    console.log("Enrolled Courses:", enrolledCourses);
+    console.log(
+      `Course: ${name} - Semester: ${semester}`
+    );
   };
+
+
+
 
 
   // The main return function, contains the table and the dialog
@@ -227,7 +192,7 @@ export default function MajorReq() {
       <div style={{ textAlign: "left", backgroundColor: "white", height: 50 }}>
         <div style={{ paddingTop: 15, paddingLeft: 20, paddingRight: 15 }}>
           <div className="text-900 font-medium flex" style={{ width: 175 }}>
-            Major Requirements
+            Core Requirements
             <div className="flex" style={{ right: 0, position: "absolute" }}>
               <div
                 className="p-inputgroup flex-1 gap-3"
@@ -273,7 +238,7 @@ export default function MajorReq() {
           value={courses}
           paginator
           header={header}
-          rows={5}
+          rows={10}
           showGridlines
           paginatorTemplate="FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink CurrentPageReport RowsPerPageDropdown"
           rowsPerPageOptions={[5, 10, 25, 50]}
@@ -288,6 +253,7 @@ export default function MajorReq() {
             "description",
             "prerequisite",
             "co_requisite",
+            "CoreRequirements",
             "course_offered",
             "course_type",
           ]}
@@ -307,9 +273,9 @@ export default function MajorReq() {
             style={{ minWidth: "14rem" }}
           />
           <Column
-            field="credits"
-            header="Total Credits"
-            style={{ minWidth: "9rem" }}
+            field="description"
+            header="Description"
+            style={{ minWidth: "22rem" }}
           />
           <Column
             field="prerequisite"
@@ -324,6 +290,15 @@ export default function MajorReq() {
             field="co_requisite"
             header="Co-Requisite"
             sortable
+            style={{ minWidth: "12rem" }}
+          />
+           <Column
+            field="CoreRequirement"
+            header="Core Requirement(s)"
+            filter
+            sortable
+            filterPlaceholder="Search by Core Requirements"
+            filterField="CoreRequirement"
             style={{ minWidth: "12rem" }}
           />
           <Column
@@ -353,7 +328,7 @@ export default function MajorReq() {
         <Dialog
           header="Enroll Courses"
           visible={enrollVisable}
-          style={{ minwidth: "40vw" }}
+          style={{ width: "40vw" }}
           onHide={() => {
             if (!enrollVisable) return;
             setEnrollVisable(false);

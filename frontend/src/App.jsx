@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import Courses from './pages/Courses';
 import CalendarPage from './pages/Calendar';
 import MajorRequirements from './pages/MajorRequirements';
+import CoreRequirements from './pages/CoreRequirements';
 import Settings from './pages/Settings';
 import Login from './pages/Login';
 import Logout from './pages/Logout';  
@@ -42,7 +43,7 @@ export default function App() {
             <Sidebar>
               <SidebarHeader text="Degree Tracker" icon="pi pi-graduation-cap" />
               <SidebarItem icon="pi pi-home" text="Home" to="/" />
-              <SidebarItem icon="pi pi-book" text="Courses" to="/courses" />
+              <SidebarItem icon="pi pi-book" text="Core Courses" to="/CoreRequirments" />
               <SidebarItem icon="pi pi-book" text="My Courses" to="/mycourses" />
               <SidebarItem icon="pi pi-calendar" text="Calendar" to="/calendar" />
               <SidebarItem icon="pi pi-book" text="Major Requirements" to="/MajorRequirements" />
@@ -57,6 +58,8 @@ export default function App() {
                 <Route path="/courses" element={<Courses />} />
                 <Route path="/mycourses" element={<MyCourses />} />
                 <Route path="/calendar" element={<CalendarPage />} />
+                <Route path="/CoreRequirments" element={<CoreRequirements />} />
+                <Route path="/calendar" element={<Calendar />} />
                 <Route path="/MajorRequirements" element={<MajorRequirements />} />
                 <Route path="/MajorTreeView" element={<MajorTreeView />} />
                 <Route path="/Settings" element={<Settings />} />

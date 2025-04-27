@@ -1,0 +1,180 @@
+{
+ "course": [
+  {
+   "name": "BUS 241 - Applied Business Modeling",
+   "course_block": "BUS 241 - Applied Business Modeling\nThis technology-driven, workforce-alignment course is designed to make students think about structuring varied business situations for quantitative analysis. It introduces principles and techniques for building and implementing decision-making models using Excel. The topics drawn are relevant to a variety of business disciplines, such as analytics, operations, marketing, finance, and accounting. The course emphasizes the application of spreadsheet modeling techniques in the area of statistics for analyzing and implementing business solutions. In addition to introducing students to spreadsheets, it will cover a wide range of Excel functions and tools for business analysis including, what-if, goal seek, probability distributions, data visualization, look-up functions, tables, scenario manager, managing Excel add-ons, arrays, statistical analysis, and regression.\nPrerequisite(s):\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Quantitative Reasoning\nCourse Typically Offered:\nCourse Type: Business"
+  },
+  {
+   "name": "ECO 101 - Introduction to Macroeconomics",
+   "course_block": "ECO 101 - Introduction to Macroeconomics\nEconomics is a social science that explores human behavior and social systems. Macroeconomics studies some of society’s biggest issues by examining how the economy as a whole operates. How can we improve the standard of living in our country and around the world? Why aren’t there always enough jobs to employ everyone who is willing and able to work? How can the government implement economic policy to limit unemployment, curtail inflation, and generally improve lives? These are some of the important questions that this course will address. Students will learn monetary and fiscal policy, international trade and globalization, the business cycle, competing theories of the government’s role in the economy, poverty, and inequality. Students will explore a variety of perspectives by examining theoretical concepts, modeling economic relationships, and discussing real-world issues.\nPrerequisite(s):\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Quantitative Reasoning; Socio-cultural Analysis\nCourse Typically Offered: Fall, spring, and summer\nCourse Type: Economics"
+  },
+  {
+   "name": "ECO 102 - Introduction to Microeconomics",
+   "course_block": "ECO 102 - Introduction to Microeconomics\nEconomics is a social science that explores human behavior and social systems. Microeconomics studies how people make decisions in response to their incentives, along with the outcomes that result from individuals’ choices and the economic forces and institutions that influence them. It provides a framework for understanding how policy can change societal outcomes by altering incentives and therefore the choices that people make. Students will learn topics such as supply and demand, externalities, market power, consumer choice, firm behavior, inequality, the minimum wage, and other labor market issues. Students will explore a variety of perspectives by examining theoretical concepts, modeling economic relationships, and discussing real-world issues.\nPrerequisite(s):\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Quantitative Reasoning; Socio-cultural Analysis\nCourse Typically Offered: Fall, spring, and summer\nCourse Type: Economics"
+  },
+  {
+   "name": "ECO 120 - Lying with Graphs: Reading, Writing and Interpreting Graphs in the Social Sciences",
+   "course_block": "ECO 120 - Lying with Graphs: Reading, Writing and Interpreting Graphs in the Social Sciences\nIf a picture’s worth a thousand words, a graph’s worth a thousand numbers. Graphs can be used to explain, present, and-yes-distort information. During this course, you will learn how to correctly interpret, critique, and construct graphs, as well as avoid the pitfalls often encountered in using graphs to communicate.\nPrerequisite(s):\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Quantitative Reasoning\nCourse Typically Offered:\nCourse Type: Economics"
+  },
+  {
+   "name": "ESP 123 - Quantitative Reasoning and the Environment",
+   "course_block": "ESP 123 - Quantitative Reasoning and the Environment\nThis course focuses on how to understand and manipulate quantitative environmental information with tools to describe, model, and analyze data. The course will cover rotating topical content emphasizing numeracy and critical thinking in the following quantitative areas: measurement and units, ratios and percentages, charts and graphs, introductory statistics, functions and regression, and mathematical modeling. Microsoft Excel will be used extensively. Meets the tools requirement for ESP majors.\nPrerequisite(s):\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Quantitative Reasoning\nCourse Typically Offered: Variable\nCourse Type: Environmental Science & Policy"
+  },
+  {
+   "name": "FIN 201 - Personal Finance",
+   "course_block": "FIN 201 - Personal Finance\nThe primary emphasis is to teach students how to become more knowledgeable and independent over personal financial matters. Topics such as obtaining financial aid, managing student loans, career and education planning, budgeting, credit cards, stock market investing, real estate, behavioral finance, retirement planning, and insurance will be covered. Upon completing the course, students will be able to make better financial decisions using computer-based simulations and software that facilitate financial planning methods such as what-if analysis, sensitivity analysis, and scenario planning. Offered every semester. This course is open to all USM students. When taken by business or accounting majors, this course will give general elective credit. Do not take if previously completed BUS 201 Personal Finance as this is the same class. Repeat rules apply. Cr 3\nPrerequisite(s):\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Quantitative Reasoning\nCourse Typically Offered:\nCourse Type: Accounting and Finance"
+  },
+  {
+   "name": "GEO 107 - Maps and Math",
+   "course_block": "GEO 107 - Maps and Math\nMaps are accurate drawings of the world. They are scale models produced by locating, measuring, and surveying landscapes. A map is a picture made of numbers. In this course students will learn how maps are made, and how math is embedded into every aspect of the cartographic process.\nPrerequisite(s):\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Quantitative Reasoning\nCourse Typically Offered:\nCourse Type: Geography"
+  },
+  {
+   "name": "GEO 270 - Mapping Environments and People: Data Visualization and Analysis",
+   "course_block": "GEO 270 - Mapping Environments and People: Data Visualization and Analysis\nThe history and practice of analytical mapping - of environmental and social phenomena - introduces students to basic concepts in quantitative reasoning and in the visual display of quantitative information. Students will study early analytic maps from the collections of USM’s Osher Map Library (from magnetism to ethnography to economics) to determine how the data were collected and analyzed; students will map data to implement the principles discussed in class.\nPrerequisite(s):\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Quantitative Reasoning\nCourse Typically Offered:\nCourse Type: Geography"
+  },
+  {
+   "name": "HON 105 - Interdisciplinary Introduction to Logic & Mathematics",
+   "course_block": "HON 105 - Interdisciplinary Introduction to Logic & Mathematics\nThis course is an introduction to logic and mathematics. It is an unusual introduction, since it transforms history, philosophy, social thought, literature, and the arts into paths for understanding logical and mathematical concepts and systems. Therein lies the course’s interdisciplinarity. These concepts and systems will be deployed to solve basic problems in everyday life and in academic research, from formally representing arguments found in scholarly texts to determining the odds of winning a hand in a game of chance to assessing scientific hypotheses. Special emphasis will be placed on developing the skill of detecting logical and statistical fallacies. Finally, the scope and limits of logical and mathematical systems will be studied.\nPrerequisite(s): Successful completion of the University’s mathematics proficiency requirement.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Quantitative Reasoning\nCourse Typically Offered: Fall\nCourse Type: Academic Honors Program"
+  },
+  {
+   "name": "LOS 120 - Statistics for Informed Decision Making",
+   "course_block": "LOS 120 - Statistics for Informed Decision Making\nIn this course, students are introduced to tools of quantitative analyses that may be used to address world questions: descriptive statistics, sampling and significance testing, correlation, and regression. Students in this course will have opportunities to use these tools in decision-making processes and increase their understanding of data misconceptions and misuses.\nPrerequisite(s): Grade of C- or higher in any MAT 100+ course, or appropriate placement test score.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Quantitative Reasoning\nCourse Typically Offered:\nCourse Type: Leadership & Organizational Studies"
+  },
+  {
+   "name": "MAT 105 - Mathematics for Quantitative Decision Making",
+   "course_block": "MAT 105 - Mathematics for Quantitative Decision Making\nThis is an introductory course in quantitative literacy that, through lecture and lab, emphasizes critical thinking, mathematical reasoning, and technological tools. Topics are selected to develop an awareness of the utility of mathematics in life and to instill an appreciation of the scope and nature of its decision-making potential.\nPrerequisite(s): Grade of C or higher in MAT 100 or MAT 101, or appropriate placement test score.\nCo-requisite(s):\nCredits: 4\nMeets the Following Core Requirement: Quantitative Reasoning\nCourse Typically Offered:\nCourse Type: Mathematics"
+  },
+  {
+   "name": "MAT 108 - College Algebra",
+   "course_block": "MAT 108 - College Algebra\nA survey of the mathematics needed for Pre-Calculus and related analytical coursework. The topics include linear, quadratic, and absolute value equations and inequalities; graphs; and functions (linear, quadratic, polynomial, rational, exponential, and logarithmic).\nPrerequisite(s): Grade of C or higher in MAT 101, or appropriate placement test score.\nCo-requisite(s):\nCredits: 4\nMeets the Following Core Requirement: Quantitative Reasoning\nCourse Typically Offered:\nCourse Type: Mathematics"
+  },
+  {
+   "name": "MAT 120 - Introduction to Statistics",
+   "course_block": "MAT 120 - Introduction to Statistics\nAn introduction to probability and statistics through lecture and lab. Particular topics include random variables and their distributions, methods of descriptive statistics, estimation and hypothesis testing, regression, and correlation.\nPrerequisite(s): Grade of C or higher in MAT 100 or MAT 101, or appropriate placement test score.\nCo-requisite(s):\nCredits: 4\nMeets the Following Core Requirement: Quantitative Reasoning\nCourse Typically Offered:\nCourse Type: Mathematics"
+  },
+  {
+   "name": "MAT 132 - Quantitative Reasoning for Elementary School Teachers",
+   "course_block": "MAT 132 - Quantitative Reasoning for Elementary School Teachers\nThis course focuses on probability and statistical content for elementary school teachers. It is designed to help future teachers see the relevance of mathematics and statistics to their and their future students’ world and in becoming critical, questioning citizens in an increasingly quantitative world.\nPrerequisite(s): Grade of C or higher in MAT 131.\nCo-requisite(s):\nCredits: 4\nMeets the Following Core Requirement: Quantitative Reasoning\nCourse Typically Offered:\nCourse Type: Mathematics"
+  },
+  {
+   "name": "MAT 140 - Pre-Calculus Mathematics",
+   "course_block": "MAT 140 - Pre-Calculus Mathematics\nA brief review of elementary algebra followed by a study of the algebraic, exponential, logarithmic, and trigonometric functions.\nPrerequisite(s): Grade of C- or higher in MAT 108 or appropriate placement test score.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Quantitative Reasoning\nCourse Typically Offered:\nCourse Type: Mathematics"
+  },
+  {
+   "name": "MAT 152 - Calculus A",
+   "course_block": "MAT 152 - Calculus A\nThe first course in a three-semester sequence covering basic calculus of real variables, Calculus A introduces the concept of limit and applies it to the definition of derivative and integral of a function of one variable. The rules of differentiation and properties of the integral are emphasized, as well as applications of the derivative and integral. This course also includes an introduction to the transcendental functions.\nPrerequisite(s): Grade of C- or higher in MAT 140 or appropriate placement test score.\nCo-requisite(s):\nCredits: 4\nMeets the Following Core Requirement: Quantitative Reasoning\nCourse Typically Offered:\nCourse Type: Mathematics"
+  },
+  {
+   "name": "MAT 210 - Business Statistics",
+   "course_block": "MAT 210 - Business Statistics\nThis course investigates graphical and numerical methods of descriptive statistics; basic probability; discrete and continuous random variables and their distributions (binomial, hypergeometric, Poisson, uniform, exponential, and normal); sampling distributions; estimation; tests of hypotheses; and other selected topics. Applications will be chosen primarily from business.\nPrerequisite(s): MAT 108 (or concurrent).\nCo-requisite(s):\nCredits: 4\nMeets the Following Core Requirement: Quantitative Reasoning\nCourse Typically Offered:\nCourse Type: Mathematics"
+  },
+  {
+   "name": "PHI 205 - Logic",
+   "course_block": "PHI 205 - Logic\nTechniques to distinguish good from bad reasoning through the study of formal and informal logic including fallacies, inductive and deductive arguments, truth tables, evidence, and rules of implication.\nPrerequisite(s):\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Quantitative Reasoning\nCourse Typically Offered:\nCourse Type: Philosophy"
+  },
+  {
+   "name": "POS 102 - People and Politics",
+   "course_block": "POS 102 - People and Politics\nThis course introduces students to comparative political analysis. It centers on basic questions in the study of political behavior: how people learn about politics, who participates in politics, how political conflict is expressed and resolved in various societies. This class uses mathematics and statistics to study political participation quantitatively.\nPrerequisite(s):\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Quantitative Reasoning; Socio-cultural Analysis\nCourse Typically Offered:\nCourse Type: Political Science"
+  },
+  {
+   "name": "PSY 201 - Statistics in Psychology",
+   "course_block": "PSY 201 - Statistics in Psychology\nA general introduction to the techniques of descriptive, predictive, and inferential statistics. Emphasis is placed on measures of central tendency and variability, correlation, hypothesis testing, and simple analysis of variance.\nPrerequisite(s): SAT Math score at least 570, Accuplacer QAS score at least 263, or grade of C- or higher in MAT 100.\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Quantitative Reasoning\nCourse Typically Offered:\nCourse Type: Psychology"
+  },
+  {
+   "name": "SOC 307 - Quantitative Research Methods",
+   "course_block": "SOC 307 - Quantitative Research Methods\nThis course provides introductory skill-building in quantitative data methods and analysis in Sociology. Students engage in critical thinking around the use of quantitative data and statistics in social science research and society. In this course, students generate research questions and testable hypotheses and analyze secondary data sources. Specific statistical topics include: measures of central tendency, measures of dispersion, t-testing, analysis of variance, cross-tabulation, recoding variables, among others. The course includes a required computer lab component. This course provides students with skills necessary to critically engage in quantitative reasoning. Previous experience with statistics not required.\nPrerequisite(s): SOC 210 with a grade of C or higher or permission of instructor.\nCo-requisite(s):\nCredits: 4\nMeets the Following Core Requirement: Quantitative Reasoning\nCourse Typically Offered:\nCourse Type: Sociology"
+  },
+  {
+   "name": "THE 115 - Math & the Theatre Arts",
+   "course_block": "THE 115 - Math & the Theatre Arts\nMath is all around us. Nowhere is this more true than in theatre. This course will show how algebra, geometry, trigonometry, and more can be practically applied to the theatrical and entertainment industries. We will focus on how mathematics is used in scenic design and construction, costume design and construction, lighting design and sound design, as well as directing and choreography.\nPrerequisite(s):\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Quantitative Reasoning\nCourse Typically Offered:\nCourse Type: Theatre"
+  },
+  {
+   "name": "BUS 241 - Applied Business Modeling",
+   "course_block": "THE 115 - Math & the Theatre Arts\nMath is all around us. Nowhere is this more true than in theatre. This course will show how algebra, geometry, trigonometry, and more can be practically applied to the theatrical and entertainment industries. We will focus on how mathematics is used in scenic design and construction, costume design and construction, lighting design and sound design, as well as directing and choreography.\nPrerequisite(s):\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Quantitative Reasoning\nCourse Typically Offered:\nCourse Type: Theatre"
+  },
+  {
+   "name": "ECO 101 - Introduction to Macroeconomics",
+   "course_block": "THE 115 - Math & the Theatre Arts\nMath is all around us. Nowhere is this more true than in theatre. This course will show how algebra, geometry, trigonometry, and more can be practically applied to the theatrical and entertainment industries. We will focus on how mathematics is used in scenic design and construction, costume design and construction, lighting design and sound design, as well as directing and choreography.\nPrerequisite(s):\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Quantitative Reasoning\nCourse Typically Offered:\nCourse Type: Theatre"
+  },
+  {
+   "name": "ECO 102 - Introduction to Microeconomics",
+   "course_block": "THE 115 - Math & the Theatre Arts\nMath is all around us. Nowhere is this more true than in theatre. This course will show how algebra, geometry, trigonometry, and more can be practically applied to the theatrical and entertainment industries. We will focus on how mathematics is used in scenic design and construction, costume design and construction, lighting design and sound design, as well as directing and choreography.\nPrerequisite(s):\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Quantitative Reasoning\nCourse Typically Offered:\nCourse Type: Theatre"
+  },
+  {
+   "name": "ECO 120 - Lying with Graphs: Reading, Writing and Interpreting Graphs in the Social Sciences",
+   "course_block": "THE 115 - Math & the Theatre Arts\nMath is all around us. Nowhere is this more true than in theatre. This course will show how algebra, geometry, trigonometry, and more can be practically applied to the theatrical and entertainment industries. We will focus on how mathematics is used in scenic design and construction, costume design and construction, lighting design and sound design, as well as directing and choreography.\nPrerequisite(s):\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Quantitative Reasoning\nCourse Typically Offered:\nCourse Type: Theatre"
+  },
+  {
+   "name": "ESP 123 - Quantitative Reasoning and the Environment",
+   "course_block": "THE 115 - Math & the Theatre Arts\nMath is all around us. Nowhere is this more true than in theatre. This course will show how algebra, geometry, trigonometry, and more can be practically applied to the theatrical and entertainment industries. We will focus on how mathematics is used in scenic design and construction, costume design and construction, lighting design and sound design, as well as directing and choreography.\nPrerequisite(s):\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Quantitative Reasoning\nCourse Typically Offered:\nCourse Type: Theatre"
+  },
+  {
+   "name": "FIN 201 - Personal Finance",
+   "course_block": "THE 115 - Math & the Theatre Arts\nMath is all around us. Nowhere is this more true than in theatre. This course will show how algebra, geometry, trigonometry, and more can be practically applied to the theatrical and entertainment industries. We will focus on how mathematics is used in scenic design and construction, costume design and construction, lighting design and sound design, as well as directing and choreography.\nPrerequisite(s):\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Quantitative Reasoning\nCourse Typically Offered:\nCourse Type: Theatre"
+  },
+  {
+   "name": "GEO 107 - Maps and Math",
+   "course_block": "THE 115 - Math & the Theatre Arts\nMath is all around us. Nowhere is this more true than in theatre. This course will show how algebra, geometry, trigonometry, and more can be practically applied to the theatrical and entertainment industries. We will focus on how mathematics is used in scenic design and construction, costume design and construction, lighting design and sound design, as well as directing and choreography.\nPrerequisite(s):\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Quantitative Reasoning\nCourse Typically Offered:\nCourse Type: Theatre"
+  },
+  {
+   "name": "GEO 270 - Mapping Environments and People: Data Visualization and Analysis",
+   "course_block": "THE 115 - Math & the Theatre Arts\nMath is all around us. Nowhere is this more true than in theatre. This course will show how algebra, geometry, trigonometry, and more can be practically applied to the theatrical and entertainment industries. We will focus on how mathematics is used in scenic design and construction, costume design and construction, lighting design and sound design, as well as directing and choreography.\nPrerequisite(s):\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Quantitative Reasoning\nCourse Typically Offered:\nCourse Type: Theatre"
+  },
+  {
+   "name": "HON 105 - Interdisciplinary Introduction to Logic & Mathematics",
+   "course_block": "THE 115 - Math & the Theatre Arts\nMath is all around us. Nowhere is this more true than in theatre. This course will show how algebra, geometry, trigonometry, and more can be practically applied to the theatrical and entertainment industries. We will focus on how mathematics is used in scenic design and construction, costume design and construction, lighting design and sound design, as well as directing and choreography.\nPrerequisite(s):\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Quantitative Reasoning\nCourse Typically Offered:\nCourse Type: Theatre"
+  },
+  {
+   "name": "LOS 120 - Statistics for Informed Decision Making",
+   "course_block": "THE 115 - Math & the Theatre Arts\nMath is all around us. Nowhere is this more true than in theatre. This course will show how algebra, geometry, trigonometry, and more can be practically applied to the theatrical and entertainment industries. We will focus on how mathematics is used in scenic design and construction, costume design and construction, lighting design and sound design, as well as directing and choreography.\nPrerequisite(s):\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Quantitative Reasoning\nCourse Typically Offered:\nCourse Type: Theatre"
+  },
+  {
+   "name": "MAT 105 - Mathematics for Quantitative Decision Making",
+   "course_block": "THE 115 - Math & the Theatre Arts\nMath is all around us. Nowhere is this more true than in theatre. This course will show how algebra, geometry, trigonometry, and more can be practically applied to the theatrical and entertainment industries. We will focus on how mathematics is used in scenic design and construction, costume design and construction, lighting design and sound design, as well as directing and choreography.\nPrerequisite(s):\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Quantitative Reasoning\nCourse Typically Offered:\nCourse Type: Theatre"
+  },
+  {
+   "name": "MAT 108 - College Algebra",
+   "course_block": "THE 115 - Math & the Theatre Arts\nMath is all around us. Nowhere is this more true than in theatre. This course will show how algebra, geometry, trigonometry, and more can be practically applied to the theatrical and entertainment industries. We will focus on how mathematics is used in scenic design and construction, costume design and construction, lighting design and sound design, as well as directing and choreography.\nPrerequisite(s):\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Quantitative Reasoning\nCourse Typically Offered:\nCourse Type: Theatre"
+  },
+  {
+   "name": "MAT 120 - Introduction to Statistics",
+   "course_block": "THE 115 - Math & the Theatre Arts\nMath is all around us. Nowhere is this more true than in theatre. This course will show how algebra, geometry, trigonometry, and more can be practically applied to the theatrical and entertainment industries. We will focus on how mathematics is used in scenic design and construction, costume design and construction, lighting design and sound design, as well as directing and choreography.\nPrerequisite(s):\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Quantitative Reasoning\nCourse Typically Offered:\nCourse Type: Theatre"
+  },
+  {
+   "name": "MAT 132 - Quantitative Reasoning for Elementary School Teachers",
+   "course_block": "THE 115 - Math & the Theatre Arts\nMath is all around us. Nowhere is this more true than in theatre. This course will show how algebra, geometry, trigonometry, and more can be practically applied to the theatrical and entertainment industries. We will focus on how mathematics is used in scenic design and construction, costume design and construction, lighting design and sound design, as well as directing and choreography.\nPrerequisite(s):\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Quantitative Reasoning\nCourse Typically Offered:\nCourse Type: Theatre"
+  },
+  {
+   "name": "MAT 140 - Pre-Calculus Mathematics",
+   "course_block": "THE 115 - Math & the Theatre Arts\nMath is all around us. Nowhere is this more true than in theatre. This course will show how algebra, geometry, trigonometry, and more can be practically applied to the theatrical and entertainment industries. We will focus on how mathematics is used in scenic design and construction, costume design and construction, lighting design and sound design, as well as directing and choreography.\nPrerequisite(s):\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Quantitative Reasoning\nCourse Typically Offered:\nCourse Type: Theatre"
+  },
+  {
+   "name": "MAT 152 - Calculus A",
+   "course_block": "THE 115 - Math & the Theatre Arts\nMath is all around us. Nowhere is this more true than in theatre. This course will show how algebra, geometry, trigonometry, and more can be practically applied to the theatrical and entertainment industries. We will focus on how mathematics is used in scenic design and construction, costume design and construction, lighting design and sound design, as well as directing and choreography.\nPrerequisite(s):\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Quantitative Reasoning\nCourse Typically Offered:\nCourse Type: Theatre"
+  },
+  {
+   "name": "MAT 210 - Business Statistics",
+   "course_block": "THE 115 - Math & the Theatre Arts\nMath is all around us. Nowhere is this more true than in theatre. This course will show how algebra, geometry, trigonometry, and more can be practically applied to the theatrical and entertainment industries. We will focus on how mathematics is used in scenic design and construction, costume design and construction, lighting design and sound design, as well as directing and choreography.\nPrerequisite(s):\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Quantitative Reasoning\nCourse Typically Offered:\nCourse Type: Theatre"
+  },
+  {
+   "name": "PHI 205 - Logic",
+   "course_block": "THE 115 - Math & the Theatre Arts\nMath is all around us. Nowhere is this more true than in theatre. This course will show how algebra, geometry, trigonometry, and more can be practically applied to the theatrical and entertainment industries. We will focus on how mathematics is used in scenic design and construction, costume design and construction, lighting design and sound design, as well as directing and choreography.\nPrerequisite(s):\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Quantitative Reasoning\nCourse Typically Offered:\nCourse Type: Theatre"
+  },
+  {
+   "name": "POS 102 - People and Politics",
+   "course_block": "THE 115 - Math & the Theatre Arts\nMath is all around us. Nowhere is this more true than in theatre. This course will show how algebra, geometry, trigonometry, and more can be practically applied to the theatrical and entertainment industries. We will focus on how mathematics is used in scenic design and construction, costume design and construction, lighting design and sound design, as well as directing and choreography.\nPrerequisite(s):\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Quantitative Reasoning\nCourse Typically Offered:\nCourse Type: Theatre"
+  },
+  {
+   "name": "PSY 201 - Statistics in Psychology",
+   "course_block": "THE 115 - Math & the Theatre Arts\nMath is all around us. Nowhere is this more true than in theatre. This course will show how algebra, geometry, trigonometry, and more can be practically applied to the theatrical and entertainment industries. We will focus on how mathematics is used in scenic design and construction, costume design and construction, lighting design and sound design, as well as directing and choreography.\nPrerequisite(s):\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Quantitative Reasoning\nCourse Typically Offered:\nCourse Type: Theatre"
+  },
+  {
+   "name": "SOC 307 - Quantitative Research Methods",
+   "course_block": "THE 115 - Math & the Theatre Arts\nMath is all around us. Nowhere is this more true than in theatre. This course will show how algebra, geometry, trigonometry, and more can be practically applied to the theatrical and entertainment industries. We will focus on how mathematics is used in scenic design and construction, costume design and construction, lighting design and sound design, as well as directing and choreography.\nPrerequisite(s):\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Quantitative Reasoning\nCourse Typically Offered:\nCourse Type: Theatre"
+  },
+  {
+   "name": "THE 115 - Math & the Theatre Arts",
+   "course_block": "THE 115 - Math & the Theatre Arts\nMath is all around us. Nowhere is this more true than in theatre. This course will show how algebra, geometry, trigonometry, and more can be practically applied to the theatrical and entertainment industries. We will focus on how mathematics is used in scenic design and construction, costume design and construction, lighting design and sound design, as well as directing and choreography.\nPrerequisite(s):\nCo-requisite(s):\nCredits: 3\nMeets the Following Core Requirement: Quantitative Reasoning\nCourse Typically Offered:\nCourse Type: Theatre"
+  }
+ ]
+}
