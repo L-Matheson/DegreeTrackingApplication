@@ -7,7 +7,6 @@ import { IconField } from "primereact/iconfield";
 import { InputIcon } from "primereact/inputicon";
 import { FilterMatchMode, FilterOperator } from "primereact/api";
 import { Dropdown } from "primereact/dropdown";
-import { ConfirmPopup } from "primereact/confirmpopup";
 import { Toast } from "primereact/toast";
 import { Dialog } from "primereact/dialog";
 import CustomDropList from "../GeneralComponents/CustomDropList";
@@ -37,6 +36,7 @@ export default function CoreReq() {
     course_offered: { value: null, matchMode: FilterMatchMode.CONTAINS },
   });
   const [globalFilterValue, setGlobalFilterValue] = useState("");
+
   // Defines course types, used in Course Type Filtering
   const [courseTypes] = useState([
     "Computer Science",
@@ -46,6 +46,7 @@ export default function CoreReq() {
     "Chemistry",
     "Engineering",
   ]);
+
   // Fetch courses
   useEffect(() => {
     const fetchCourses = async () => {
@@ -55,7 +56,7 @@ export default function CoreReq() {
         );
         if (response.ok) {
           const data = await response.json();
-          setCourses(data); 
+          setCourses(data);
           console.log(data);
         } else {
           console.error("Failed to fetch courses:", response.statusText);
@@ -67,6 +68,7 @@ export default function CoreReq() {
 
     fetchCourses();
   }, []);
+
   // Controls the filtering
   const onGlobalFilterChange = (e) => {
     const value = e.target.value;
@@ -76,6 +78,13 @@ export default function CoreReq() {
     setGlobalFilterValue(value);
   };
 
+  const enrolledCourses = new Map(); // Store enrolled courses, key is course name, value is semester
+
+  const handleDropdownSelection = (name, semester) => {
+    console.log(`Course: ${name} - Semester: ${semester}`);
+    enrolledCourses.set(name, semester);
+    console.log("Enrolled Courses:", enrolledCourses);
+  };
 
   async function enrollCourse() {
     if (selectedCourses.length === 0) {
@@ -90,28 +99,59 @@ export default function CoreReq() {
       setNoSelectCoursesWarning(true);
       toast.current.show({
         severity: "warn",
-        summary: "Max Courses Succeeded",
+        summary: "Max Courses Exceeded",
         detail:
-          "Max of Five Courses Succeeded, Please Deselect Courses and Try Again",
+          "Max of Five Courses Exceeded, Please Deselect Courses and Try Again",
       });
     } else {
       setNoSelectCoursesWarning(false);
       setEnrollVisable(true);
       console.log("Selected Courses:", selectedCourses);
-      toast.current.show({
-        severity: "success",
-        summary: "Success",
-        detail: "You have successfully enrolled in the course(s)",
-      });
     }
   }
-  //Calls the course handler to save the courses if they can be saved
-  function handleEnroll(){
-    console.log("Enrolling in courses:", selectedCourses);
+
+  // Calls the course handler to save the courses
+  function handleEnroll() {
     selectedCourses.forEach((course) => {
-      courseHandler.saveCourse(course, course.selectedSemester);
+      const semester = enrolledCourses.get(course.name);
+      if (semester) {
+        courseHandler
+          .saveCourse(course, semester)
+          .then((response) => {
+            if (response.ok) {
+              console.log("Course saved successfully:", course.name, semester);
+              toast.current.show({
+                severity: "success",
+                summary: "Success",
+                detail: `You have successfully enrolled in ${course.name} for ${semester}`,
+              });
+            } else {
+              console.error("Failed to save course:", response.statusText);
+              toast.current.show({
+                severity: "error",
+                summary: "Error",
+                detail: `Failed to enroll in ${course.name} for ${semester}, ensure you are not already enrolled`,
+              });
+            }
+          })
+          .catch((error) => {
+            console.error("Error saving course:", error);
+            toast.current.show({
+              severity: "error",
+              summary: "Error",
+              detail: `Error enrolling in ${course.name} for ${semester}`,
+            });
+          });
+      } else {
+        console.error(`No semester selected for course: ${course.name}`);
+        toast.current.show({
+          severity: "warn",
+          summary: "No Semester Selected",
+          detail: `Please select a semester for ${course.name} before enrolling.`,
+        });
+      }
     });
-  };
+  }
 
   // The header above the table, contains the search bar and Courses title
   const renderHeader = () => {
@@ -174,17 +214,6 @@ export default function CoreReq() {
       />
     );
   };
-
-  
-  const handleDropdownSelection = (name, semester) => {
-    console.log(
-      `Course: ${name} - Semester: ${semester}`
-    );
-  };
-
-
-
-
 
   // The main return function, contains the table and the dialog
   return (
@@ -292,7 +321,7 @@ export default function CoreReq() {
             sortable
             style={{ minWidth: "12rem" }}
           />
-           <Column
+          <Column
             field="CoreRequirement"
             header="Core Requirement(s)"
             filter

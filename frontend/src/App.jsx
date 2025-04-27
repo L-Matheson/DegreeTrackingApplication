@@ -45,7 +45,6 @@ export default function App() {
               <SidebarItem icon="pi pi-home" text="Home" to="/" />
               <SidebarItem icon="pi pi-book" text="Core Courses" to="/CoreRequirments" />
               <SidebarItem icon="pi pi-book" text="My Courses" to="/mycourses" />
-              <SidebarItem icon="pi pi-calendar" text="Calendar" to="/calendar" />
               <SidebarItem icon="pi pi-book" text="Major Requirements" to="/MajorRequirements" />
               <SidebarItem icon="pi pi-sitemap" text="Major Tree View" to="/MajorTreeView" />
               <hr className="solid" />
@@ -59,7 +58,6 @@ export default function App() {
                 <Route path="/mycourses" element={<MyCourses />} />
                 <Route path="/calendar" element={<CalendarPage />} />
                 <Route path="/CoreRequirments" element={<CoreRequirements />} />
-                <Route path="/calendar" element={<Calendar />} />
                 <Route path="/MajorRequirements" element={<MajorRequirements />} />
                 <Route path="/MajorTreeView" element={<MajorTreeView />} />
                 <Route path="/Settings" element={<Settings />} />
