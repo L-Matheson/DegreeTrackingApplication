@@ -102,48 +102,54 @@ export default function MajorReq() {
       setNoSelectCoursesWarning(false);
       setEnrollVisable(true);
       console.log("Selected Courses:", selectedCourses);
-      toast.current.show({
-        severity: "success",
-        summary: "Success",
-        detail: "You have successfully enrolled in the course(s)",
-      });
     }
   }
 
-  // Calls the course handler to save the courses if they can be saved
+  // Calls the course handler to save the courses
   function handleEnroll() {
-    for (const [name, semester] of enrolledCourses) {
-      let result = courseHandler.saveCourse(name, semester)
-        .then((response) => {
-          if (response.ok) {
-            console.log("Course saved successfully:", name, semester);
-            toast.current.show({
-              severity: "success",
-              summary: "Success",
-              detail: `You have successfully enrolled in ${name} for ${semester}`,
-            });
-          } else {
-            console.error("Failed to save course:", response.statusText);
+    selectedCourses.forEach((course) => {
+      const semester = enrolledCourses.get(course.name); 
+      if (semester) {
+        courseHandler
+          .saveCourse(course, semester) 
+          .then((response) => {
+            if (response.ok) {
+              console.log("Course saved successfully:", course.name, semester);
+              toast.current.show({
+                severity: "success",
+                summary: "Success",
+                detail: `You have successfully enrolled in ${course.name} for ${semester}`,
+              });
+            } else {
+              console.error("Failed to save course:", response.statusText);
+              toast.current.show({
+                severity: "error",
+                summary: "Error",
+                detail: `Failed to enroll in ${course.name} for ${semester}, ensure you are not already enrolled`,
+              });
+            }
+          })
+          .catch((error) => {
+            console.error("Error saving course:", error);
             toast.current.show({
               severity: "error",
               summary: "Error",
-              detail: `Failed to enroll in ${name} for ${semester}, ensure you are not already enrolled`,
+              detail: `Error enrolling in ${course.name} for ${semester}`,
             });
-          }
-        })
-        .catch((error) => {
-          console.error("Error saving course:", error);
-          toast.current.show({
-            severity: "error",
-            summary: "Error",
-            detail: `Error enrolling in ${name} for ${semester}`,
           });
+      } else {
+        console.error(`No semester selected for course: ${course.name}`);
+        toast.current.show({
+          severity: "warn",
+          summary: "No Semester Selected",
+          detail: `Please select a semester for ${course.name} before enrolling.`,
         });
-      console.log("Result:", result);
-    }
+      }
+    });
   }
 
-  // The header above the table, contains the search bar and Courses title
+
+  // The header of the table, contains the search bar and the add course button
   const renderHeader = () => {
     return (
       <div className="flex flex-wrap gap-2 justify-content-between align-items-center">
@@ -347,7 +353,7 @@ export default function MajorReq() {
         <Dialog
           header="Enroll Courses"
           visible={enrollVisable}
-          style={{ width: "40vw" }}
+          style={{ minwidth: "40vw" }}
           onHide={() => {
             if (!enrollVisable) return;
             setEnrollVisable(false);

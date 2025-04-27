@@ -73,9 +73,10 @@ async extractPrerequisites(prerequisite) {
 async saveCourse(course, semester) {
 
     let savedCourse = '';
-
+    let credits = 3
     if(course.name != undefined) {
       savedCourse = course.name;
+      credits = course.credits
     } else {
       savedCourse = course
     }
@@ -97,6 +98,7 @@ async saveCourse(course, semester) {
             progress: "Enrolled",
             semesterEnrolled: semester,
             gpa: "0",
+            credits: credits,
           }),
         }
       );

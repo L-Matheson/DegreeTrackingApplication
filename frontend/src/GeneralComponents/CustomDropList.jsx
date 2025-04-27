@@ -75,14 +75,18 @@ export default function CustomDropList({ course, onSelectionChange }) {
     <div className="list-group">
       <div key={course.id} className="singleLine">
         {course.name}
+        <div style={{paddingLeft: "10px"}}>
         <Dropdown
-          value={selectedSemester}
-          onChange={handleDropdownChange}
-          options={semesters}
-          optionLabel="name"
-          placeholder="Select a Semester"
-          className="w-full md:w-14rem"
-        />
+
+value={selectedSemester}
+onChange={handleDropdownChange}
+options={semesters}
+optionLabel="name"
+placeholder="Select a Semester"
+className="w-full md:w-14rem"
+/>
+        </div>
+       
       </div>
     </div>
   );

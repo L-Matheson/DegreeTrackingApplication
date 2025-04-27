@@ -5,6 +5,7 @@ from api.models.enrolledCourses import EnrolledCourses
 from api.serializers.enrolledCoursesSerializer import enrolledCoursesSerializer
 from rest_framework.decorators import api_view
 import json
+
 @api_view(['GET'])
 def enrolled_courses_by_semester(request, semester, direction):
     try:
@@ -51,6 +52,22 @@ def enrolled_courses_by_semester(request, semester, direction):
     except Exception as e:
         return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
     
+@api_view(['GET'])
+def enrolled_courses_semester(request, semester):
+    # gets student information that matches the primary key
+    try:
+        enrolledCourses = EnrolledCourses.objects.all()
+        returned_courses = []
+        for course in enrolledCourses:
+            if course.semesterEnrolled == semester:
+                returned_courses.append(course)
+        # enrolledCourses = EnrolledCourses.objects.all(semesterEnrolled=semester)
+    except EnrolledCourses.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
+    # serialize the student data and return it
+    serializer = enrolledCoursesSerializer(returned_courses, many=True)
+    return Response(serializer.data)
+
 @api_view(['GET'])
 def get_all_enrolled_courses(request):
     enrolledCourses = EnrolledCourses.objects.all()

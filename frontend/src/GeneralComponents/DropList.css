@@ -2,6 +2,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  text-wrap: wrap ;
   font-weight: 600;
     display: flex;
     justify-content: space-between;

@@ -9,43 +9,110 @@ import { Tag } from "primereact/tag";
 import { Card } from "primereact/card";
 import { Chip } from "primereact/chip";
 import React, { useState, useEffect, useRef } from "react";
-import { useMountEffect } from 'primereact/hooks';
+import { useMountEffect } from "primereact/hooks";
 import { InputText } from "primereact/inputtext";
 import { Button } from "primereact/button";
 import { IconField } from "primereact/iconfield";
 import { InputIcon } from "primereact/inputicon";
 import { MeterGroup } from "primereact/metergroup";
-import { Messages } from 'primereact/messages';
+import { Messages } from "primereact/messages";
 import "./HomeFormat.css";
 
 export default function Home() {
-
   const msgs = useRef(null);
-  const [showMessage, setShowMessage] = useState(true);
+  const [majorCredits, setCredits] = useState(0);
+  const [currentCourses, setCurrentCourses] = useState([]);
+  const [prevCourses, setPrevCourses] = useState([]);
 
-  useEffect(() => {
-    // Check if the message has already been dismissed
-    const messageDismissed = localStorage.getItem("messageDismissed");
-    if (!messageDismissed) {
-      setShowMessage(true); // Show the message if it hasn't been dismissed
-    }
-  }, []);
+  const [nextCourses, setNextCourses] = useState([]);
 
   useMountEffect(() => {
     if (msgs.current) {
-        msgs.current.clear();
-        msgs.current.show([
-            { sticky: true, severity: 'info', summary: 'Enroll', detail: 'Fall 2025 enrollment is now open! Please enroll now during priority registeration' },
-        ]);
+      msgs.current.clear();
+      msgs.current.show([
+        {
+          sticky: true,
+          severity: "info",
+          summary: "Enroll",
+          detail:
+            "Fall 2025 enrollment is now open! Please enroll now during priority registeration",
+          closable: false,
+        },
+      ]);
     }
-});
+    loadData();
+  });
 
-  const handleDismiss = () => {
-    if (msgs.current) {
-      msgs.current.clear(); 
+  useEffect(() => {
+    if (prevCourses.length > 0) {
+      gatherCredits();
     }
-    localStorage.setItem("messageDismissed", true); 
-  };
+  }, [prevCourses]);
+
+  function gatherCredits() {
+    for (const course of prevCourses) {
+      if (course.credits) {
+        setCredits(
+          (prevCredits) => Number(prevCredits) + Number(course.credits)
+        );
+      } else {
+        setCredits((prevCredits) => Number(prevCredits) + 3); // Default to 3 credits if not specified
+      }
+      console.log("Credits:", majorCredits);
+    }
+  }
+  async function loadData() {
+    // Fetchs all courses before Fall 2025
+    try {
+      const responseEnrolled = await fetch(
+        "http://127.0.0.1:8000/api/courses/enrolled/all/Spring 2025/down"
+      );
+      if (responseEnrolled.ok) {
+        const fetchedCourses = await responseEnrolled.json();
+        setPrevCourses(fetchedCourses);
+        console.log("Previous Courses fetched successfully:", fetchedCourses);
+      } else {
+        console.error("Failed to fetch courses:", responseEnrolled.statusText);
+      }
+    } catch (error) {
+      console.error("Error fetching courses:", error);
+    }
+
+    // Fetch courses for the current semester
+    try {
+      const response = await fetch(
+        `http://127.0.0.1:8000/api/courses/enrolled/semester/Spring 2025/`
+      );
+      if (response.ok) {
+        const fetchedCourses = await response.json();
+
+        setCurrentCourses(fetchedCourses);
+        console.log("Current courses fetched successfully:", currentCourses);
+      } else {
+        console.error("Failed to fetch courses:", response.statusText);
+      }
+    } catch (error) {
+      console.error("Error fetching courses:", error);
+    }
+
+    // Fetch courses for the next semester
+    try {
+      const response = await fetch(
+        `http://127.0.0.1:8000/api/courses/enrolled/semester/Fall 2025/`
+      );
+      if (response.ok) {
+        const fetchedCourses = await response.json();
+        console.log("Courses fetched successfully:", fetchedCourses);
+        setNextCourses(fetchedCourses);
+      } else {
+        console.error("Failed to fetch courses:", response.statusText);
+      }
+    } catch (error) {
+      console.error("Error fetching courses:", error);
+    }
+
+    gatherCredits();
+  }
 
   const meter = (props, attr) => (
     <span
@@ -59,16 +126,18 @@ export default function Home() {
   );
 
   const labelList = ({ values }) => (
-    <div className="flex flex-wrap gap-8">
+    <div className="flex flex-wrap gap-3 justify-content-center">
       {values.map((item, index) => (
-        <Card className="flex-1" key={index}>
+        <Card className="flex-1" key={index} style={{ width: 240 }}>
           <div
             className="flex justify-content-between gap-4"
-            style={{ width: 250 }}
+            style={{ width: 200 }}
           >
             <div className="flex flex-column gap-1">
               <span className="text-secondary text-sm">{item.label}</span>
-              <span className="font-bold text-lg">{item.value}</span>
+              <span className="font-bold text-lg">
+                {item.value} / {item.totalNeeded}
+              </span>
             </div>
             <span
               className="w-2rem h-2rem border-circle inline-flex justify-content-center align-items-center text-center"
@@ -84,29 +153,46 @@ export default function Home() {
 
   const start = ({ totalPercent }) => (
     <div className="flex justify-content-between mt-3 mb-2 relative">
-      <span>Total Credits</span>
-      <span
+      <span>Total Credits Taken</span>
+      {/* <span
         style={{ width: totalPercent + 4 + "%" }}
         className="absolute text-right"
       >
         {totalPercent + " Credits"}
-      </span>
+      </span> */}
       <span className="font-medium">120 Credits</span>
     </div>
   );
 
   const totalCourses = [
     {
-      label: "Credits Taken",
+      label: "Core Credits Taken",
       color: "#34d399",
-      value: 10,
-      icon: "pi pi-book",
+      value: 0,
+      totalNeeded: 30,
+      icon: "pi pi-check",
     },
     {
-      label: "Credits Planned",
+      label: "Major Credits Taken",
       color: "#fbbf24",
-      value: 20,
+      value: majorCredits,
+      totalNeeded: 80,
       icon: "pi pi-briefcase",
+    },
+    {
+      label: "Elective Credits Taken",
+      color: "#60a5fa",
+      value: 0,
+      totalNeeded: 10,
+      icon: "pi pi-building-columns",
+    },
+    {
+      label: "Remaining Credits",
+      color: "lightgray",
+      value: 120 - majorCredits,
+      icon: "pi pi-globe",
+      totalNeeded: 120,
+      meterTemplate: meter,
     },
   ];
 
@@ -162,19 +248,10 @@ export default function Home() {
           </div>
         </div>
 
-         
-          <div style={{ padding: 10 }}>
-          {showMessage && (
-          <div style={{ padding: 10 }}>
-            <Messages
-              ref={msgs}
-              style={{ height: 50 }}
-              onRemove={handleDismiss} // Handle dismissal when the message is closed
-            />
-          </div>
-        )}
-          </div>
-   
+        <div style={{ padding: 10 }}>
+          <Messages ref={msgs} style={{ height: 50 }} />
+        </div>
+
         <div className="performance-content">
           <div style={{ padding: 10 }}>
             <div className="card flex justify-content-center">
@@ -191,16 +268,11 @@ export default function Home() {
 
         <div className="performance-footer">
           <div className="student-tag">
-            <Tag value="Major: Computer Science" rounded />
-          </div>
-          <div className="student-tag">
-            <Tag value="Minor: Cyber Security" rounded />
-          </div>
-          <div className="student-tag">
-            <Tag value="Graduate in Four Years" rounded />
-          </div>
-          <div className="student-tag">
-            <Tag value="Sophomore" rounded />
+            <Tag
+              value="Computer Science requires 120 credits in total, 80-83 credits (depending on courses chosen to take) coming from major related courses, 30 credits from core courses and the rest of elective or
+            minor related courses"
+              rounded
+            />
           </div>
         </div>
       </div>
@@ -223,23 +295,11 @@ export default function Home() {
 
         {/* Make into a for loop that runs through courses when available */}
         <div className="current-semester-courses">
-          <div className="current-semester-class">
-            {" "}
-            <Chip label="COS 430" style={{ fontWeight: 600 }} />
-          </div>
-
-          <div className="current-semester-class">
-            {" "}
-            <Chip label="COS 285" style={{ fontWeight: 600 }} />
-          </div>
-          <div className="current-semester-class">
-            {" "}
-            <Chip label="GEO 101" style={{ fontWeight: 600 }} />
-          </div>
-          <div className="current-semester-class">
-            {" "}
-            <Chip label="PHI 105" style={{ fontWeight: 600 }} />
-          </div>
+          {currentCourses.map((course, index) => (
+            <div key={index}>
+              <Chip label={course.name} style={{ fontWeight: 600 }} />
+            </div>
+          ))}
         </div>
       </div>
 
@@ -270,32 +330,39 @@ export default function Home() {
             style={{
               fontWeight: 600,
               textAlign: "left",
-              padding: 20,
+              paddingTop: 20,
+              paddingLeft: 20,
               color: "gray",
             }}
           >
-            GPA
+            Important Deadlines
           </div>
-          <div className="current-semester-courses">
+   
             <div className="gpa">
-              <div style={{ fontWeight: 600, color: "GrayText" }}>
-                Spring 2025:
-              </div>{" "}
-              3.2
-            </div>
-            <div className="gpa">
-              {" "}
               <div
-                style={{ fontWeight: 600, color: "GrayText", width: "auto" }}
+                style={{
+                  paddingTop: 10,
+                  paddingLeft: 20,
+                  paddingRight: 10,
+                  justifyContent: "space-between",
+                  display: "flex",
+                  flexDirection: "column",
+                  textAlign: "left",
+                  gap: 10
+                }}
               >
-                Overall:
-              </div>{" "}
-              3.2
+                <li style={{ justifyContent: "space-between", display: "flex" }}> <div>Last Day of Courses</div> <div> May 2, 2025</div></li>
+                <li
+                  style={{ justifyContent: "space-between", display: "flex" }}
+                >
+                  <div> Final Exams</div>
+                  <div >May 3 - 9, 2025</div>
+                </li>
+                <li style={{ justifyContent: "space-between", display: "flex" }}> <div>2025 Commencement Ceremony</div><div> May 10, 2025</div></li>
+                <li style={{ justifyContent: "space-between", display: "flex" }}> <div>Grade submission deadline</div> <div>May 19. 2025</div></li>
+              </div>
             </div>
-          </div>
-          <div className="cell-footer">
-            <Button label="View Transcript" size="small" />
-          </div>
+          
         </div>
 
         <div className="support-cell">
@@ -309,27 +376,12 @@ export default function Home() {
           >
             Fall 2025 Courses
           </div>
-          <div className="current-semester-courses">
-            <div className="next-semester-class">
-              {" "}
-              <Chip label="COS 473" style={{ fontWeight: 600 }} />
-            </div>
-            <div className="next-semester-class">
-              {" "}
-              <Chip label="COS 350" style={{ fontWeight: 600 }} />
-            </div>
-            <div className="next-semester-class">
-              {" "}
-              <Chip label="ITP 210" style={{ fontWeight: 600 }} />
-            </div>
-            <div className="next-semester-class">
-              {" "}
-              <Chip label="MAT 110" style={{ fontWeight: 600 }} />
-            </div>
-          </div>
-          <div className="cell-footer"> 
-            <Button label="Full Course Catalog" size="small" />
-            <Button label="Alter Courses" size="small" />
+          <div className="next-semester-courses">
+            {nextCourses.map((course, index) => (
+              <div key={index}>
+                <Chip label={course.name} style={{ fontWeight: 600 }} />
+              </div>
+            ))}
           </div>
         </div>
       </div>
