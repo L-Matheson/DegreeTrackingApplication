@@ -15,12 +15,6 @@ is more tedious than it needs to be and often leaves students unsure if they are
 experience to easily display all of a student's required classes in one location. This API will be fully customizable so it can be modified depending on a student's graduation or education 
 goals. 
 
-Some of the expected key features of this API are
-  * See what classes to take each semester to reach graduation by a student-selected year
-  * Allow for these classes to be changed and have the API adapt to the change to still display a timeline properly
-  * Display an overview of all required classes, including core and degree-specific
-  * TBD
-
 
 # Use
 As mentioned, this API runs on a Django framework. This utilizes the REST framework which allows the API to use routes such as GET, POST, PATCH, and DELETE. The directory is set up so the backend is all 
@@ -31,12 +25,11 @@ To better understand how to use the API after installation, please refer to the 
 
 # Roadmap
 
-* Import Django and get the necessary files imported and ready to use
-* Create docker containers and images through the Django framework
-* Publish the first working version 
-* Create table frameworks to outline data structures needed for the application
-* Create Dashboard, coures, and other related pages
-* Get neccessary data from USM about courses
+* Overhaul the dashboard to better reflect a students needs
+* Add functionality to the settings page
+* Enhance the enrollment system
+* Transfer all course processing into the backend
+* Quality of life changes before project completion 
 
 # Questions
   Any questions can be submitted directly to Lucas at 22lucasmatheson@gmail.com
