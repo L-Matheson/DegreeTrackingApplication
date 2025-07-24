@@ -89,8 +89,9 @@ export default function Login({ onLogin }) {
                  * This is where courses will be initally processed
                  * In a real world scenerio, this would already be stored
                  *
-                 * REDO THIS ALGORITHM ITS TERRIBLE AND MAKES ME WANT TO VOMIT
-                 *
+                 *  Todo: This needs to be redone in either python or 
+                 *  initally stored with docker, this should never be
+                 *  the case when storing data like this
                  */
                 for (let i = 0; i < dataCourse.course.length; i++) {
                   const x = dataCourse.course[i];
