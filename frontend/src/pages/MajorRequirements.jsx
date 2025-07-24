@@ -13,17 +13,18 @@ import { Dialog } from "primereact/dialog";
 import CustomDropList from "../GeneralComponents/CustomDropList";
 import CourseHandler from "../GeneralComponents/courseHandler";
 
+// Author : Lucas Matheson
 export default function MajorReq() {
   const [courses, setCourses] = useState([]);
   const [selectedCourses, setSelectedCourses] = useState([]);
   const toast = useRef(null);
   const [courseHandler] = useState(new CourseHandler());
-  courseHandler.fetchCourses() // gather all the necessary courses upon course handler initialization
+  courseHandler.fetchCourses()  // This should be done in an on mount function, not in the open like this
   const addCourse = useRef(null);
   const [noSelectCoursesWarning, setNoSelectCoursesWarning] = useState(false);
   const [enrollVisable, setEnrollVisable] = useState(false);
 
-  // Defines what filters can be used for what rows
+
   const [filters, setFilters] = useState({
     global: { value: null, matchMode: FilterMatchMode.CONTAINS },
     name: {
@@ -59,7 +60,7 @@ export default function MajorReq() {
         );
         if (response.ok) {
           const data = await response.json();
-          setCourses(data); // Assuming the API returns an array of courses
+          setCourses(data); 
           console.log(data);
         } else {
           console.error("Failed to fetch courses:", response.statusText);
